@@ -13,9 +13,10 @@
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script type="text/javascript" src="js/jauge.js"></script>
+    <!-- Include des fichiers JS de graphique -->
+    <script type="text/javascript" src="js/graphiqueJauge.js"></script>
     <script type="text/javascript" src="js/afficheJson.js"></script>
-    <script type="text/javascript" src="js/graph.js"></script>
+    <script type="text/javascript" src="js/graphiqueCourbe.js"></script>
     <script type="text/javascript" src="js/graphStyles.js"></script>
  
     <script type="text/javascript">
@@ -27,14 +28,16 @@
             initGrapheJauge('#pression','Baromètre','Hpa',900,1100,900,975,'#DF5353',975,1000,'#DDDF0D',1000,1100,"#55BF3B",900);
             initGrapheJauge('#temperatureInterieure','Température Intérieure','°C',-20,45,-20,0,'#0066ff',0,25,'#55BF3B',25,45,"#DF5353",-20);
             initGrapheJauge('#luminosite','Capteur de lumière','lux',0,1000,0,50,'#0066ff',50,500,'#55BF3B',500,1000,"#DF5353",-20);
-           
-
+          
+      //  initGrapheCourbe('#container');
+  importJSON2();
             setInterval(function() {
                 importJSON('#humidite','humidite');
                 importJSON('#pluie','detectionEau');
                 importJSON('#pression','pression');
                 importJSON('#temperatureInterieure','temperatureInterieure');
                 importJSON('#luminosite','luminosite');
+                
             }, 1000);
         });
     </script>	

@@ -1,7 +1,23 @@
+/////////// GRAPHIQUE COURBE ///////////
+
+// Ouverture du fichier Json pour les affichages instantanés
+var valeur = 0;
+
+function importJSON2() {
+    $.getJSON('json/donnees300s.json', function(data) {
+        
+        valeur = data.humidite;
+        initGrapheCourbe(valeur);
+    });
+}
 
 
 
-$(function () {
+
+    
+
+function initGrapheCourbe(){
+    
     $('#container').highcharts({
         chart: {
             type: 'spline'
@@ -100,13 +116,13 @@ $(function () {
                 marker: {
                     enabled: false
                 },
-                pointInterval: 3600000, // one day
+                pointInterval: 3600000, // 
                 pointStart: Date.UTC(2015, 3, 06, 0, 0, 0)
             }
         },
         series: [{
         name:'humidite',
-            data: [1,2,3,4,5,6,7,8,9,10,11,22,13,15,14,56,57,58,51,45,45,85,95,75]
+            data: valeur
 
         }],
         navigation: {
@@ -115,4 +131,4 @@ $(function () {
             }
         }
     });
-});
+};

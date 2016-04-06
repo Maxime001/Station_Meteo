@@ -19,7 +19,7 @@
             // Si le fichier de données est supprimé, on reprends init.json pour le réinitialiser
           
             if ($json == ""){
-                $source="init.json";
+                $source="json/init.json";
                 $dest=$this->fichierEnregistrement;
                 copy($source, $dest);
                 
@@ -35,10 +35,11 @@
             $nouvelleDonnee = $recupBdd->recupDonneeUnique($parametre);
             
             $longueurTableau = count($tableauValeur);
-           
-            while($longueurTableau > $tailleMaxTableau){
-                array_shift($tableauValeur);
-                $longueurTableau = count($tableauValeur);
+            if($this->tailleMaxTableau != 0){
+                while($longueurTableau > $tailleMaxTableau){
+                    array_shift($tableauValeur);
+                    $longueurTableau = count($tableauValeur);
+                }
             }
             
             // Ajout de la dernière valeur au tableau

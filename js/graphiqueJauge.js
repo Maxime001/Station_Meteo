@@ -2,7 +2,7 @@
 
 // Ouverture du fichier Json pour les affichages instantanés
 function importJSON() {
-    $.getJSON('donnees.json', function(data) {
+    $.getJSON('json/donnees5s.json', function(data) {
         updateGraphes(data);
     });
 }
