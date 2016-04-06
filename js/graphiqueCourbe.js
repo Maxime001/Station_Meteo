@@ -1,13 +1,14 @@
 /////////// GRAPHIQUE COURBE ///////////
 
 // Ouverture du fichier Json pour les affichages instantanés
-var valeur = 0;
+
 
 function importJSON2() {
     $.getJSON('json/donnees300s.json', function(data) {
         
         valeur = data.humidite;
         initGrapheCourbe(valeur);
+        console.log(valeur);
     });
 }
 
@@ -16,7 +17,7 @@ function importJSON2() {
 
     
 
-function initGrapheCourbe(){
+function initGrapheCourbe(valeur){
     
     $('#container').highcharts({
         chart: {

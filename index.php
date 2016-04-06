@@ -17,7 +17,7 @@
     <script type="text/javascript" src="js/graphiqueJauge.js"></script>
     <script type="text/javascript" src="js/afficheJson.js"></script>
     <script type="text/javascript" src="js/graphiqueCourbe.js"></script>
-    <script type="text/javascript" src="js/graphStyles.js"></script>
+    <script type="text/javascript" src="js/graphiqueStyles.js"></script>
  
     <script type="text/javascript">
         afficheJson();
