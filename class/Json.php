@@ -1,24 +1,32 @@
 <?php
-    class Json {
+    class Json {        
+        public $tailleMaxTableau;
+        public $fichierEnregistrement;
+       
+        public function __construct($tailleMaxTableau,$fichierEnregistrement){
+            $this->tailleMaxTableau = $tailleMaxTableau;
+            $this->fichierEnregistrement = $fichierEnregistrement;
+        }
+              
         public function envoiJson($parametre){
-              $tailleMaxTableau = 10;
+            $tailleMaxTableau = $this->tailleMaxTableau;
+            $fichierEnregistrement = $this->fichierEnregistrement;
+ 
             // Lecture du fichier Json
-            $json = file_get_contents("donnees.json");
+            $json = file_get_contents($fichierEnregistrement);
             $json = json_decode($json);
             
             // Si le fichier de données est supprimé, on reprends init.json pour le réinitialiser
           
             if ($json == ""){
                 $source="init.json";
-                $dest="donnees.json";
+                $dest=$this->fichierEnregistrement;
                 copy($source, $dest);
                 
-                $json = file_get_contents("donnees.json");
+                $json = file_get_contents($this->fichierEnregistrement);
                 $json = json_decode($json);
             }
-            
-            
-            
+                
             // Lecture & enregistrement du tableau ou va être ajouté une valeur
             $tableauValeur = $json->$parametre; 
 
@@ -45,13 +53,9 @@
             $compteur = count($tableauValeur);
             
             // Ouverture du fichier Json
-            $addJson = fopen("donnees.json",'r+')
+            $addJson = fopen($this->fichierEnregistrement,'r+')
             or die("Erreur d'ouverture du fichier Json");
             //Ecriture du nouveau Json
             fputs($addJson,$json); 
         }
-            
-            
     }
-
-?>
