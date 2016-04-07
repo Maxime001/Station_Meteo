@@ -1,6 +1,6 @@
 <!doctype html>
     <head>
-<META HTTP-EQUIV="Refresh" CONTENT="10">
+<META HTTP-EQUIV="Refresh" CONTENT="300">
 
 </head> 
     <?php

@@ -6,9 +6,8 @@
 function importJSON2() {
     $.getJSON('json/donnees300s.json', function(data) {
         
-        valeur = data.humidite;
+         var valeur = data.humidite;
         initGrapheCourbe(valeur);
-        console.log(valeur);
     });
 }
 

@@ -33,7 +33,7 @@
             // Récupération de la dernière valeur entrée en BDD
             $recupBdd = new BaseDonnees;
             $nouvelleDonnee = $recupBdd->recupDonneeUnique($parametre);
-            
+            settype($nouvelleDonnee,'float');
             $longueurTableau = count($tableauValeur);
             if($this->tailleMaxTableau != 0){
                 while($longueurTableau > $tailleMaxTableau){
