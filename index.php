@@ -29,8 +29,9 @@
             initGrapheJauge('#temperatureInterieure','Température Intérieure','°C',-20,45,-20,0,'#0066ff',0,25,'#55BF3B',25,45,"#DF5353",-20);
             initGrapheJauge('#luminosite','Capteur de lumière','lux',0,1000,0,50,'#0066ff',50,500,'#55BF3B',500,1000,"#DF5353",-20);
           
-      //  initGrapheCourbe('#container');
-  importJSON2();
+
+        importJson300s();
+        
             setInterval(function() {
                 importJSON('#humidite','humidite');
                 importJSON('#pluie','detectionEau');
@@ -49,7 +50,10 @@
     <div id="zone"></div>
     
     
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<div id="grapheHumidite" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<!--<div id="grapheTemperature" style="min-width: 310px; height: 400px; margin: 0 auto"></div>-->
+
+
     <!-- Affichage des jauges temps réel -->
     <div id="humidite" style="float:left;min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto;"></div> 
     <div id="pluie" style="float:left;min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div> 
@@ -70,35 +74,35 @@
         // Affiche les 7 Capteurs
         $temperature =  new CapteurTemperatureExterieure;
         $temperature =  $temperature->getDonnee();
-    //    echo $T.$temperature[0];
+        echo $T.$temperature[0];
 
         $temperature2 = new CapteurTemperatureInterieure;
         $temperature2 = $temperature2->getDonnee();
-     //   echo $T2.$temperature2[0];
+        echo $T2.$temperature2[0];
 
         $pression = new CapteurPression;
         $pression = $pression->getDonnee();
-     //   echo $P.$pression[0];
+        echo $P.$pression[0];
 
         $eau = new CapteurDetectionEau;
         $eau = $eau->getDonnee();
-     //   echo $E.$eau[0];
+        echo $E.$eau[0];
 
         $humidite = new CapteurHumidite;
         $humidite = $humidite->getDonnee();
-     //   echo $H.$humidite[0];
+        echo $H.$humidite[0];
 
         $luminosite = new CapteurLuminosite;
         $luminosite =  $luminosite->getDonnee();
-     //   echo $L.$luminosite[0];
+        echo $L.$luminosite[0];
 
         $bruit= new CapteurMesureBruit;
         $bruit = $bruit->getDonnee();
-      //  echo $B.$bruit[0];
+        echo $B.$bruit[0];
 
         $resistance = new CapteurLuminosite;
         $resistance = $resistance->getDonnee();
-      //  echo $La.$resistance[0];
+        echo $La.$resistance[0];
 
         $newDate = date("d/m/Y H:i:s", strtotime($luminosite[1]));
       //  echo $D.$newDate;

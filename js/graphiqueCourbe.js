@@ -3,22 +3,26 @@
 // Ouverture du fichier Json pour les affichages instantanés
 
 
-function importJSON2() {
+function importJson300s() {
     $.getJSON('json/donnees300s.json', function(data) {
-        
-         var valeur = data.humidite;
-        initGrapheCourbe(valeur);
+       loadDataGraphe(data);
     });
+}
+
+function loadDataGraphe(data){
+    
+    initGrapheCourbe(data.humidite,"#grapheHumidite");
+   // initGrapheCourbe(data.temperatureExterieure,"#temperatureExterieure");
+ 
 }
 
 
 
-
     
 
-function initGrapheCourbe(valeur){
+function initGrapheCourbe(valeur,div){
     
-    $('#container').highcharts({
+    $(div).highcharts({
         chart: {
             type: 'spline'
         },
@@ -115,9 +119,9 @@ function initGrapheCourbe(valeur){
                 },
                 marker: {
                     enabled: false
-                },
-                pointInterval: 3600000, // 
-                pointStart: Date.UTC(2015, 3, 06, 0, 0, 0)
+                }, //3600000
+                pointInterval: 300000, 
+                pointStart: Date.UTC(2015, 3, 07, 9, 47, 0)
             }
         },
         series: [{
