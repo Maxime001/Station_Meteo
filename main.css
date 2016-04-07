@@ -1,0 +1,59 @@
+#temperatureInterieure {
+    float: left;
+    min-width: 310px;
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#grapheHumidite {
+    min-width: 310px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#grapheTemperature {
+    min-width: 310px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#humidite {
+    float: left;
+    min-width: 310px;
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#pluie {
+    float: left;
+    min-width: 310px;
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#pression {
+    float: left;
+    min-width: 310px;
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#temperatureInterieure {
+    float: left;
+    min-width: 310px;
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#luminosite {
+    float: left;
+    min-width: 310px;
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
+}

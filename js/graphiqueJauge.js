@@ -1,19 +1,14 @@
 /////////// GRAPHIQUE JAUGE ///////////
 
-// Ouverture du fichier Json pour les affichages instantanés
-function importJSON() {
-    $.getJSON('json/donnees5s.json', function(data) {
-        updateGraphes(data);
-    });
-}
+
 
 // appel des nouvelles données Json de chaque capteur
 function updateGraphes(data) {
     updateGrapheJauge(data.humidite, "#humidite");
     updateGrapheJauge(data.detectionEau, "#pluie");
-    updateGrapheJauge(data.pression,"#pression");
-    updateGrapheJauge(data.temperatureInterieure,"#temperatureInterieure");
-    updateGrapheJauge(data.luminosite,"#luminosite");
+    updateGrapheJauge(data.pression, "#pression");
+    updateGrapheJauge(data.temperatureInterieure, "#temperatureInterieure");
+    updateGrapheJauge(data.luminosite, "#luminosite");
 }
 
 // Update de la valeur

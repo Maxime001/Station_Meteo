@@ -1,24 +1,11 @@
 /////////// GRAPHIQUE COURBE ///////////
 
-// Ouverture du fichier Json pour les affichages instantanés
-
-
-function importJson300s() {
-    $.getJSON('json/donnees300s.json', function(data) {
-       loadDataGraphe(data);
-    });
-}
-
 function loadDataGraphe(data){
     
     initGrapheCourbe(data.humidite,"#grapheHumidite");
    // initGrapheCourbe(data.temperatureExterieure,"#temperatureExterieure");
  
 }
-
-
-
-    
 
 function initGrapheCourbe(valeur,div){
     
