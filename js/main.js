@@ -1,6 +1,4 @@
-/**
- * Created by Daniel on 07/04/2016.
- */
+
 
 $(document).ready(function() {
     afficheJson();
@@ -15,11 +13,8 @@ $(document).ready(function() {
     importJson300s();
 
     setInterval(function() {
-        importJSON('#humidite','humidite');
-        importJSON('#pluie','detectionEau');
-        importJSON('#pression','pression');
-        importJSON('#temperatureInterieure','temperatureInterieure');
-        importJSON('#luminosite','luminosite');
+        importJSON();
+
 
     }, 2000);
 });

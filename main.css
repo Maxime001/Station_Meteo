@@ -12,6 +12,24 @@
     margin: 0 auto;
 }
 
+#grapheTemperatureExterieure {
+    min-width: 310px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#grapheDetectionEau{
+    min-width: 310px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#grapheLuminosite{
+    min-width: 310px;
+    height: 400px;
+    margin: 0 auto;
+}
+
 #grapheTemperature {
     min-width: 310px;
     height: 400px;
