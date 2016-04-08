@@ -4,7 +4,7 @@
  * Options pour les graphiques 
  * @param Obj
  */
-function loadOptions(data){
+function loadOptions(data,arrayDate){
 
         // Humidite 
     GrapheCourbeHumidite = {
@@ -34,7 +34,13 @@ function loadOptions(data){
         limd5:90,
         limf5:100,
         valeur5:"Pluie très probable",
-        couleur5:"#606060"
+        couleur5:"#606060",
+        an:arrayDate[0],
+        mois:arrayDate[1],
+        jour:arrayDate[2],
+        heure:arrayDate[3],
+        minute:arrayDate[4],
+        seconde:arrayDate[5]
     };
     // Options pour graphique de température exterieure
     GrapheCourbeTemperatureExt = {
@@ -64,7 +70,13 @@ function loadOptions(data){
         limd5:90,
         limf5:100,
         valeur5:"",
-        couleur5:"#606060"
+        couleur5:"#606060",
+        an:arrayDate[0],
+        mois:arrayDate[1],
+        jour:arrayDate[2],
+        heure:arrayDate[3],
+        minute:arrayDate[4],
+        seconde:arrayDate[5]
     };
     // Options pour le graphique de détection d'eau
     GrapheCourbeDetectionEau = {
@@ -94,7 +106,13 @@ function loadOptions(data){
         limd5:"",
         limf5:"",
         valeur5:"",
-        couleur5:"#606060"
+        couleur5:"#606060",
+        an:arrayDate[0],
+        mois:arrayDate[1],
+        jour:arrayDate[2],
+        heure:arrayDate[3],
+        minute:arrayDate[4],
+        seconde:arrayDate[5]
     };
     // Options pour le graphique de luminosité
     GrapheCourbeLuminosite = {
@@ -124,16 +142,51 @@ function loadOptions(data){
         limd5:"",
         limf5:"",
         valeur5:"",
-        couleur5:"#606060"
+        couleur5:"#606060",
+        an:arrayDate[0],
+        mois:arrayDate[1],
+        jour:arrayDate[2],
+        heure:arrayDate[3],
+        minute:arrayDate[4],
+        seconde:arrayDate[5]
     };
 }
+
+/*
+ * Fonction qui détermine l'heure de la première valeure enregistrée dans le json, dans le but de la passer en paramètre du graphique
+ * @param {obj} data objet data contenant un tableau avec toutes les dates d'acquisition
+ * @returns {array} retourne un tableau contenant les valeur en an,mois,jour,heure,minute,seconde de la premiere acquisiton enregistrée en json
+ */
+function detectTime(data){
+ 
+
+    var elt = data.split("-");
+    var an = elt[0];
+    var mois = elt[1]-1;
+    var elt2 = elt[2];
+    var elt2 = elt2.split(" ");
+    var jour = elt2[0];;
+    var elt3 = elt2[1].split(":");
+    var heure = elt3[0];
+    var minute = elt3[1];
+    var secondes = elt3[2];
+    
+    alert(mois);
+
+    return arrayDate =[an,mois,jour,heure,minute,secondes];
+}
+
+
+
 
 /*
  * Initialisation des graphiques
  * @param obj data
  */
 function loadDataGraphe(data){
-    loadOptions(data);
+    
+    var arrayDate = detectTime(data.Date[0]);
+    loadOptions(data,arrayDate);
 
 
     initGrapheCourbe(GrapheCourbeHumidite);
@@ -247,7 +300,7 @@ function initGrapheCourbe(valeur){
                     enabled: false
                 }, //3600000
                 pointInterval: 300000, 
-                pointStart: Date.UTC(2015, 3, 07, 9, 47, 0)
+                pointStart: Date.UTC(valeur.an, valeur.mois, valeur.jour, valeur.heure, valeur.minute, valeur.seconde)
             }
         },
         series: [{

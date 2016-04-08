@@ -39,7 +39,7 @@ Autoloader::register();
 <div id="luminosite"></div>
 
  Affichage des graphiques journaliers 
- <div id="grapheHumidite" ></div></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+ <div id="grapheHumidite" ></div></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
 <div id="grapheTemperatureExterieure" ></div>
 <div id="grapheDetectionEau"></div>
 <div id="grapheLuminosite"></div>
