@@ -3,11 +3,19 @@
         public $tailleMaxTableau;
         public $fichierEnregistrement;
        
+        /**
+         * @param type $tailleMaxTableau taille maximale du tableau dans le fichier json
+         * @param type $fichierEnregistrement fichier ou est enregistré le fichier json
+         */
         public function __construct($tailleMaxTableau,$fichierEnregistrement){
             $this->tailleMaxTableau = $tailleMaxTableau;
             $this->fichierEnregistrement = $fichierEnregistrement;
         }
-              
+        
+        /**
+         * Enregistre dans un fichier json les dernieres entrées de bdd
+         * @param String $parametre nom de la colonne en bdd que l'on veux sauver en json
+         */
         public function envoiJson($parametre){
             $tailleMaxTableau = $this->tailleMaxTableau;
             $fichierEnregistrement = $this->fichierEnregistrement;
@@ -33,7 +41,9 @@
             // Récupération de la dernière valeur entrée en BDD
             $recupBdd = new BaseDonnees;
             $nouvelleDonnee = $recupBdd->recupDonneeUnique($parametre);
-            settype($nouvelleDonnee,'float');
+            if($parametre != "Date"){
+                settype($nouvelleDonnee,'float');
+            }
             $longueurTableau = count($tableauValeur);
             if($this->tailleMaxTableau != 0){
                 while($longueurTableau > $tailleMaxTableau){
@@ -59,4 +69,22 @@
             //Ecriture du nouveau Json
             fputs($addJson,$json); 
         }
+        
+        /**
+         * Vérifie en fonction du paramètre entré (jour, mois, annee...) si les dates sont les mêmes. Si ce n'est pas le cas, le contenu du fichier json est supprimé.
+         * @param String $typeDate
+         */
+        public function controleFichierJson($typeDate){
+            $fichierEnregistrement = $this->fichierEnregistrement;
+            $recupDate = new BaseDonnees; 
+            $date = $recupDate->recupDate($typeDate);
+            // Si les dates sont différentes les unes des autres, on efface le contenu du fichier Json
+            if($date[0] != $date[1]){
+                $suppressionContenu = fopen($fichierEnregistrement,"w");
+                ftruncate($suppressionContenu,0);
+                fclose($suppressionContenu);
+                echo "fichier supprimé";
+            }
+        }
+        
     }

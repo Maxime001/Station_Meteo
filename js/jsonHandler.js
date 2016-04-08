@@ -1,18 +1,25 @@
-// Lecture du fichier JSON
+/*
+ * Lecture du fichier Json - donneesInstantannee.json
+ */
 function importJSON() {
-    $.getJSON('json/donnees5s.json', function(data) {
+    $.getJSON('json/donneesInstantanee.json', function(data) {
         updateGraphes(data);
     });
 }
 
+/*
+ * Lecture du fichier Json - donneesJournalieres.json
+ */
 function importJson300s() {
-    $.getJSON('json/donnees300s.json', function(data) {
+    $.getJSON('json/donneesJournalieres.json', function(data) {
         loadDataGraphe(data);
     });
 }
 
 
-// Affichage des données JSON
+/*
+ * Affichage des données Json
+ */
 function afficheJson(){
     $('#lecture').on('click', function () {
         $('#zone').empty();

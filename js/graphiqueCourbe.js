@@ -1,8 +1,12 @@
 /////////// GRAPHIQUE COURBE ///////////
 
-function loadDataGraphe(data){
-    // Options pour chaque graphique
-        // Humidite
+/*
+ * Options pour les graphiques 
+ * @param Obj
+ */
+function loadOptions(data){
+
+        // Humidite 
     GrapheCourbeHumidite = {
         data : data.humidite,
         div : "#grapheHumidite",
@@ -122,13 +126,26 @@ function loadDataGraphe(data){
         valeur5:"",
         couleur5:"#606060"
     };
-    
+}
+
+/*
+ * Initialisation des graphiques
+ * @param obj data
+ */
+function loadDataGraphe(data){
+    loadOptions(data);
+
+
     initGrapheCourbe(GrapheCourbeHumidite);
     initGrapheCourbe(GrapheCourbeTemperatureExt);
     initGrapheCourbe(GrapheCourbeDetectionEau);
     initGrapheCourbe(GrapheCourbeLuminosite);
 }
 
+/*
+ * Graphique des courbes 
+ * @param Obj objet contenant les parametres du graphique
+ */
 function initGrapheCourbe(valeur){
     
     $(valeur.div).highcharts({

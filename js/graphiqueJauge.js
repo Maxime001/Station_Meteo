@@ -1,8 +1,9 @@
 /////////// GRAPHIQUE JAUGE ///////////
 
-
-
-// appel des nouvelles données Json de chaque capteur
+/*
+ * Mise a jour des données provenant du fichier Json
+ * @param {obj} data Objet contenant tout les tableaux contenant les nouvelles données
+ */
 function updateGraphes(data) {
     updateGrapheJauge(data.humidite, "#humidite");
     updateGrapheJauge(data.detectionEau, "#pluie");
@@ -11,13 +12,20 @@ function updateGraphes(data) {
     updateGrapheJauge(data.luminosite, "#luminosite");
 }
 
-// Update de la valeur
+/*
+ * Requetes ajax pour la mise a jour des jauges
+ * @param {array} valeur tableau contenant les nouvelles données
+ * @param {string} div nom de l'id dans lequel sera affiché le graphique 
+ */
 function updateGrapheJauge(valeur,div) {
     var point = $(div).highcharts().series[0].points[0];      
     point.update(eval(valeur[valeur.length-1]));
 }
 
-// Initialisation des jauges
+/*
+ * Graphique des courbes 
+ * @param {String} paramètres divers pour le graphique
+ */
 function initGrapheJauge(div,titre,titre2,min,max,intD1,intF1,C1,intD2,intF2,C2,intD3,intF3,C3,zero) {
     $(div).highcharts({
             chart:{

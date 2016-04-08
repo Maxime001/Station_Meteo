@@ -22,7 +22,8 @@ Autoloader::register();
     <script type="text/javascript" src="js/graphiqueCourbe.js"></script>
     <script type="text/javascript" src="js/graphiqueStyles.js"></script>
     <script type="text/javascript" src="js/jsonHandler.js"></script>
-
+    
+    <script type="text/javascript" src="js/graphiqueOptions"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 

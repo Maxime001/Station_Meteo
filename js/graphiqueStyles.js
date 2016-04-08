@@ -1,4 +1,6 @@
-// Jauge Theme
+/*
+ * Style des graphiques
+ */
 Highcharts.createElement('link', {
     href: '//fonts.googleapis.com/css?family=Dosis:400,600',
     rel: 'stylesheet',

@@ -1,38 +1,45 @@
 <!doctype html>
     <head>
-<META HTTP-EQUIV="Refresh" CONTENT="300">
-
+<!--<META HTTP-EQUIV="Refresh" CONTENT="300">
+-->
 </head> 
     <?php
     // Appel de l'autoload -> Chargement automatique des class
     require 'class/Autoloader.php';
     Autoloader::register();
-    $save ="json/donnees300s.json";
+    $save ="json/donneesJournalieres.json";
     
-    $test = new Json(0,$save);
-    $test->envoiJson("Date");
+    
+    $Controle = new Json(0,$save);
+    $Controle->controleFichierJson("jour");
+    
+    $jsonDate = new Json(0,$save);
+    $jsonDate->envoiJson("Date");
 
-    $test2 = new Json(0,$save);
-    $test2->envoiJson("pression");
+    $jsonPression = new Json(0,$save);
+    $jsonPression->envoiJson("pression");
 
-    $test3 = new Json(0,$save);
-    $test3->envoiJson("luminosite");
+    $jsonLuminosite = new Json(0,$save);
+    $jsonLuminosite->envoiJson("luminosite");
 
-    $test4 = new Json(0,$save);
-    $test4->envoiJson("humidite");
+    $jsonHumidite = new Json(0,$save);
+    $jsonHumidite->envoiJson("humidite");
 
-    $test5 = new Json(0,$save);
-    $test5->envoiJson("photoresistance");
+    $jsonPhotoresistance = new Json(0,$save);
+    $jsonPhotoresistance->envoiJson("photoresistance");
 
-    $test6 = new Json(0,$save);
-    $test6->envoiJson("detectionEau");
+    $jsonDetectionEau = new Json(0,$save);
+    $jsonDetectionEau->envoiJson("detectionEau");
 
-    $test7 = new Json(0,$save);
-    $test7->envoiJson("mesureBruit");
+    $jsonMesureBruit = new Json(0,$save);
+    $jsonMesureBruit->envoiJson("mesureBruit");
 
-    $test8 = new Json(0,$save);
-    $test8->envoiJson("temperatureExterieure");
+    $jsonTemperatureExterieure = new Json(0,$save);
+    $jsonTemperatureExterieure->envoiJson("temperatureExterieure");
 
-    $test9 = new Json(0,$save);
-    $test9->envoiJson("temperatureInterieure");
+    $jsonTemperatureInterieure = new Json(0,$save);
+    $jsonTemperatureInterieure->envoiJson("temperatureInterieure");
+    
+
+    
 ?>
