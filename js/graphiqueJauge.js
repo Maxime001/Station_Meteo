@@ -8,7 +8,7 @@ function updateGraphes(data) {
     updateGrapheJauge(data.humidite, "#humidite");
     updateGrapheJauge(data.detectionEau, "#pluie");
     updateGrapheJauge(data.pression, "#pression");
-    updateGrapheJauge(data.temperatureInterieure, "#temperatureInterieure");
+    updateGrapheJauge(data.temperatureExterieure, "#temperatureExterieure");
     updateGrapheJauge(data.luminosite, "#luminosite");
 }
 

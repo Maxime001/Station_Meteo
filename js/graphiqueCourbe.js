@@ -171,7 +171,6 @@ function detectTime(data){
     var minute = elt3[1];
     var secondes = elt3[2];
     
-    alert(mois);
 
     return arrayDate =[an,mois,jour,heure,minute,secondes];
 }
