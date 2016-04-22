@@ -1,12 +1,12 @@
 function updageGrapheSolidJauge(data){
     var chart = $('#deltaTemperature').highcharts();
     if (chart) {
-        tInt = data.temperatureInterieure;
-        tInt = eval(tInt);
-        tExt = data.temperatureExterieure;
-        tExt = eval(tExt);
+        tInt = data.temperatureInterieure[data.temperatureInterieure.length-1];
+        tExt = data.temperatureExterieure[data.temperatureExterieure.length-1];
         newVal = tInt-tExt;
-        alert(newVal);
+
+        newVal = newVal.toFixed(2);
+        newVal = eval(newVal);
         var point = chart.series[0].points[0],newVal;    
         point.update(newVal);
     }
