@@ -1,6 +1,6 @@
 .graphique{
-    min-width: 310px;
-    float:left;
+    /*min-width: 310px;*/
+
     width:400px;
     height: 300px;
     margin: 0 auto;
@@ -9,5 +9,12 @@
 .jauge{
     min-width: 250px;
     height: 300px;
+    border:1px solid black;
 
+}
+
+.solidJauge{
+    width: 300px; 
+    height: 200px;
+    border: 1px solid black;
 }
