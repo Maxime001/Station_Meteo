@@ -7,10 +7,14 @@ Autoloader::register();
 <!doctype html>
 <head>
     <title> Station Météo</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="main.css">
-
+    
     <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    
 
     <!-- Highcharts -->
     <script src="js/libs/highcharts.js"></script>
@@ -26,6 +30,8 @@ Autoloader::register();
     <script type="text/javascript" src="js/graphiqueOptions"></script>
     <script type="text/javascript" src="js/main.js"></script>
     
+    <script type="text/javascript" src="js/progressBarr.js"></script>
+    
     <script type="text/javascript" src="js/ajax.js"></script>
 </head>
 
@@ -34,20 +40,29 @@ Autoloader::register();
 
 
 <!-- Affichage des jauges temps réel  -->
+<div class="container">
+    <div class="row">
+        <div class="jauge col-lg2" id="humidite"></div>
+        <div class="jauge col-lg2" id="pluie"></div>
+        <div class="jauge col-lg2" id="pression"></div>
+        <div class="jauge col-lg2" id="temperatureExterieure"></div>
+        <div class="jauge col-lg2" id="luminosite"></div>
+    </div>
+</div>
 
-<div id="humidite"></div>
-<div id="pluie"></div>
-<div id="pression"></div>
-<div id="temperatureExterieure"></div>
-<div id="luminosite"></div>
-</br></br>
 
 
- <!--Affichage des graphiques journaliers--> 
- <div id="grapheHumidite" ></div>
-<div id="grapheTemperatureExterieure" ></div>
-<div id="grapheDetectionEau"></div>
-<div id="grapheLuminosite"></div>
+
+
+
+ <!--Affichage des graphiques journaliers
+ <div class="graphique" id="grapheHumidite" ></div>
+<div class="graphique" id="grapheTemperatureExterieure" ></div>
+<div class="graphique" id="grapheDetectionEau"></div>
+<div class="graphique" id="grapheLuminosite"></div>
+--> 
+
+
 
 
 <?php

@@ -18,7 +18,7 @@ Highcharts.theme = {
     },
     title: {
         style: {
-            fontSize: '20px',
+            fontSize: '14px',
             fontWeight: 'bold',
             textTransform: 'uppercase'
         }
