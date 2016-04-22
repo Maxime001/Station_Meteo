@@ -11,10 +11,9 @@ Autoloader::register();
     <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
-    
 
     <!-- Highcharts -->
     <script src="js/libs/highcharts.js"></script>
@@ -37,22 +36,16 @@ Autoloader::register();
 
 <body>
 
-
-
 <!-- Affichage des jauges temps réel  -->
 <div class="container">
     <div class="row">
-        <div class="jauge col-lg2" id="humidite"></div>
-        <div class="jauge col-lg2" id="pluie"></div>
-        <div class="jauge col-lg2" id="pression"></div>
-        <div class="jauge col-lg2" id="temperatureExterieure"></div>
-        <div class="jauge col-lg2" id="luminosite"></div>
+        <div class="jauge col-xs-2" id="humidite"></div>
+        <div class="jauge col-xs-2" id="pluie"></div>
+        <div class="jauge col-xs-2" id="pression"></div>
+        <div class="jauge col-xs-2" id="temperatureExterieure"></div>
+        <div class="jauge col-xs-2" id="luminosite"></div>
     </div>
 </div>
-
-
-
-
 
 
  <!--Affichage des graphiques journaliers
