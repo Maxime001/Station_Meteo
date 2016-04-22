@@ -4,7 +4,7 @@ $(document).ready(function() {
     // Affiche les données json
     afficheJson();
     // Ajax mise a jour du fichier json
-    updateWeather(); 
+  //  updateWeather(); 
     
     solidJauge();
     // Initialisation de toutes les jauges

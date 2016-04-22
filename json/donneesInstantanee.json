@@ -1,1 +1,1 @@
-{"Date":["2016-04-22 14:52:29","2016-04-22 14:52:29"],"pression":[986,986],"luminosite":[385,385],"humidite":[46,46],"photoresistance":[864,864],"detectionEau":[988,988],"mesureBruit":[0,0],"temperatureExterieure":[25.1,25.1],"temperatureInterieure":[25.5,25.5]}
+{"detectionEau": [996, 996], "humidite": [46.2, 46.2], "luminosite": [368.0, 368.0], "Date": [2, 2], "pression": [985, 985], "photoresistance": [856, 856], "temperatureInterieure": [27.0, 27.0], "mesureBruit": [0, 0], "temperatureExterieure": [26.1, 26.1]}

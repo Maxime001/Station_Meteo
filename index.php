@@ -28,6 +28,7 @@ Autoloader::register();
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/progressBarr.js"></script>
     <script type="text/javascript" src="js/ajax.js"></script>
+    <script src="js/libs/solid-jauge.js"></script>
 </head>
 
 <body>
@@ -65,8 +66,11 @@ Autoloader::register();
     </div>
 </div>
 
+</br> 
+____________________________________________________________________________
 
-    <script src="js/libs/solid-jauge.js"></script>
+</br></br>
+    
 
 
 
