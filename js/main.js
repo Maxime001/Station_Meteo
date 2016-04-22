@@ -3,7 +3,10 @@
 $(document).ready(function() {
     // Affiche les données json
     afficheJson();
-   updateWeather(); 
+    // Ajax mise a jour du fichier json
+    updateWeather(); 
+    
+    solidJauge();
     // Initialisation de toutes les jauges
     initGrapheJauge('#humidite','Taux d\'humidité',' %HR',0,100,0,50,'#55BF3B',50,75,'#DDDF0D',75,100,'#DF5353',0);
     initGrapheJauge('#pluie','Capteur de pluie',' SU',0,1000,0,500,'#DF5353',500,700,'#DDDF0D',700,1000,'#55BF3B',0);

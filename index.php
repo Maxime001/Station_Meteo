@@ -22,6 +22,7 @@ Autoloader::register();
 
     <!-- Fonctions graphiques et JSON -->
     <script type="text/javascript" src="js/graphiqueJauge.js"></script>
+     <script type="text/javascript" src="js/graphiqueSolidJauge.js"></script>
     <script type="text/javascript" src="js/graphiqueCourbe.js"></script>
     <script type="text/javascript" src="js/graphiqueStyles.js"></script>
     <script type="text/javascript" src="js/jsonHandler.js"></script>
@@ -42,35 +43,30 @@ Autoloader::register();
         <div class="jauge col-xs-2" id="humidite"></div>
         <div class="jauge col-xs-2" id="pluie"></div>
         <div class="jauge col-xs-2" id="pression"></div>
-        <div class="jauge col-xs-2" id="temperatureExterieure"></div>
+       
         <div class="jauge col-xs-2" id="luminosite"></div>
+        
+    
     </div>
 </div>
 
 
- <!--Affichage des graphiques journaliers
+
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+
+<div style="width: 600px; height: 400px; margin: 0 auto">
+     <div class="jauge col-xs-2" id="temperatureExterieure"></div>
+    <div id="deltaTemperature" style="width: 300px; height: 200px; float: left"></div>
+</div>
+
+<!--col-xs-4 col-sm-3 col-md-2-->
+ Affichage des graphiques journaliers
  <div class="graphique" id="grapheHumidite" ></div>
 <div class="graphique" id="grapheTemperatureExterieure" ></div>
 <div class="graphique" id="grapheDetectionEau"></div>
 <div class="graphique" id="grapheLuminosite"></div>
---> 
 
 
-
+</body>
 
 <?php
-// Ici  il faut un script ajax qui va get les données json et les mettre a jour 
-    $save ="json/donneesInstantanee.json";
-    $jsonInst = new Json(1,$save);
-    $jsonInst->envoiJson("Date");
-    $jsonInst->envoiJson("pression");
-    $jsonInst->envoiJson("luminosite");
-    $jsonInst->envoiJson("humidite");
-    $jsonInst->envoiJson("photoresistance");
-    $jsonInst->envoiJson("detectionEau");
-    $jsonInst->envoiJson("mesureBruit");
-    $jsonInst->envoiJson("temperatureExterieure");
-    $jsonInst->envoiJson("temperatureInterieure");
-
-?> 
-</body>

@@ -4,6 +4,7 @@
 function importJSON() {
     $.getJSON('json/donneesInstantanee.json', function(data) {
         updateGraphes(data);
+        updageGrapheSolidJauge(data);
     });
 }
 
