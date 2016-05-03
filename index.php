@@ -67,23 +67,33 @@ Autoloader::register();
 </div>
 
 </br> 
-____________________________________________________________________________
+______________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 </br></br>
     
+<h1> Contrôle de l'observatoire </h1></br>
+</br>
+<button>Ouvrir le toit</button><button>Fermer le toit</button></br></br>
+<button>Allumer l'alarme</button><button>Eteindre l'alarme</button></br></br>
+<button>Mettre sous tension télescope</button><button>Arrêter le 220V</button></br></br>
+<button>Allumer résistance chauffante</button><button>Eteindre résistance chauffante</button></br>
 
+</br>
+<div style="height:400px;width:400px;background-color:grey">VUE 3D du télescope</div>
+</br></br></br></br>______________________________________________________________________________________________________________________________________________________________________________________________________________
 
-
-
-
-<!--col-xs-4 col-sm-3 col-md-2
- Affichage des graphiques journaliers
+</br></br>
+<h1>Affichage des graphiques journaliers</h1>
  <div class="graphique" id="grapheHumidite" ></div>
 <div class="graphique" id="grapheTemperatureExterieure" ></div>
 <div class="graphique" id="grapheDetectionEau"></div>
 <div class="graphique" id="grapheLuminosite"></div>
--->
 
+</br></br></br></br>______________________________________________________________________________________________________________________________________________________________________________________________________________
+
+<h1> Affichage historique graphiques </h1>
+
+</br></br>
 </body>
 
 <?php
