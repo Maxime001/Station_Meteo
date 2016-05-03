@@ -1,0 +1,58 @@
+#g1 {
+    width:400px; height:320px;
+    display: inline-block;
+    margin: 1em;
+}
+
+#g2 {
+    display: inline-block;
+    margin: 1em;
+}
+
+p {
+    display: block;
+    width: 450px;
+    margin: 2em auto;
+    text-align: left;
+}
+
+h3 {
+    margin-top: 5px !important;
+}
+
+.container-fluid {
+    margin-top: 20px;
+}
+
+.full-width {
+    width: 40%;
+}
+
+.limited-width {
+    width: 40%;
+}
+
+.body {
+    display: table;
+    background-color: green;
+}
+
+.left-side {
+    float: none !important;
+    display: table-cell !important;
+}
+
+.right-side {
+    float: none !important;
+    display: table-cell !important;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+.green {
+    color: green;
+
+}
