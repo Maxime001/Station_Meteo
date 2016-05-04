@@ -19,7 +19,7 @@ function updateGraphes(data) {
  */
 function updateGrapheJauge(valeur,div) {
     var point = $(div).highcharts().series[0].points[0];      
-    point.update(eval(valeur[valeur.length-1]));
+    point.update(eval(valeur));
 }
 
 /*

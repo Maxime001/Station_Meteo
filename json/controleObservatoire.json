@@ -1,54 +1,59 @@
 {
     "envoiCommandes": {
-        "activeAlarme": 1,
-        "desactiveAlarme": 1,
-        "ouvreToit": 1,
-        "fermeToit": 1,
-        "tensionTelescopeOn": 1,
-        "tensionTelescopeOff": 1,
-        "resistanceChauffanteOn": 1,
-        "resistanceChauffanteOff": 1
-    },
-    "position": {
-        "alarme": "activee",
-        "toit": "ferme",
-        "tension": "off",
-        "resistanceChauffante": "off"
-    },
-    "statutCapteur": {
-        "capteurHumiditeTemp": 0,
-        "capteurTemperatureInterieure": 0,
-        "capteurPression": 0,
-        "capteurPluie": 0,
-        "capteurBruit": 0,
-        "capteurLux": 0,
-        "capteurDistanceOuvertureToit": 0,
-        "arduinoTelescope": 0,
-        "relai220V": 0,
-        "alarme": 0,
-        "photoresistanceLaser": 0,
-        "miseSousTensionPc": 0,
-        "capteurHallPositionStationMeteo": 0,
-        "capteurHallPositionToitOuest": 0,
-        "capteurHallPositionToitEst": 0,
-        "capteurTemperatureResistanceChauffante": 0,
-        "accelerometre": 0
-    },
-    "donneesAccelerometre": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-    },
+        "activeAlarme": 1, 
+        "desactiveAlarme": 1, 
+        "fermeToit": 1, 
+        "ouvreToit": 1, 
+        "resistanceChauffanteOff": 1, 
+        "resistanceChauffanteOn": 1, 
+        "tensionTelescopeOff": 1, 
+        "tensionTelescopeOn": 1
+    }, 
     "meteoInstantanee": {
-        "detectionEau": [1, 1],
-        "humidite": [1, 1],
-        "luminosite": [1, 1],
-        "Date": [2, 2],
-        "pression": [1, 1],
-        "photoresistance": [1, 1],
-        "temperatureInterieure": [1, 1],
-        "mesureBruit": [1, 1],
-        "temperatureExterieure": [1, 1]
+        "detectionEau": 5, 
+        "humidite": 5.0, 
+        "luminosite": 5.2, 
+        "mesureBruit": 5, 
+        "photoresistance": 5, 
+        "pression": 5, 
+        "temperatureExterieure": 5.2, 
+        "temperatureInterieure": 5.3
+    }, 
+    "position": {
+        "alarme": "activee", 
+        "resistanceChauffante": "off", 
+        "tension": "off", 
+        "toit": "ferme"
+    }, 
+    "statutCapteur": {
+        "accelerometre": 0, 
+        "alarme": 0, 
+        "arduinoTelescope": 0, 
+        "capteurBruit": 0, 
+        "capteurDistanceOuvertureToit": 0, 
+        "capteurHallPositionStationMeteo": 0, 
+        "capteurHallPositionToitEst": 0, 
+        "capteurHallPositionToitOuest": 0, 
+        "capteurHumiditeTemp": 0, 
+        "capteurLux": 0, 
+        "capteurPluie": 0, 
+        "capteurPression": 0, 
+        "capteurTemperatureInterieure": 0, 
+        "capteurTemperatureResistanceChauffante": 0, 
+        "miseSousTensionPc": 0, 
+        "photoresistanceLaser": 0, 
+        "relai220V": 0
+    },
+    "valeurCapteurs":{
+        "accelerometreX": 0, 
+        "accelerometreY": 0, 
+        "accelerometreZ": 0,
+        "activiteAlarme": 0, 
+        "capteurDistanceOuvertureToit": 32, 
+        "capteurHallPositionStationMeteo": 0, 
+        "capteurHallPositionToitEst": 0, 
+        "capteurHallPositionToitOuest": 0, 
+        "miseSousTensionPc": 0,  
+        "relai220V": 0
     }
 }
-
