@@ -1,10 +1,7 @@
 
 
 $(document).ready(function() {
-    // Affiche les données json
-    afficheJson();
-    // Ajax mise a jour du fichier json
-    //  updateWeather(); 
+
     
     solidJauge();
     // Initialisation de toutes les jauges
@@ -15,16 +12,14 @@ $(document).ready(function() {
     initGrapheJauge('#luminosite','Capteur de lumière','lux',0,1000,0,50,'#0066ff',50,500,'#55BF3B',500,1000,"#DF5353",-20);
 
     // Appel du fichier json pour les données journalières ainsi que des graphiques journaliers
-    importJson300s();
+  /*  importJson300s();*/
 
     setInterval(function() {
         // Mise a jour du fichier Json donneesInstantanee.json 
         importJSON();
-
-
     }, 2000);
     
-
+    // Jquery sur les boutons de contrôle de l'observatoire
     var toit = true;
     var alarme = true;
     var resistance = true;

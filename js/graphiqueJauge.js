@@ -5,11 +5,11 @@
  * @param {obj} data Objet contenant tout les tableaux contenant les nouvelles données
  */
 function updateGraphes(data) {
-    updateGrapheJauge(data.humidite, "#humidite");
-    updateGrapheJauge(data.detectionEau, "#pluie");
-    updateGrapheJauge(data.pression, "#pression");
-    updateGrapheJauge(data.temperatureExterieure, "#temperatureExterieure");
-    updateGrapheJauge(data.luminosite, "#luminosite");
+    updateGrapheJauge(data.meteoInstantanee.humidite, "#humidite");
+    updateGrapheJauge(data.meteoInstantanee.detectionEau, "#pluie");
+    updateGrapheJauge(data.meteoInstantanee.pression, "#pression");
+    updateGrapheJauge(data.meteoInstantanee.temperatureExterieure, "#temperatureExterieure");
+    updateGrapheJauge(data.meteoInstantanee.luminosite, "#luminosite");
 }
 
 /*
