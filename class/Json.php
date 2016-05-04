@@ -2,6 +2,7 @@
     class Json {        
         public $tailleMaxTableau;
         public $fichierEnregistrement;
+        private $envoiCommandes = "envoiCommandes";
        
         /**
          * @param type $tailleMaxTableau taille maximale du tableau dans le fichier json
@@ -11,6 +12,22 @@
             $this->tailleMaxTableau = $tailleMaxTableau;
             $this->fichierEnregistrement = $fichierEnregistrement;
         }
+        
+        
+        public function envoiCommande($parametre){
+            $fichierEnregistrement = $this->fichierEnregistrement;
+            $json = file_get_contents($fichierEnregistrement);
+            $json = json_decode($json);
+            $json->envoiCommandes->$parametre = 1;
+            $json = json_encode($json, JSON_PRETTY_PRINT);
+            // Ouverture du fichier Json
+            $addJson = fopen($this->fichierEnregistrement,'r+')
+            or die("Erreur d'ouverture du fichier Json");
+            ftruncate($addJson,0);
+            //Ecriture du nouveau Json
+            fputs($addJson,$json);
+        }
+        
         
         /**
          * Enregistre dans un fichier json les dernieres entrées de bdd
@@ -58,7 +75,7 @@
            // Mise a jour de la variable contenant tout le fichier json
             $json->$parametre = $tableauValeur;
             // Reencodage du fichier json
-            $json = json_encode($json);
+            $json = json_encode($json, JSON_PRETTY_PRINT);
         
              // Compteur de taille des données
             $compteur = count($tableauValeur);

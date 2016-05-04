@@ -29,9 +29,13 @@ Autoloader::register();
     <script type="text/javascript" src="js/progressBarr.js"></script>
     <script type="text/javascript" src="js/ajax.js"></script>
     <script src="js/libs/solid-jauge.js"></script>
+    <script type="text/javascript"></script>
+    
+
 </head>
 
 <body>
+
 
 <!-- Affichage des jauges temps réel  -->
 <div class="container">
@@ -73,12 +77,14 @@ ________________________________________________________________________________
     
 <h1> Contrôle de l'observatoire </h1></br>
 </br>
-<button>Ouvrir le toit</button><button>Fermer le toit</button></br></br>
-<button>Allumer l'alarme</button><button>Eteindre l'alarme</button></br></br>
-<button>Mettre sous tension télescope</button><button>Arrêter le 220V</button></br></br>
-<button>Allumer résistance chauffante</button><button>Eteindre résistance chauffante</button></br>
 
+
+<button id="TensionTelescope">Mise sous tension télescope</button></br></br>
+<button id="Resistance">Resistance chauffante</button></br></br>
+<button id="Alarme">Alarme</button></br></br>
+<button id="Toit">Toit</button></br></br>
 </br>
+
 <div style="height:400px;width:400px;background-color:grey">VUE 3D du télescope</div>
 </br></br></br></br>______________________________________________________________________________________________________________________________________________________________________________________________________________
 

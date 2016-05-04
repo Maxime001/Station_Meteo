@@ -4,7 +4,7 @@ $(document).ready(function() {
     // Affiche les données json
     afficheJson();
     // Ajax mise a jour du fichier json
-  //  updateWeather(); 
+    //  updateWeather(); 
     
     solidJauge();
     // Initialisation de toutes les jauges
@@ -23,4 +23,56 @@ $(document).ready(function() {
 
 
     }, 2000);
+    
+
+    var toit = true;
+    var alarme = true;
+    var resistance = true;
+    var tension = true;
+        
+    $("#Toit").click(function(){
+       if(toit === true){
+           toit = false;
+           ouvreToit();
+       }
+       else{
+           toit = true;
+           fermeToit();
+       }    
+    });
+    $("#Alarme").click(function(){
+        if(alarme === true){
+           alarme = false;
+           activeAlarme();
+       }
+       else{
+           alarme = true;
+           desactiveAlarme();
+       } 
+    });
+    
+    $("#Resistance").click(function(){
+        if(resistance === true){
+           resistance = false;
+           resistanceChauffanteOn();
+       }
+       else{
+           resistance = true;
+           resistanceChauffanteOff();
+       } 
+    });
+        
+    $("#TensionTelescope").click(function(){
+        if(tension === true){
+           tension = false;
+           tensionTelescopeOn();
+       }
+       else{
+           tension = true;
+           tensionTelescopeOff();
+       } 
+    });
+    
+    
+
 });
