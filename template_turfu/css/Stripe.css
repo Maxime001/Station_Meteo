@@ -1,0 +1,36 @@
+.stripe-element {
+    float: left;
+    border: 1px solid white;
+    border-radius: 3px;
+    position: relative;
+    display: inline-block;
+}
+
+.stripe-element .stripe-element-tooltip {
+    visibility: hidden;
+    width: 220px;
+    background-color: rgba(29, 29, 29, 0.85);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 15px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    margin-bottom: 5px;
+}
+
+.stripe-element:hover .stripe-element-tooltip {
+    visibility: visible;
+}
+
+#sensor_status_text {
+    font-weight: bold;
+    color: #FF3636;
+    margin-top: 10px;
+    font-size: 12px;
+}
