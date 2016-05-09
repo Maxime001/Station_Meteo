@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thème stylé test</title>
+
+    <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="js/libs/raphael-2.1.4.min.js"></script>
+    <script src="js/libs/justgage.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row row-offcanvas row-offcanvas-left">
+        <div class="row-offcanvas row-offcanvas-right">
+            <div class="col-sm-2 sidebar-offcanvas" id="sidebarLeft" role="navigation">
+                <div class="well sidebar-nav">
+                    <h3>Jauges</h3>
+                    <div id="g2" class="gauge"></div>
+                </div>
+            </div>
+
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="well col-sm-6 right-side">
+                        <h3>Infos</h3>
+                        <h4>Interprétation :</h4>
+                        Alertes : </br>
+                        Humidité : 100% : Fort risque de pluie </br>
+                        Pression : Baisse de 2HPa dans les 2 dernières heures ! </br>
+                    </div>
+                    <div class="well col-sm-6 left-side">
+                        <h3>Météo Google</h3>
+                        <img class="limited-width" src="weather_map.png" alt="weather">
+                    </div>
+                </div>
+                <div class="well row">
+                    <h1>3D Scene</h1>
+                    <img class="full-width" src="3dscene.jpg" alt="3D scene">
+                </div>
+            </div>
+
+            <div class="col-sm-2 sidebar-offcanvas" id="sidebarRight" role="navigation">
+                <div class="well sidebar-nav">
+                    <h3>Contrôles</h3>
+                    <img src="switches.jpg" alt="">
+                </div>
+                <div class="well sidebar-nav">
+                    <h3>Debug console</h3>
+                    <p class="green">Status ok</p>
+                    <p class="green">Capteurs ok</p>
+                    <p class="red">Erreur capteur vent</p>
+                    <p>fegr</p>
+                    <p>Sizeinirgngiozjojfez</p>
+                    <p>Sizeinirgngiozjojfez</p>
+                    <p>Sizeinirgngiozjojfez</p>
+                    <p>Sizeinirgngiozjojfez</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>© Telescope dashboard 2018</p>
+    </footer>
+
+</div>
+<script src="jauges.js"></script>
+
+
+</body>
+</html>
