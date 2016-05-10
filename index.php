@@ -90,6 +90,12 @@ ________________________________________________________________________________
 
 </br></br>
 <h1>Affichage des graphiques journaliers</h1>
+<?php
+// Au chargement, on va faire la requete SQL qui va remplir correctement le json avec les dernieres 24h de données
+$MajJson = new Json(0,"json/meteo24h.json");
+$MajJson->save24h();
+
+?>
  <div class="graphique" id="grapheHumidite" ></div>
 <div class="graphique" id="grapheTemperatureExterieure" ></div>
 <div class="graphique" id="grapheDetectionEau"></div>

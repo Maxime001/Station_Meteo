@@ -11,6 +11,44 @@ class BaseDonnees {
         catch(Exception $e){die('Erreur : '.$e->getMessage());}
     }
     
+    public function recup24h(){
+        date_default_timezone_set("Europe/Paris");
+        $Date = time();
+        $DateJ = $Date - 86400;
+        $DateMoinsUnJour =  date('Y-m-d H:i:d',$DateJ)."</br>";
+        $date = array();
+        $pression = array();
+        $luminosite = array();
+        $humidite = array();
+        $detectionEau = array();
+        $mesureBruit = array();
+        $temperatureExterieure = array();
+        $termperatureInterieure = array();
+        $reponse = $this->bdd->query('SELECT * FROM infometeo WHERE Date >= "'.$DateMoinsUnJour.'"');
+        while($donnees = $reponse->fetch()){
+            array_push($date,$donnees["Date"]);
+            array_push($pression,intval($donnees["pression"]));
+            array_push($luminosite,intval($donnees["luminosite"]));
+            array_push($humidite,  floatval($donnees["humidite"]));
+            array_push($detectionEau,intval($donnees["detectionEau"]));
+            array_push($mesureBruit,intval($donnees["mesureBruit"]));
+            array_push($temperatureExterieure,floatval($donnees["temperatureExterieure"]));
+            array_push($termperatureInterieure,floatval($donnees["temperatureInterieure"]));
+        }
+        $array = array();
+        array_push($array,$date);
+        array_push($array,$pression);
+        array_push($array,$luminosite);
+        array_push($array,$humidite);
+        array_push($array,$detectionEau);
+        array_push($array,$mesureBruit);
+        array_push($array,$temperatureExterieure);
+        array_push($array,$termperatureInterieure);
+
+        
+       return $array;
+    }
+    
     /**
      * Requete SQL qui retourne un tableau des dernieres Données et Temps
      * @param string $donnee

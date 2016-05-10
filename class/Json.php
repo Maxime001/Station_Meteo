@@ -13,6 +13,31 @@
             $this->fichierEnregistrement = $fichierEnregistrement;
         }
         
+        public function save24h(){
+            $fichierEnregistrement = $this->fichierEnregistrement;
+            $json = file_get_contents($fichierEnregistrement);
+            $json = json_decode($json);
+            $bdd = new BaseDonnees();
+            $donnees = $bdd->recup24h();
+            
+            $json->Date = $donnees[0];
+            $json->pression = $donnees[1];
+            $json->luminosite = $donnees[2];
+            $json->humidite = $donnees[3];
+            $json->detectionEau = $donnees[4];
+            $json->mesureBruit = $donnees[5];
+            $json->temperatureExterieure = $donnees[6];
+            $json->temperatureInterieure = $donnees[7];
+            
+            $json = json_encode($json, JSON_PRETTY_PRINT);
+            
+            $addJson = fopen($this->fichierEnregistrement,'r+')
+            or die("Erreur d'ouverture du fichier Json");
+            ftruncate($addJson,0);
+            //Ecriture du nouveau Json
+            fputs($addJson,$json);
+
+        }
         
         public function envoiCommande($parametre){
             $fichierEnregistrement = $this->fichierEnregistrement;

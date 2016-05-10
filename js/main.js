@@ -12,7 +12,7 @@ $(document).ready(function() {
     initGrapheJauge('#luminosite','Capteur de lumière','lux',0,1000,0,50,'#0066ff',50,500,'#55BF3B',500,1000,"#DF5353",-20);
 
     // Appel du fichier json pour les données journalières ainsi que des graphiques journaliers
-  /*  importJson300s();*/
+    importJsonJournalier();
 
     setInterval(function() {
         // Mise a jour du fichier Json donneesInstantanee.json 

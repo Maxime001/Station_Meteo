@@ -5,7 +5,7 @@
  * @param Obj
  */
 function loadOptions(data,arrayDate){
-
+   
         // Humidite 
     GrapheCourbeHumidite = {
         data : data.humidite,
@@ -121,28 +121,9 @@ function loadOptions(data,arrayDate){
         titre: "Luminosité du ciel",
         soustitre:"Graphique de la luminosité du jour",
         mini:0,
-        maxi:1000,
+        maxi:20000,
         unite:"SU",
-        limd1:0,
-        limf1:250,
-        valeur1:"Pluie",
-        couleur1:"#606060",
-        limd2:250,
-        limf2:500,
-        valeur2:"Humide",
-        couleur2:"#606060",
-        limd3:500,
-        limf3:1000,
-        valeur3:"Sec",
-        couleur3:"#606060",
-        limd4:"",
-        limf4:"",
-        valeur4:"",
-        couleur4:"#606060",
-        limd5:"",
-        limf5:"",
-        valeur5:"",
-        couleur5:"#606060",
+        
         an:arrayDate[0],
         mois:arrayDate[1],
         jour:arrayDate[2],
@@ -158,8 +139,6 @@ function loadOptions(data,arrayDate){
  * @returns {array} retourne un tableau contenant les valeur en an,mois,jour,heure,minute,seconde de la premiere acquisiton enregistrée en json
  */
 function detectTime(data){
- 
-
     var elt = data.split("-");
     var an = elt[0];
     var mois = elt[1]-1;
@@ -170,7 +149,6 @@ function detectTime(data){
     var heure = elt3[0];
     var minute = elt3[1];
     var secondes = elt3[2];
-    
 
     return arrayDate =[an,mois,jour,heure,minute,secondes];
 }

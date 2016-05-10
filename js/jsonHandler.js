@@ -13,8 +13,8 @@ function importJSON() {
  */
 
 // fichier a modifier 
-function importJson300s() {
-    $.getJSON('json/donneesJournalieres.json', function(data) {
+function importJsonJournalier() {
+    $.getJSON('json/meteo24h.json', function(data) {
         loadDataGraphe(data);
     });
 }
