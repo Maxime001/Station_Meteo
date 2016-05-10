@@ -1,9 +1,0 @@
-{
-    "CapteurUltrason":22,
-    "CapteurHall":[1,1],
-    "Alarme":1,
-    "TensionTelescope":0,
-    "TensionResistance":0,
-    "PositionToit":1,
-    "mesureBruit":[0,0]
-}
