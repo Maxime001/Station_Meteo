@@ -78,23 +78,29 @@ Stripe.prototype.update = function (data) {
     var i = 0;
     var stripes_to_update = [];
     var sensor_status_bad = [];
+    var statusChanged = false;
 
     for (var sensor_name in this.data) {
         if (this.data.hasOwnProperty(sensor_name)) {
             var sensor_status = this.data[sensor_name];
 
-            // Changing status
-            if (sensor_status != this.stripes[i].sensorStatus) {
-                if (sensor_status == 1) {
-                    this.stripes[i]["backgroundColor"] = "#21C721";
-                    this.stripes[i]["sensorStatus"] = 1;
-                }
-                else {
-                    this.stripes[i]["backgroundColor"] = "#FF3636";
-                    this.stripes[i]["sensorStatus"] = 0;
-                }
+            for (i = 0; i < this.stripes[i].length; i++) {
+                // Changing status
+                if (this.stripes[i].sensorName == sensor_name
+                    && sensor_status != this.stripes[i].sensorStatus) {
+                    if (sensor_status == 1) {
+                        this.stripes[i]["backgroundColor"] = "#21C721";
+                        this.stripes[i]["sensorStatus"] = 1;
+                    }
+                    else {
+                        this.stripes[i]["backgroundColor"] = "#FF3636";
+                        this.stripes[i]["sensorStatus"] = 0;
+                    }
 
-                stripes_to_update.push(this.stripes[i]);
+                    stripes_to_update.push(this.stripes[i]);
+                    statusChanged = true;
+                    console.log("pass");
+                }
             }
 
             if (sensor_status != 1) {
@@ -105,30 +111,48 @@ Stripe.prototype.update = function (data) {
         }
     }
 
-    this.updateText(sensor_status_bad);
+    if (statusChanged) {
+        this.updateText(sensor_status_bad);
 
-    // Animations
-    TweenMax.staggerTo(stripes_to_update, 0.4, {
-        opacity: 0,
-        scaleY: 0.5
-    });
-
-    for (i = 0; i < stripes_to_update.length; i++) {
-        TweenMax.fromTo(stripes_to_update[i], 0.5, {
-            x: randomInt(-10, 10) + "px",
-            y: randomInt(-10, 10) + "px",
-            scale: 0,
-            backgroundColor: "#FFF",
-            immediateRender: false
-        }, {
-            x: "0px",
-            y: "0px",
-            opacity: 1,
-            scale: 1,
-            delay: 0.4 + i * 0.05,
-            backgroundColor: stripes_to_update[i].backgroundColor,
-            ease: Back.easeOut.config(3)
+        // Animations
+        TweenMax.staggerTo(stripes_to_update, 0.4, {
+            opacity: 0,
+            scaleY: 0.5
         });
+
+        for (i = 0; i < stripes_to_update.length; i++) {
+            TweenMax.fromTo(stripes_to_update[i], 0.5, {
+                x: randomInt(-10, 10) + "px",
+                y: randomInt(-10, 10) + "px",
+                scale: 0,
+                backgroundColor: "#FFF",
+                immediateRender: false
+            }, {
+                x: "0px",
+                y: "0px",
+                opacity: 1,
+                scale: 1,
+                delay: 0.4 + i * 0.05,
+                backgroundColor: stripes_to_update[i].backgroundColor,
+                ease: Back.easeOut.config(3)
+            });
+        }
+    }
+    else {
+        var sensor_status_stripes = $("#sensor_status_stripe").children();
+
+        for (i = 0; i < sensor_status_stripes.length; i++) {
+            TweenLite.to(sensor_status_stripes[i], 0.4, {
+                scale: 0.7,
+                ease: Power2.easeOut,
+                delay: i * 0.05
+            });
+            TweenLite.to(sensor_status_stripes, 0.4, {
+                scale: 1,
+                ease:Bounce.easeOut,
+                delay: i * 0.1
+            });
+        }
     }
 };
 
