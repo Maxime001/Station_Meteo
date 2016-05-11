@@ -48,7 +48,7 @@ function loadOptions(data,arrayDate){
         div : "#grapheTemperatureExterieure",
         titre: "Température Exterieure",
         soustitre:"Températures de la journée",
-        mini:-20,
+        mini:0,
         maxi:45,
         unite:"%HR",
         limd1:-20,
