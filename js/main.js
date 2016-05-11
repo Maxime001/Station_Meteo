@@ -2,9 +2,9 @@
 
 $(document).ready(function() {
 
-    
+    // Appel de la solidJauge
     solidJauge();
-    // Initialisation de toutes les jauges
+    // Initialisation de toutes les jauges - donnees instantanées
     initGrapheJauge('#humidite','Taux d\'humidité',' %HR',0,100,0,50,'#55BF3B',50,75,'#DDDF0D',75,100,'#DF5353',0);
     initGrapheJauge('#pluie','Capteur de pluie',' SU',0,1000,0,500,'#DF5353',500,700,'#DDDF0D',700,1000,'#55BF3B',0);
     initGrapheJauge('#pression','Baromètre','Hpa',900,1100,900,975,'#DF5353',975,1000,'#DDDF0D',1000,1100,"#55BF3B",900);
