@@ -1,3 +1,7 @@
+<?php
+require 'class/Autoloader.php';
+Autoloader::register();
+?>
 <!doctype html>
 <head>
     <title> Station Météo</title>
