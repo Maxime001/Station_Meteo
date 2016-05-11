@@ -1,7 +1,7 @@
 <?php
 
 class BaseDonnees extends Bdd {
-    
+
     public function recup24h(){
         date_default_timezone_set("Europe/Paris");
         $Date = time();

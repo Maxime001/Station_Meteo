@@ -29,6 +29,7 @@
             $json->temperatureExterieure = $donnees[6];
             $json->temperatureInterieure = $donnees[7];
             
+           
             $json = json_encode($json, JSON_PRETTY_PRINT);
             
             $addJson = fopen($this->fichierEnregistrement,'r+')
