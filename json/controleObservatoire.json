@@ -10,14 +10,14 @@
         "tensionTelescopeOn": 1
     }, 
     "meteoInstantanee": {
-        "detectionEau": 89, 
-        "humidite": 91.2, 
-        "luminosite": 745.0, 
+        "detectionEau": 87, 
+        "humidite": 91.4, 
+        "luminosite": 739.0, 
         "mesureBruit": 0, 
         "photoresistance": 0, 
         "pression": 1003, 
         "temperatureExterieure": 15.3, 
-        "temperatureInterieure": 17.6
+        "temperatureInterieure": 17.7
     }, 
     "position": {
         "alarme": "activee", 
