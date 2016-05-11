@@ -1,15 +1,7 @@
 <?php
 
-class BaseDonnees {
-    private $bdd="";
-    
-    /**
-     * Connection a la base de donnée
-     */
-    public function __construct(){
-        try{ $this->bdd = new PDO('mysql:host=localhost;dbname=meteo;charset=utf8', 'root', ''); }
-        catch(Exception $e){die('Erreur : '.$e->getMessage());}
-    }
+class BaseDonnees extends Bdd {
+
     
     public function recup24h(){
         date_default_timezone_set("Europe/Paris");
