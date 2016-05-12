@@ -48,8 +48,8 @@ Autoloader::register();
         <div class="solidJauge col-xs-6" id="deltaTemperature" ></div>
                 <div class="col-xs-2">
             <?php
-            $Sat24 = new Sat24();
-            echo $Sat24->afficheLune();
+      //      $Sat24 = new Sat24();
+       //     echo $Sat24->afficheLune();
             
             ?>
         </div>
@@ -57,7 +57,7 @@ Autoloader::register();
     <div class="row">
         <div class="col-xs-8">
             <?php
-            echo $Sat24->Date();
+    //        echo $Sat24->Date();
             ?>
         </div>
         <div class="col-xs-2"><h4>Interprétation :</h4></br>
