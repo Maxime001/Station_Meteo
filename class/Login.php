@@ -1,6 +1,18 @@
 <?php
 
-class login{
+class Login{
+    
+    public function isSecure($value){
+    	// Regex a utiliser en fonction des champs choisis
+	$regex = "#^[\w-ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØŒŠþÙÚÛÜÝŸàáâãäåæçèéêëìíîïðñòóôõöøœšÞùúûüýÿ\' ]*$#";
+		if(preg_match($regex, $value)){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+         
     public function verifChamps($id,$pass){
 
         if(!isset($_POST[$id]) | !isset($_POST[$pass])){
@@ -14,22 +26,23 @@ class login{
             return "L'identifiant et le mot de passe doivent contenir au moins 5 caractères";
         }
         else{
-            $pass = hash('sha256', $pass);
-            $verifBdd = new BaseDonnees();
-            $verif = $verifBdd->verifInfo($id);
-            
-            if($pass != $verif){
-                return "mauvais mot de passe/identifiant";
-            }
-            else{
-                return "OK";
-                
-            }
+            $Regex = self::isSecure($id);
+            $Regex2 = self::isSecure($pass);
+            if($Regex == true && $Regex2 == true){
+                echo $pass = hash('sha256', $pass);
+                $verifBdd = new BaseDonnees();
+                $verif = $verifBdd->verifInfo($id);
+
+                if($pass != $verif){
+                    return "mauvais mot de passe/identifiant";
+                }
+                else{
+                    return "OK";
+                }
+           }
+           else{
+                return "erreur regex";
+            }   
         }
-        
     }
-    /*
-
-
-*/
 }
