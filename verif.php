@@ -2,6 +2,6 @@
 
 $verifForm = new Login();
 echo $Verif =  $verifForm->verifChamps("id","pass");
-if($Verif == "OK"){
+if($Verif == true){
     $_SESSION['validUser'] = 1;
 }

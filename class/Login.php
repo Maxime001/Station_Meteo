@@ -29,7 +29,7 @@ class Login{
             $Regex = self::isSecure($id);
             $Regex2 = self::isSecure($pass);
             if($Regex == true && $Regex2 == true){
-                echo $pass = hash('sha256', $pass);
+                $pass = hash('sha256', $pass);
                 $verifBdd = new BaseDonnees();
                 $verif = $verifBdd->verifInfo($id);
 
@@ -37,7 +37,7 @@ class Login{
                     return "mauvais mot de passe/identifiant";
                 }
                 else{
-                    return "OK";
+                    return true;
                 }
            }
            else{
