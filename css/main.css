@@ -35,19 +35,13 @@
     z-index: 10;
     width: 320px;
     height: 220px;
-    margin: 0 auto;
+    margin: 42vh auto 0 auto;
     padding: 0 auto;
-    margin-top: 42vh;
     transform: translateY(-55%);
-    background-color: rgba(0, 51, 153, 0.4);
-    box-shadow: 1px 1px 1px 1px #656565;
+    background-color: rgba(23, 63, 90, 0.38);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     border-radius: 3px;
 
-}
-
-.logContainer {
-    color: white;
-    font-family: calibri;
 }
 
 body {
