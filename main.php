@@ -1,8 +1,5 @@
-<?php
-require 'class/Autoloader.php';
-Autoloader::register();
-?>
 <!doctype html>
+<html>
 <head>
     <title> Station Météo</title>
     <!-- Jquery -->
@@ -105,3 +102,4 @@ $MajJson->save24h();
 
 </br></br>
 </body>
+</html>

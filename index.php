@@ -1,14 +1,15 @@
 <?php
     session_start();
     require 'class/Autoloader.php';
-    Autoloader::register();
+    Autoloader::register();  
+    
+    include 'verif.php';
 
     if(!isset($_SESSION['validUser'])){
-        $form = new Form();
-        echo "</br></br>Identifiant :".$form->input("id","text");
-        echo "Mot de passe :".$form->input("pass","password");
-        echo $form->submit();
+        include 'login.php';
     }
-    else{
+
+    elseif(isset($_SESSION['validUser'])){
         include 'main.php';
     }
+
