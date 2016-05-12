@@ -19,7 +19,7 @@ class Form {
     /*
      *
      */
-    public $surround = 'p';
+    public $surround = 'span';
     /*
      * 
      */
@@ -42,9 +42,9 @@ class Form {
     /*
      *
      */
-    public function input($name,$type){
+    public function input($name,$type,$class){
          return $this->surround(
-             '<input type="'.$type.'" name="' . $name . '"value = "' . $this->getValue($name) . '">');
+             '<input class="'.$class.'" type="'.$type.'" name="' . $name . '"value = "' . $this->getValue($name) . '">');
     }
     /*
      *

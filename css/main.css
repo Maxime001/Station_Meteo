@@ -38,13 +38,15 @@
     height:240px;
     margin:0 auto;
     padding:0 auto;
-   margin-top: 50vh;
-  transform: translateY(-50%);
-  background-color: rgba(0, 51, 153, 0.5);
+   margin-top: 42vh;
+  transform: translateY(-55%);
+  background-color: rgba(0, 51, 153, 0.4);
   box-shadow: 1px 1px 1px 1px #656565;
   border-radius:3px;
 
 }
+
+
 
 .logContainer{
     color:white;
@@ -53,10 +55,65 @@
 
 body{
     margin:0px;
+    overflow:hidden;
 }
 
-.fieldContainer{
-   display : table;
+.fieldContainer1{
+    width:320px;
+    height:60px;
+    position: absolute;
+    top: 0;
+    border-bottom:1px solid rgba(180, 180, 180, 1);
+
+}
+
+.fieldContainer2{
+    width:320px;
+    height:60px;
+    position:relative;
+    top:5px;
+    border-bottom:1px solid rgba(180, 180, 180, 1);
+
+}
+.fieldContainerValidate{
+
+display : table;
 margin : 0 auto;
+    width:320px;
+}
+
+.field, .imgConnect{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.imgConnect{
+    padding-top:17px;
+    padding-left:10px;
 
 }
+
+.field{
+    margin-left:15px;
+    padding-top:17px;
+}
+
+form input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+     
+    -webkit-text-fill-color: rgba(0, 51, 153, 0) !important;
+}
+
+.saisie{
+    width:245px;
+    height:30px;
+      background-color: rgba(0, 51, 153, 0);
+  outline: none;
+  border:none;
+  font-size:18px; 
+  font-family:calibri;
+color:white;
+}
+
+
+
