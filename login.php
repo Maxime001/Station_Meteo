@@ -5,7 +5,7 @@
 </head>
 <body class="login">
     <form action="index.php" method="post" enctype="multipart/form-data" autocomplete="off">
-        
+
         <div class="logBlock">
             <div class="logContainer"></br></br>
                 <?php
@@ -14,13 +14,13 @@
                 <div class="fieldContainer1">
                     <img src="img/user.png" class="imgConnect">
                     <span class="field">
-                        <?= $form->input("id","text","saisie"); ?>
+                        <?= $form->input("id", "text", "saisie", "Identifiant"); ?>
                     </span>
                 </div></br>
                 <div class="fieldContainer2">
                      <img src="img/pass.png" class="imgConnect">
                      <span  class="field">
-                        <?=$form->input("pass","password","saisie"); ?>
+                        <?=$form->input("pass", "password", "saisie", "Mot de passe"); ?>
                      </span>
                 </div ></br>
                 <div class="fieldContainerValidate">
@@ -28,7 +28,7 @@
                 </div>
 
             </div>
-                   
+
         </div>
                  <div>
                     <?= $Verif;?>
