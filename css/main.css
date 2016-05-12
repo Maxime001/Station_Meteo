@@ -35,7 +35,7 @@
 .logBlock{
     z-index:10;
     width:320px;
-    height:240px;
+    height:220px;
     margin:0 auto;
     padding:0 auto;
    margin-top: 42vh;
@@ -63,7 +63,7 @@ body{
     height:60px;
     position: absolute;
     top: 0;
-    border-bottom:1px solid rgba(180, 180, 180, 1);
+    border-bottom:1px solid rgba(180, 180, 180, 0.3);
 
 }
 
@@ -72,7 +72,7 @@ body{
     height:60px;
     position:relative;
     top:5px;
-    border-bottom:1px solid rgba(180, 180, 180, 1);
+    border-bottom:1px solid rgba(180, 180, 180, 0.3);
 
 }
 .fieldContainerValidate{
@@ -99,8 +99,7 @@ margin : 0 auto;
 }
 
 form input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
-     
+    -webkit-box-shadow: 0 0 0px 1000px white inset;   
     -webkit-text-fill-color: rgba(0, 51, 153, 0) !important;
 }
 
@@ -115,5 +114,30 @@ form input:-webkit-autofill {
 color:white;
 }
 
+button{
+    width:275px;
+    height:40px;
+    margin-left:20px;
+    margin-top:15px;
+    border-radius:2px;
+    border:none;
+   
+    border-radius: 3px;
+    border: solid 1px #1270B2;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,0.15);
+    background-image: linear-gradient(#0d92f2,#0077cc);
+    background-color: #0086e6;
+    
+    
+    
+    
+    color:white;
+    font-family:calibri;
+    font-size:19px;
+    
+}
 
 
+button:hover {
+    background-image: linear-gradient(#0086e6,#1a9fff);
+}
