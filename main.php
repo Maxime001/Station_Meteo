@@ -1,4 +1,7 @@
-<!doctype html>
+<?php
+
+if($_SERVER['REQUEST_URI'] == '/main.php') header('Location:/');
+?><!doctype html>
 <html>
 <head>
     <title> Station Météo</title>
