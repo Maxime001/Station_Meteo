@@ -40,6 +40,16 @@ class BaseDonnees extends Bdd {
        return $array;
     }
     
+    public function verifInfo($nom){
+        $reponse =$this->bdd->query('SELECT password FROM user WHERE name = "'.$nom.'"');
+        if($donnees = $reponse->fetch()){
+            return $donnees['password'];
+        }
+        else{
+            return "Erreur d'identification";
+        }
+    }
+    
     /**
      * Requete SQL qui retourne un tableau des dernieres Données et Temps
      * @param string $donnee
