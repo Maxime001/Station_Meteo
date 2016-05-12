@@ -4,26 +4,34 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body class="login">
-    <form action="index.php" method="post" enctype="multipart/form-data">
+    <form action="index.php" method="post" enctype="multipart/form-data" autocomplete="off">
         
         <div class="logBlock">
             <div class="logContainer"></br></br>
                 <?php
                 $form = new Form();
                 ?>
-                <div class="fieldContainer">
-                    <?= $form->input("id","text"); ?>
+                <div class="fieldContainer1">
+                    <img src="img/user.png" class="imgConnect">
+                    <span class="field">
+                        <?= $form->input("id","text","saisie"); ?>
+                    </span>
                 </div></br>
-                <div class="fieldContainer">
-                    <?=$form->input("pass","password"); ?>
+                <div class="fieldContainer2">
+                     <img src="img/pass.png" class="imgConnect">
+                     <span  class="field">
+                        <?=$form->input("pass","password","saisie"); ?>
+                     </span>
                 </div ></br>
-                <div class="fieldContainer">
+                <div class="fieldContainerValidate">
                     <?= $form->submit() ;?>
                 </div>
-                <div>
+
+            </div>
+                   
+        </div>
+                 <div>
                     <?= $Verif;?>
                 </div>
-            </div>
-        </div>
     </form>
 </body>
