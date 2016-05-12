@@ -2,11 +2,15 @@
 <head>
     <title>Bienvenue</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript">
+    </script>
 </head>
 <body class="login">
     <form action="index.php" method="post" enctype="multipart/form-data" autocomplete="off">
         
-        <div class="logBlock">
+
+        <div class="logBlock">     
+            <div class="title" style="margin-top:-40px; margin-left:100px; position:absolute; color:white; font-size:25px;">Andromède</div>
             <div class="logContainer"></br></br>
                 <?php
                 $form = new Form();
@@ -26,12 +30,9 @@
                 <div class="fieldContainerValidate">
                     <?= $form->submit() ;?>
                 </div>
-
-            </div>
-                   
+            </div>     
         </div>
-                 <div>
-                    <?= $Verif;?>
-                </div>
+        <div class="logBlock2"><span class="verifStyle"><?= $Verif;?></span></div>  
+
     </form>
 </body>
