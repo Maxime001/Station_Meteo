@@ -37,7 +37,7 @@ class Login{
                     return "mauvais mot de passe/identifiant";
                 }
                 else{
-                    return true;
+                    return "OK";
                 }
            }
            else{
