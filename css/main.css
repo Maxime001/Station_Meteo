@@ -18,3 +18,45 @@
     height: 200px;
     border: 1px solid black;
 }
+
+
+.login{
+    color:black;
+    background-color:white;
+    background-image:url(../img/image_de_fond.jpg);
+    background-size: cover;
+    z-index:0;
+}
+
+@media all and (max-width:1350px){
+
+}
+
+.logBlock{
+    z-index:10;
+    width:320px;
+    height:240px;
+    margin:0 auto;
+    padding:0 auto;
+   margin-top: 50vh;
+  transform: translateY(-50%);
+  background-color: rgba(0, 51, 153, 0.5);
+  box-shadow: 1px 1px 1px 1px #656565;
+  border-radius:3px;
+
+}
+
+.logContainer{
+    color:white;
+    font-family:calibri;
+}
+
+body{
+    margin:0px;
+}
+
+.fieldContainer{
+   display : table;
+margin : 0 auto;
+
+}

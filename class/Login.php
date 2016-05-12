@@ -1,22 +1,31 @@
 <?php
 
 class Login{
-    
+/**
+ * 
+ * @param type $value
+ * @return boolean
+ */
     public function isSecure($value){
     	// Regex a utiliser en fonction des champs choisis
 	$regex = "#^[\w-ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØŒŠþÙÚÛÜÝŸàáâãäåæçèéêëìíîïðñòóôõöøœšÞùúûüýÿ\' ]*$#";
 		if(preg_match($regex, $value)){
-			return true;
+                    return true;
 		}
 		else{
-			return false;
+                    return false;
 		}
 	}
-         
+    /**
+     * 
+     * @param type $id
+     * @param type $pass
+     * @return string
+     */     
     public function verifChamps($id,$pass){
 
-        if(!isset($_POST[$id]) | !isset($_POST[$pass])){
-            return;            
+        if(!isset($_POST[$id]) || !isset($_POST[$pass])){
+            return "test";            
         }
         
         $id = htmlspecialchars($_POST[$id]);
