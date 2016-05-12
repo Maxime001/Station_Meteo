@@ -1,4 +1,5 @@
 <?php
+    if($_SERVER['REQUEST_URI'] == '/index.php') header('Location:/');
     session_start();
     require 'class/Autoloader.php';
     Autoloader::register();  
