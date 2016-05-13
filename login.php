@@ -5,13 +5,7 @@
     <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="js/ajax.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-        
-            $(".submit").on("click",function() {
 
-                console.log("test");
-            });
-        });
     </script>
 </head>
 <body class="login">

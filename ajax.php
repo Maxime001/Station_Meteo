@@ -16,10 +16,6 @@ $envoiCommandeObservatoire = new Json(0,"json/controleObservatoire.json");
 
 
 
-if($_GET['requete'] == 'verifId'){
-
-}
-
 
 if($_GET['requete'] == 'ouvreToit'){
     $envoiCommandeObservatoire->envoiCommande("ouvreToit");  
