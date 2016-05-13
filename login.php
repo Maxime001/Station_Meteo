@@ -7,8 +7,8 @@
     <script type="text/javascript">
         function afficheAlerte(){
         $var = "<?= $Verif ?>";
-        if($var === ""){
-           document.getElementById("alertBlock").style.display = "none";
+        if($var != ""){
+           document.getElementById("alertBlock").style.visibility = "visible";
         }
     }
     </script>
