@@ -48,7 +48,6 @@
 
         </div>
         <div id="alertBlock"  class="logBlock2"><span class="verifStyle2"><?= $Verif;?></span></div>  
-        <!--<div  style="display:none"class="logBlock3"><span class="verifStyle"></span></div>  -->
 
     </form>
 </body>

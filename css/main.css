@@ -45,19 +45,20 @@
 .logBlock2{
     z-index:10;
     width:300px;
-    min-height:50px;
+    min-height:30px;
     height:auto;
     margin:0 auto;
     padding:0 auto;
-   margin-top: -3%;  
+   margin-top: -4%;  
   transform: translateY(-55%);
-  background-color: rgba(0, 51, 153, 0.3);
+  background-color: rgba(153, 51, 0, 0.7);
   box-shadow: 1px 1px 1px 1px #656565;
   border-radius:1px;
   color:white;
   font-family:verdana;
   word-wrap: break-word;
 padding:10px;
+text-align:center;
 }
 
 .logBlock3{

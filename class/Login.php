@@ -27,9 +27,10 @@ class Login{
             return ;            
 
         }
-        elseif(!isset($_SESSION['nombre_essai'])){
-        $_SESSION['nombre_essai'] = 1;
-        } 
+        else{
+            if(!isset($_SESSION['nombre_essai'])){
+            $_SESSION['nombre_essai'] = 1;
+        }   }
         
         $id = htmlspecialchars($_POST[$id]);
         $pass = htmlspecialchars($_POST[$pass]);
