@@ -23,11 +23,13 @@ class Login{
      * @return string
      */     
     public function verifChamps($id,$pass){
-
-
+ 
         if((!isset($_POST[$id])) OR (!isset($_POST[$pass]))){
             return ;            
         }
+        elseif(!isset($_SESSION['nombre_essai'])){
+        $_SESSION['nombre_essai'] = 1;
+        } 
         
         $id = htmlspecialchars($_POST[$id]);
         $pass = htmlspecialchars($_POST[$pass]);
@@ -44,7 +46,7 @@ class Login{
                 $verif = $verifBdd->verifInfo($id);
 
                 if($pass != $verif){
-                    return "mauvais mot de passe/identifiant";
+                    return "Identifiant/Mot de passe incorrect";
                 }
                 else{
                     return "OK";

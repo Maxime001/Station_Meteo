@@ -4,6 +4,7 @@
     require 'class/Autoloader.php';
     Autoloader::register();  
     
+
     include 'verif.php';
 
     if(!isset($_SESSION['validUser'])){
