@@ -31,6 +31,7 @@
                 <div class="fieldContainerValidate">
                     <?= $form->submit() ;?>
                 </div>
+          
             </div>     
 
 
@@ -38,7 +39,8 @@
 
 
         </div>
-        <div class="logBlock2"><span class="verifStyle"><?= $Verif;?></span></div>  
+        <div  class="logBlock2"><span class="verifStyle2"><?= $Verif;?></span></div>  
+        <div  style="display:none"class="logBlock3"><span class="verifStyle"><?= $Verif;?></span></div>  
 
     </form>
 </body>
