@@ -90,4 +90,15 @@ class BaseDonnees extends Bdd {
         }
          return $array;
     }
+    
+    public function envoiDonnee($valeur){
+        $this->bdd->exec('INSERT INTO ip(ip) VALUES('.$valeur.')');
+    }
+    
+    public function receptionDonnee($valeur){
+        $reponse =$this->bdd->query('SELECT ip FROM ip WHERE ip = "'.$valeur.'"');
+            if($donnees = $reponse->fetch()){
+                return true;
+            }
+    }
 }
