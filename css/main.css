@@ -96,7 +96,7 @@ transform: translateY(-75%);
 
 }
 
-body {
+.login {
     margin: 0px;
     overflow: hidden;
 }
