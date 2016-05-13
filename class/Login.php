@@ -36,8 +36,8 @@ class Login{
                 $_SESSION['nombre_essai'] += 1;
                 if($_SESSION['nombre_essai'] >=5){
                     
-                //$IP = $_SERVER['REMOTE_ADDR'];
-                    $IP =  "192.168.1.2";
+                $IP = $_SERVER['REMOTE_ADDR'];
+
                     $bdd = new BaseDonnees();
                     $bdd->envoiDonnee("'$IP'");
                     
