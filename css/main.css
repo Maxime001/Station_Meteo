@@ -120,7 +120,6 @@ transform: translateY(-75%);
 }
 
 .fieldContainerValidate {
-
     display: table;
     margin: 0 auto;
     width: 320px;
@@ -156,7 +155,7 @@ form input:-webkit-autofill {
     font-size: 18px;
 }
 
-button {
+.submitButton {
     width: 275px;
     height: 40px;
     margin-left: 20px;
@@ -181,16 +180,11 @@ button:hover {
 }
 
 .title{
-        z-index:10;
-
+    z-index:10;
     margin:0 auto;
     padding:0 auto;
-
- 
-color:white;
-font-family:verdana;
-font-size:17px;
-
+    color:white;
+    font-family:verdana;
+    font-size:17px;
     border-color: #0b5e9a;
-
 }

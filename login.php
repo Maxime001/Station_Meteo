@@ -2,7 +2,9 @@
 <head>
     <title>Bienvenue</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
     <script type="text/javascript">
+
     </script>
 </head>
 <body class="login">
@@ -29,7 +31,7 @@
                      </span>
                 </div ></br>
                 <div class="fieldContainerValidate">
-                    <?= $form->submit() ;?>
+                    <?= $form->submit("submitButton") ;?>
                 </div>
           
             </div>     
@@ -40,7 +42,7 @@
 
         </div>
         <div  class="logBlock2"><span class="verifStyle2"><?= $Verif;?></span></div>  
-        <div  style="display:none"class="logBlock3"><span class="verifStyle"><?= $Verif;?></span></div>  
+        <!--<div  style="display:none"class="logBlock3"><span class="verifStyle"></span></div>  -->
 
     </form>
 </body>

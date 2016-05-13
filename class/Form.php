@@ -49,7 +49,7 @@ class Form {
     /*
      *
      */
-    public function submit(){
-        return $this->surround('<button type="submit">Envoyer</button>');
+    public function submit($class){
+        return $this->surround('<button class="'.$class.'" type="submit">Envoyer</button>');
     }
 }
