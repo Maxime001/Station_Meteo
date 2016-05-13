@@ -14,7 +14,7 @@
     </script>
 </head>
 <body class="login" onload="afficheAlerte()">
-    <form action="index.php" method="post" enctype="multipart/form-data" autocomplete="off">
+    <form action="#" method="post" enctype="multipart/form-data" autocomplete="off">
         
 
         <div id="dd" class="logBlock">     
