@@ -25,7 +25,7 @@ class Login{
     public function verifChamps($id,$pass){
 
 
-        if(!isset($_POST[$id]) OR !isset($_POST[$pass])){
+        if((!isset($_POST[$id])) OR (!isset($_POST[$pass]))){
             return ;            
         }
         
