@@ -7,9 +7,6 @@
 setTimeout(updateWeather,3000); 
 }*/
 
-function verifId(){
-
-}
 
 function ouvreToit(){
      $.ajax({
