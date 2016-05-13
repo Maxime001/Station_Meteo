@@ -5,15 +5,20 @@
     Autoloader::register();  
     
 
-    include 'verif.php';
-
-    if(!isset($_SESSION['validUser'])){
-        include 'login.php';
+    $ip = new BloquageIp();
+    $res = $ip->verifBloque();
+    if($res == true){
+        include '404.php';
     }
+    else{    
+        include 'verif.php';
 
-    elseif(isset($_SESSION['validUser'])){
-        include 'main.php';
+        if(!isset($_SESSION['validUser'])){
+            include 'login.php';
+        }
+
+        elseif(isset($_SESSION['validUser'])){
+            include 'main.php';
+        }
     }
-
-    ?>
 
