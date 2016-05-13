@@ -44,22 +44,43 @@
 }
 .logBlock2{
     z-index:10;
-    width:320px;
-    height:50px;
+    width:300px;
+    min-height:50px;
+    height:auto;
     margin:0 auto;
     padding:0 auto;
-   margin-top: -9vh;  
-transform: translateY(-75%);
+   margin-top: -3%;  
+  transform: translateY(-55%);
   background-color: rgba(0, 51, 153, 0.3);
   box-shadow: 1px 1px 1px 1px #656565;
   border-radius:1px;
   color:white;
-  font-family:calibri;
+  font-family:verdana;
+  word-wrap: break-word;
+padding:10px;
+}
+
+.logBlock3{
+    z-index:10;
+    width:320px;
+    height:50px;
+    margin:0 auto;
+    padding:0 auto;
+   margin-top: -5vh;  
+transform: translateY(-75%);
+  background-color: rgba(153, 51, 0, 0.5);
+  box-shadow: 1px 1px 1px 1px #656565;
+  border-radius:1px;
+  color:white;
+  font-family:verdana;
   
 }
+
 .verifStyle{
-    padding:10px;
-    font-size:18px;
+    padding-left:20px;
+    height: 3em; /* hauteur du parent */
+  line-height: 3em; 
+    font-size:15px;
 }
 
 .logBlock {
@@ -75,7 +96,7 @@ transform: translateY(-75%);
 
 }
 
-body {
+.login {
     margin: 0px;
 	overflow:hidden;
 }
@@ -167,7 +188,7 @@ button:hover {
 
  
 color:white;
-font-family:calibri;
+font-family:verdana;
 font-size:17px;
 
     border-color: #0b5e9a;
