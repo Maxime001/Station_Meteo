@@ -77,7 +77,7 @@ transform: translateY(-75%);
 
 body {
     margin: 0px;
-    overflow: hidden;
+	overflow:hidden;
 }
 
 .fieldContainer1 {
