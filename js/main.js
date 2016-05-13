@@ -19,6 +19,12 @@ $(document).ready(function() {
         importJSON();
     }, 2000);
     
+    
+     $(".logBlock2").click(function(){
+           verifId();
+       });
+       
+    
     // Jquery sur les boutons de contrôle de l'observatoire
     var toit = true;
     var alarme = true;
