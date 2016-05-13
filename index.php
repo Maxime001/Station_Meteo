@@ -13,4 +13,6 @@
     elseif(isset($_SESSION['validUser'])){
         include 'main.php';
     }
-?>
+
+    ?>
+
