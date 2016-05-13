@@ -5,14 +5,19 @@
     <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="js/ajax.js"></script>
     <script type="text/javascript">
-
+        function afficheAlerte(){
+        $var = "<?= $Verif ?>";
+        if($var === ""){
+           document.getElementById("alertBlock").style.display = "none";
+        }
+    }
     </script>
 </head>
-<body class="login">
+<body class="login" onload="afficheAlerte()">
     <form action="index.php" method="post" enctype="multipart/form-data" autocomplete="off">
         
 
-        <div class="logBlock">     
+        <div id="dd" class="logBlock">     
             <div class="title" style="margin-top:-40px; margin-left:100px; position:absolute; color:white; font-size:25px;">Andromède</div>
         
             <div class="logContainer"></br></br>
@@ -42,7 +47,7 @@
 
 
         </div>
-        <div  class="logBlock2"><span class="verifStyle2"><?= $Verif;?></span></div>  
+        <div id="alertBlock"  class="logBlock2"><span class="verifStyle2"><?= $Verif;?></span></div>  
         <!--<div  style="display:none"class="logBlock3"><span class="verifStyle"></span></div>  -->
 
     </form>
