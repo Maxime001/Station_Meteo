@@ -12,14 +12,21 @@
            document.getElementById("alertBlock").style.visibility = "visible";
         }
     }
+    
+    $( document ).ready(function() {
+    $('#barr').show("slow");
+    $('#time').show("slow");
+    $('#dd').fadeIn(1000);
+});
+
     </script>
 </head>
 <body class="login" onload="afficheAlerte(); document.getElementById('focus').focus(); startTime()" >
     <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
-        <div id="time"></div>
-        <div id="barr"></div>
+        <div style="display:none" id="time"></div>
+        <div style="display:none" id="barr"></div>
 
-        <div id="dd" class="logBlock">     
+        <div style="display:none" id="dd" class="logBlock">     
             <div class="title" style="">Andromède</div>
         
             <div class="logContainer"></br></br>
