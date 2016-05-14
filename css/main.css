@@ -1,3 +1,26 @@
+@font-face {
+    font-family: "NumericFont";
+    src: url('font/Open24DisplaySt.ttf');
+}
+
+#time{
+    color:rgba(255, 255, 255, 0.8);
+    font-size:35px;
+    position:absolute;
+      top: 50px;
+  right: 20px;
+    letter-spacing : 3px;
+    font-family: "NumericFont";
+}
+#barr{
+    width:180px;
+    height:1px;
+    position:absolute;
+    border-bottom:1px solid;
+    border-color:rgba(255, 255, 255, 0.6);
+    top:105px;
+    right:20px;
+}
 .graphique {
     /*min-width: 310px;*/
 

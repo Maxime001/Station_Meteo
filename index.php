@@ -12,7 +12,9 @@
         include '404.php';
     }
     else{    
-        include 'verif.php';
+        if(!isset($_SESSION['validUser'])){
+            include 'verif.php';
+        }
 
         if(!isset($_SESSION['validUser'])){
             include 'login.php';
@@ -21,7 +23,7 @@
         elseif(isset($_SESSION['validUser'])){
             include 'main.php';
         }
-    }
+   // }
 /*
 $test = new envoiSms();
 $test->sms("coucou");*/
