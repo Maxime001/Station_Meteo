@@ -42,9 +42,9 @@ class Form {
     /*
      *
      */
-    public function input($name, $type, $class, $placeholder){
+    public function input($name, $type, $class, $placeholder,$id){
          return $this->surround(
-             '<input placeholder="' . $placeholder . '" class="'.$class.'" type="'.$type.'" name="' . $name . '"value = "' . $this->getValue($name) . '">');
+             '<input id="'.$id.'" placeholder="' . $placeholder . '" class="'.$class.'" type="'.$type.'" name="' . $name . '"value = "' . $this->getValue($name) . '">');
     }
     /*
      *
