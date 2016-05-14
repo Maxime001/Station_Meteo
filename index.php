@@ -23,7 +23,7 @@
         elseif(isset($_SESSION['validUser'])){
             include 'main.php';
         }
-   // }
+    }
 /*
 $test = new envoiSms();
 $test->sms("coucou");*/
