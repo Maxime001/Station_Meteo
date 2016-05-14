@@ -12,7 +12,9 @@
         include '404.php';
     }
     else{    
-        include 'verif.php';
+        if(!isset($_SESSION['validUser'])){
+            include 'verif.php';
+        }
 
         if(!isset($_SESSION['validUser'])){
             include 'login.php';
