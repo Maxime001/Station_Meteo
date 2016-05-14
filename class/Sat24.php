@@ -1,4 +1,7 @@
 <?php
+    /**
+     * Classe gérant toutes les API externes
+     */
     class Sat24{ 
         
         public static function Date(){

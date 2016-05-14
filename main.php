@@ -11,6 +11,7 @@ if($_SERVER['REQUEST_URI'] == '/main.php') header('Location:/');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/button.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <!-- Highcharts -->
     <script src="js/libs/highcharts.js"></script>
@@ -104,5 +105,16 @@ $MajJson->save24h();
 <h1> Affichage historique graphiques </h1>
 
 </br></br>
+
+<div class="onoffswitch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
+
+
+
 </body>
 </html>

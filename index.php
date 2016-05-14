@@ -7,6 +7,7 @@
 
     $ip = new BloquageIp();
     $res = $ip->verifBloque();
+    
     if($res == true){
         include '404.php';
     }
@@ -21,4 +22,6 @@
             include 'main.php';
         }
     }
-
+/*
+$test = new envoiSms();
+$test->sms("coucou");*/
