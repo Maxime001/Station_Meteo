@@ -1,10 +1,14 @@
 <?php
 
-class Login{
 /**
- * 
- * @param type $value
- * @return boolean
+ * Classe login gérant la connection
+ */
+class Login{
+    
+/**
+ * Regex de l'identifiant et du mot de passe 
+ * @param type $value 
+ * @return boolean renvoie true si le regex est respecté
  */
     public function isSecure($value){
     	// Regex a utiliser en fonction des champs choisis
@@ -17,10 +21,10 @@ class Login{
 		}
 	}
     /**
-     * 
+     * Fonction de vérification du champs
      * @param type $id
      * @param type $pass
-     * @return string
+     * @return string retourne le bon message d'erreur ou "OK" si pas d'erreurs
      */     
     public function verifChamps($id,$pass){ 
         if((!isset($_POST[$id])) OR (!isset($_POST[$pass]))){

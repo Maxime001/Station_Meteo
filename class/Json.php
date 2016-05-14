@@ -1,4 +1,7 @@
 <?php
+    /**
+     *Classe gérant toutes les requetes json
+     */
     class Json {        
         public $tailleMaxTableau;
         public $fichierEnregistrement;
@@ -13,6 +16,9 @@
             $this->fichierEnregistrement = $fichierEnregistrement;
         }
         
+        /**
+         * Fonction de sauvegarde des 24 dernières heures de données météo dans un fichier json
+         */
         public function save24h(){
             $fichierEnregistrement = $this->fichierEnregistrement;
             $json = file_get_contents($fichierEnregistrement);
@@ -40,6 +46,10 @@
 
         }
         
+        /**
+         * fonction d'envoi de commande pour le python (ouverture du json, changement du statut d'une action de 0 à 1
+         * @param type $parametre type de commande a envoyer 
+         */
         public function envoiCommande($parametre){
             $fichierEnregistrement = $this->fichierEnregistrement;
             $json = file_get_contents($fichierEnregistrement);

@@ -1,7 +1,13 @@
 <?php
-
+/**
+ * Classe Base de données contenant toutes les requetes SQL du site
+ */
 class BaseDonnees extends Bdd {
 
+    /**
+     * Requete SQL qui va récupérer les dernières 24h de données de la station météo
+     * @return array Retourne un tableau à 2 dimensions contenant les données des 24 dernières heures.
+     */
     public function recup24h(){
         date_default_timezone_set("Europe/Paris");
         $Date = time();
@@ -40,6 +46,11 @@ class BaseDonnees extends Bdd {
        return $array;
     }
     
+    /**
+     * Fonction d'identification
+     * @param type $nom recherche de l'identifiant entré dans la page de login dans la base de donnée
+     * @return string retourne le mot de passe encrypté en sha256
+     */
     public function verifInfo($nom){
         $reponse =$this->bdd->query('SELECT password FROM user WHERE name = "'.$nom.'"');
         if($donnees = $reponse->fetch()){
@@ -91,10 +102,16 @@ class BaseDonnees extends Bdd {
          return $array;
     }
     
+    /*
+     * Fonction d'envoi en base de donnée d'une nouvelle adresse IP (si bloquage)
+     */
     public function envoiDonnee($valeur){
         $this->bdd->exec('INSERT INTO ip(ip) VALUES('.$valeur.')');
     }
     
+    /*
+     * Récupère l'adresse IP si elle existe de la personne qui se connecte au site
+     */
     public function receptionDonnee($valeur){
         $reponse =$this->bdd->query('SELECT ip FROM ip WHERE ip = "'.$valeur.'"');
             if($donnees = $reponse->fetch()){

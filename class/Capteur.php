@@ -1,5 +1,8 @@
 <?php
 
+    /**
+     * Classe principale gérant tout les capteurs de données météo
+     */
     class Capteur {
        protected $colonneBDD;
         
