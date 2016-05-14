@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="js/ajax.js"></script>
+    <script type="text/javascript" src="js/clock.js"></script>
     <script type="text/javascript">
         function afficheAlerte(){
         $var = "<?= $Verif ?>";
@@ -13,9 +14,10 @@
     }
     </script>
 </head>
-<body class="login" onload="afficheAlerte(); document.getElementById('focus').focus();" >
+<body class="login" onload="afficheAlerte(); document.getElementById('focus').focus(); startTime()" >
     <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
-        
+        <div id="time"></div>
+        <div id="barr"></div>
 
         <div id="dd" class="logBlock">     
             <div class="title" style="">Andromède</div>
