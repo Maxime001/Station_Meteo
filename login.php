@@ -13,12 +13,12 @@
     }
     </script>
 </head>
-<body class="login" onload="afficheAlerte()">
+<body class="login" onload="afficheAlerte(); document.getElementById('focus').focus();" >
     <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
         
 
         <div id="dd" class="logBlock">     
-            <div class="title" style="margin-top:-40px; margin-left:100px; position:absolute; color:white; font-size:25px;">Andromède</div>
+            <div class="title" style="margin-top:-40px; margin-left:90px; position:absolute; color:white; font-size:25px;">Andromède</div>
         
             <div class="logContainer"></br></br>
                 <?php
@@ -27,13 +27,13 @@
                 <div class="fieldContainer1">
                     <img src="img/user.png" class="imgConnect">
                     <span class="field">
-                        <?= $form->input("id", "text", "saisie", "Identifiant"); ?>
+                        <?= $form->input("id", "text", "saisie", "Identifiant","focus"); ?>
                     </span>
                 </div></br>
                 <div class="fieldContainer2">
                      <img src="img/pass.png" class="imgConnect">
                      <span  class="field">
-                        <?=$form->input("pass", "password", "saisie", "Mot de passe"); ?>
+                        <?=$form->input("pass", "password", "saisie", "Mot de passe","nonfocus"); ?>
                      </span>
                 </div ></br>
                 <div class="fieldContainerValidate">
