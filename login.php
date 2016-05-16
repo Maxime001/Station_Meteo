@@ -1,7 +1,7 @@
 <!doctype html>
 <head>
     <title>Bienvenue</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="js/ajax.js"></script>
