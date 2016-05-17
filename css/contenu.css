@@ -4,11 +4,15 @@
 
 .mainTitle{
     font-family: calibri;
-    font-size:18px;
-    margin:0 auto;
-    padding: 0 auto;
+    font-size:20px;
+    margin:-1px;
+    padding: -1px;
     text-align:center;
-    border:1px solid black;
+    border-radius:2px;
+    border:1px solid rgba(255, 255, 255, 0.6);
+    color:white;
+    opacity:0.9;
+    background-color:#34495E;
     
 }
 
