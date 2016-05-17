@@ -35,22 +35,21 @@
 .graphique {
     /*min-width: 310px;*/
 
-    width: 1400px;
-    height: 500px;
-    margin: 0 auto;
+    width: 800px;
+    height: 300px;
+
 }
 
 .jauge {
-    min-width: 250px;
+    width: 220px;
     height: 300px;
-    border: 1px solid black;
-
+    margin:-10px;
 }
 
 .solidJauge {
     width: 300px;
     height: 200px;
-    border: 1px solid black;
+
 }
 
 .error404 {
@@ -244,3 +243,4 @@ button:hover {
 #alertBlock{
     visibility:hidden;
 }
+
