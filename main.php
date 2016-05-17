@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_URI'] == '/main.php') header('Location:/');
     <script src="js/libs/exporting.js"></script>
     <!-- Fonctions graphiques et JSON -->
     <script type="text/javascript" src="js/graphiqueJauge.js"></script>
-     <script type="text/javascript" src="js/graphiqueSolidJauge.js"></script>
+    <script type="text/javascript" src="js/graphiqueSolidJauge.js"></script>
     <script type="text/javascript" src="js/graphiqueCourbe.js"></script>
     <script type="text/javascript" src="js/graphiqueStyles.js"></script>
     <script type="text/javascript" src="js/jsonHandler.js"></script>
@@ -95,6 +95,7 @@ $MajJson = new Json(0,"json/meteo24h.json");
 $MajJson->save24h();
 
 ?>
+<div class="graphique" id="graphePression" ></div>
  <div class="graphique" id="grapheHumidite" ></div>
 <div class="graphique" id="grapheTemperatureExterieure" ></div>
 <div class="graphique" id="grapheDetectionEau"></div>
@@ -106,13 +107,6 @@ $MajJson->save24h();
 
 </br></br>
 
-<div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-    <label class="onoffswitch-label" for="myonoffswitch">
-        <span class="onoffswitch-inner"></span>
-        <span class="onoffswitch-switch"></span>
-    </label>
-</div>
 
 
 

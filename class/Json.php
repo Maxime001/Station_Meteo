@@ -26,15 +26,63 @@
             $bdd = new BaseDonnees();
             $donnees = $bdd->recup24h();
             
-            $json->Date = $donnees[0];
-            $json->pression = $donnees[1];
-            $json->luminosite = $donnees[2];
-            $json->humidite = $donnees[3];
-            $json->detectionEau = $donnees[4];
-            $json->mesureBruit = $donnees[5];
-            $json->temperatureExterieure = $donnees[6];
-            $json->temperatureInterieure = $donnees[7];
+            $json->donnees->Date = $donnees[0];
+            $json->donnees->pression = $donnees[1];
+            $json->donnees->luminosite = $donnees[2];
+            $json->donnees->humidite = $donnees[3];
+            $json->donnees->detectionEau = $donnees[4];
+            $json->donnees->mesureBruit = $donnees[5];
+            $json->donnees->temperatureExterieure = $donnees[6];
+            $json->donnees->temperatureInterieure = $donnees[7];
             
+            $pressionMin = min($donnees[1]);
+            $pressionMax = max($donnees[1]);
+            $luminositeMin = min($donnees[2]);
+            $luminositeMax = max($donnees[2]);
+            $humiditeMin = min($donnees[3]);
+            $humiditeMax = max($donnees[3]);
+            $detectionEauMin = min($donnees[4]);
+            $detectionEauMax = max($donnees[4]);
+            $mesureBruitMin = min($donnees[5]);
+            $mesureBruitMax = max($donnees[5]);            
+            $temperatureExterieureMin = min($donnees[6]);
+            $temperatureExterieureMax = max($donnees[6]);
+            $temperatureInterieureMin = min($donnees[7]);
+            $temperatureInterieureMax = max($donnees[7]);
+            
+            $json->minMax->pressionMin = $pressionMin;
+            $json->minMax->pressionMax = $pressionMax;
+            $json->minMax->luminositeMin = $luminositeMin;
+            $json->minMax->luminositeMax = $luminositeMax;
+            $json->minMax->humiditeMin = $humiditeMin;
+            $json->minMax->humiditeMax = $humiditeMax;
+            $json->minMax->detectionEauMin = $detectionEauMin;
+            $json->minMax->detectionEauMax = $detectionEauMax;
+            $json->minMax-> mesureBruitMin = $mesureBruitMin;
+            $json->minMax->mesureBruitMax = $mesureBruitMax;
+            $json->minMax->temperatureExterieureMin = $temperatureExterieureMin;
+            $json->minMax->temperatureExterieureMax = $temperatureExterieureMax;
+            $json->minMax->temperatureInterieureMin = $temperatureInterieureMin;
+            $json->minMax->temperatureInterieureMax = $temperatureInterieureMax;
+                    
+                    /*
+             * 
+             *     "minMax": {
+        "pressionMin": 0,
+        "pressionMax": 0,
+        "luminositeMin": 0,
+        "luminositeMax": 0,
+        "humiditeMin": 0,
+        "humiditeMax": 0,
+        "detectionEauMin": 0,
+        "detectionEauMax": 0,
+        "mesureBruitMin": 0,
+        "mesureBruitMax": 0,
+        "temperatureExterieureMin": 0,
+        "temperatureExterieureMax": 0,
+        "temperatureInterieureMin": 0,
+        "temperatureInterieureMax": 0
+             */
            
             $json = json_encode($json, JSON_PRETTY_PRINT);
             
