@@ -6,7 +6,7 @@
     
 
     $ip = new BloquageIp();
-   $res = $ip->verifBloque();
+    $res = $ip->verifBloque();
     
     if($res == true){
         include '404.php';

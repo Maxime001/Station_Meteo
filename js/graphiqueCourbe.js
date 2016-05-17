@@ -5,10 +5,45 @@
  * @param Obj
  */
 function loadOptions(data,arrayDate){
-   
+       // Humidite 
+    GrapheCourbePression = {
+        data : data.donnees.pression,
+        div : "#graphePression",
+        titre: "pression",
+        soustitre:"Pression ambiante pour la journée",
+        mini:data.minMax.pressionMin,
+        maxi:data.minMax.pressionMax,
+        unite:"HPa",
+        limd1:0,
+        limf1:50,
+        valeur1:"Air sec",
+        couleur1:"#606060",
+        limd2:50,
+        limf2:70,
+        valeur2:"Air humide",
+        couleur2:"#606060",
+        limd3:70,
+        limf3:80,
+        valeur3:"Air très humide",
+        couleur3:"#606060",
+        limd4:80,
+        limf4:90,
+        valeur4:"Air saturé en eau",
+        couleur4:"#606060",
+        limd5:90,
+        limf5:100,
+        valeur5:"Pluie très probable",
+        couleur5:"#606060",
+        an:arrayDate[0],
+        mois:arrayDate[1],
+        jour:arrayDate[2],
+        heure:arrayDate[3],
+        minute:arrayDate[4],
+        seconde:arrayDate[5]
+    };
         // Humidite 
     GrapheCourbeHumidite = {
-        data : data.humidite,
+        data : data.donnees.humidite,
         div : "#grapheHumidite",
         titre: "humidité",
         soustitre:"Humidite ambiante pour la journée",
@@ -44,12 +79,12 @@ function loadOptions(data,arrayDate){
     };
     // Options pour graphique de température exterieure
     GrapheCourbeTemperatureExt = {
-        data : data.temperatureExterieure,
+        data : data.donnees.temperatureExterieure,
         div : "#grapheTemperatureExterieure",
         titre: "Température Exterieure",
         soustitre:"Températures de la journée",
-        mini:0,
-        maxi:45,
+        mini:data.minMax.temperatureExterieureMin,
+        maxi:data.minMax.temperatureExterieureMax,
         unite:"%HR",
         limd1:-20,
         limf1:0,
@@ -80,7 +115,7 @@ function loadOptions(data,arrayDate){
     };
     // Options pour le graphique de détection d'eau
     GrapheCourbeDetectionEau = {
-        data : data.detectionEau,
+        data : data.donnees.detectionEau,
         div : "#grapheDetectionEau",
         titre: "Detection d'eau",
         soustitre:"Detection d'eau aujourd'hui",
@@ -116,12 +151,12 @@ function loadOptions(data,arrayDate){
     };
     // Options pour le graphique de luminosité
     GrapheCourbeLuminosite = {
-        data : data.luminosite,
+        data : data.donnees.luminosite,
         div : "#grapheLuminosite",
         titre: "Luminosité du ciel",
         soustitre:"Graphique de la luminosité du jour",
-        mini:0,
-        maxi:20000,
+        mini:data.minMax.luminositeMin,
+        maxi:data.minMax.luminositeMax,
         unite:"SU",
         
         an:arrayDate[0],
@@ -162,7 +197,7 @@ function detectTime(data){
  */
 function loadDataGraphe(data){
     
-    var arrayDate = detectTime(data.Date[0]);
+    var arrayDate = detectTime(data.donnees.Date[0]);
     loadOptions(data,arrayDate);
 
 
@@ -170,6 +205,7 @@ function loadDataGraphe(data){
     initGrapheCourbe(GrapheCourbeTemperatureExt);
     initGrapheCourbe(GrapheCourbeDetectionEau);
     initGrapheCourbe(GrapheCourbeLuminosite);
+    initGrapheCourbe(GrapheCourbePression);
 }
 
 /*
