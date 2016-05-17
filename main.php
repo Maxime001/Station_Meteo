@@ -88,23 +88,23 @@
                     <div class=" jauge" id="temperatureExterieure"></div>
                     <div class="solidJauge  " id="deltaTemperature" ></div>
                 </div>
-                <div class="fond" style="margin-top:80px;height:500px; padding:5px;z-index:-10;">
-                    <div class= "mainTitle" style="">Contrôle des commandes</div>
+                <div class="fond affichageCommandes">
+                    <div class= "mainTitle">Contrôle des commandes</div>
                     </br></br>
                     <button id="Resistance">Resistance chauffante</button></br></br>
                     <button id="Alarme">Alarme</button></br></br>
                     <button id="Toit">Toit</button></br></br>
                 </div>
 
-                <div class="fond " style="margin-top:80px; height:auto; padding:5px;z-index:-10;">
+                <div class="fond affichageCourbes ">
                     <div class= "mainTitle">Meteo des dernières 24h</div>
-                    <div class="graphique" id="graphePression" ></div></br>
+                    <div class="graphique" id="graphePression" ></div>
                     <div class="graphique" id="grapheHumidite" ></div>
                     <div class="graphique" id="grapheTemperatureExterieure" ></div>
                     <div class="graphique" id="grapheDetectionEau"></div>
                     <div class="graphique" id="grapheLuminosite"></div>
                 </div>
-                <div class="fond" style="height:200px; padding:5px;z-index:-10;">
+               
                     
             </main>
 
