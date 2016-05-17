@@ -38,7 +38,7 @@
         <script type="text/javascript"></script>
     </head>
     <body class="main">
-        <div class="container">
+        <div class="container-fluid">
             <ul id="gn-menu" class="gn-menu-main">
                 <li class="gn-trigger">
                     <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
@@ -75,19 +75,19 @@
                 <li><a class="codrops-icon codrops-icon-drop" href=""><span>Back to the Codrops Article</span></a></li>
             </ul>
             <main>
-                
+       
       
-                <div class="well col-sm-6 left-side" style="margin-top:80px">
-                     <div class= col-sm-12"  >Meteo temps réel</div>
-                    <div class="jauge col-sm-6"  id="humidite"></div>
-                    <div class="jauge col-sm-6" id="pluie"></div>
-                    <div class="jauge col-sm-6" id="luminosite"></div>
-                    <div class="jauge col-sm-6" id="temperatureExterieure"></div>
+                <div class="well col-sm-3 left-side" style="margin-top:80px">
+                     <div class= "mainTitle">Meteo temps réel</div>
+                    <div class="jauge "  id="humidite"></div>
+                    <div class="jauge" id="pluie"></div>
+                    <div class="jauge " id="luminosite"></div>
+                    <div class="jauge " id="temperatureExterieure"></div>
                     <div class="solidJauge col-sm-12" id="deltaTemperature" ></div>
                 </div>
                   <div class="jauge" id="pression"></div>
               
-                
+         
             </main>
         </div>
         
@@ -96,5 +96,8 @@
         <script>
                 new gnMenu( document.getElementById( 'gn-menu' ) );
         </script>
+        
+        
+    </div>
     </body>
 </html>
