@@ -35,7 +35,7 @@
 .graphique {
     /*min-width: 310px;*/
 
-    width: 800px;
+    width: auto;
     height: 300px;
 
 }
@@ -43,8 +43,8 @@
 .jauge {
     width: 220px;
     height: 300px;
-
-float:left;
+    padding-left:0px;
+    padding-right:0px;
 }
 
 .solidJauge {
