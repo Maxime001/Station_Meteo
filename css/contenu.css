@@ -18,31 +18,36 @@
 
 .fond{
     background-color:white;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius:5px;
+    z-index:-10;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.1);
+        display: inline-block;
+    vertical-align: top;
 }
 
 .affichageJauges{
     height:auto;
     margin-top:80px;
     z-index:-10;
-    width:408px;
+    min-width:408px;
     padding:-25px;
+    width:30%;
 
 
 }
 
 .affichageCommandes{
-    height:500px;
+    height:840px;
     margin-top:80px;
     z-index:-10;
-    width: 500px;
+    width: 30%;
 
 }
 
 .affichageCourbes{
     height:auto;
     z-index:-10;
-    width:500px;
+    width:39%;
       margin-top:80px;
 }

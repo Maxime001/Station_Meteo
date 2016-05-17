@@ -94,7 +94,10 @@
                     <button id="Resistance">Resistance chauffante</button></br></br>
                     <button id="Alarme">Alarme</button></br></br>
                     <button id="Toit">Toit</button></br></br>
+                    </br></br></br></br></br></br></br></br>
+                    <div class="mainTitle">Vue 3D</div>
                 </div>
+                
 
                 <div class="fond affichageCourbes ">
                     <div class= "mainTitle">Meteo des dernières 24h</div>
