@@ -41,15 +41,22 @@
 }
 
 .jauge {
-    width: 220px;
+    width: 200px;
     height: 300px;
     padding-left:0px;
     padding-right:0px;
+
+    margin : 0 auto;
+    padding:0 auto;
+ 
+    display:inline-block;
 }
 
 .solidJauge {
     width: 300px;
     height: 200px;
+    display : table;
+    margin : 0 auto;
 
 }
 

@@ -9,9 +9,20 @@
     padding: 0 auto;
     text-align:center;
     border:1px solid black;
+    
 }
 
-.well{
-    margin:5px;
+.fond{
+    background-color:white;
+    border: 1px solid white;
+    border-radius:5px;
 }
 
+.affichageJauges{
+    height:auto;
+    margin-top:80px;
+    z-index:-10;
+    width:408px;
+    padding:-25px;
+
+}
