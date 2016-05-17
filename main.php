@@ -35,6 +35,7 @@
         <script type="text/javascript" src="js/progressBarr.js"></script>
         <script type="text/javascript" src="js/ajax.js"></script>
         <script src="js/libs/solid-jauge.js"></script>
+        <script type="text/javascript" src="js/clock.js"></script>
         <script type="text/javascript"></script>
     </head>
     <body class="main">
@@ -72,12 +73,13 @@
                 </li>
                 <li><a href="http://tympanus.net/codrops">Codrops</a></li>
                 <li><a class="codrops-icon codrops-icon-prev" href=""><span>Previous Demo</span></a></li>
-                <li><a class="codrops-icon codrops-icon-drop" href=""><span>Back to the Codrops Article</span></a></li>
+                <li> STATUT DES CAPTEURS </li>
+                <li>HEURE DU SERVEUR</li>
             </ul>
-            <main>
-       
-
-                <div class="well col-sm-3" style="height:auto; margin-top:80px">
+            <main style="margin:0 auto; padding:0 auto">
+           
+            
+                <div class="well col-sm-3" style="height:auto; margin-top:80px;z-index:-10;">
                      <div class= "mainTitle col-sm-12">Meteo temps réel</div>
                     <div class="  col-xl-12 col-xs-12 col-md-12 col-lg-6  jauge"  id="humidite"></div>
                     <div class="   col-xl-12 col-xs-12 col-md-12 col-lg-6 jauge" id="pluie"></div>
@@ -85,13 +87,16 @@
                     <div class=" col-xl-12 col-xs-12  col-md-12 col-lg-6 jauge" id="temperatureExterieure"></div>
                     <div class="solidJauge  col-md-12" id="deltaTemperature" ></div>
                 </div>
-                <div class="well col-sm-4" style="margin-top:80px;height:500px; padding:5px;">
+                <div class="well col-sm-4" style="margin-top:80px;height:500px; padding:5px;z-index:-10;">
+                    <div class= "mainTitle col-sm-12" style="">Contrôle des commandes</div>
+                    </br></br>
                     <button id="Resistance">Resistance chauffante</button></br></br>
                     <button id="Alarme">Alarme</button></br></br>
                     <button id="Toit">Toit</button></br></br>
                 </div>
 
-                <div class="well col-sm-4" style="margin-top:80px; height:auto; padding:5px;">
+                <div class="well col-sm-4" style="margin-top:80px; height:auto; padding:5px;z-index:-10;">
+                    <div class= "mainTitle col-sm-12">Meteo des dernières 24h</div>
                     <div class="graphique" id="graphePression" ></div>
                     <div class="graphique" id="grapheHumidite" ></div>
                     <div class="graphique" id="grapheTemperatureExterieure" ></div>
