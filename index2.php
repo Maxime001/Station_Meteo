@@ -1,71 +1,100 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Google Nexus Website Menu</title>
-		<meta name="description" content="A sidebar menu as seen on the Google Nexus 7 website" />
-		<meta name="keywords" content="google nexus 7 menu, css transitions, sidebar, side menu, slide out menu" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="template/css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="template/css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="template/css/component.css" />
-		<script src="js/modernizr.custom.js"></script>
-	</head>
-	<body>
-		<div class="container">
-			<ul id="gn-menu" class="gn-menu-main">
-				<li class="gn-trigger">
-					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
-					<nav class="gn-menu-wrapper">
-						<div class="gn-scroller">
-							<ul class="gn-menu">
-								<li class="gn-search-item">
-									<input placeholder="Search" type="search" class="gn-search">
-									<a class="gn-icon gn-icon-search"><span>Search</span></a>
-								</li>
-								<li>
-									<a class="gn-icon gn-icon-download">Downloads</a>
-									<ul class="gn-submenu">
-										<li><a class="gn-icon gn-icon-illustrator">Vector Illustrations</a></li>
-										<li><a class="gn-icon gn-icon-photoshop">Photoshop files</a></li>
-									</ul>
-								</li>
-								<li><a class="gn-icon gn-icon-cog">Settings</a></li>
-								<li><a class="gn-icon gn-icon-help">Help</a></li>
-								<li>
-									<a class="gn-icon gn-icon-archive">Archives</a>
-									<ul class="gn-submenu">
-										<li><a class="gn-icon gn-icon-article">Articles</a></li>
-										<li><a class="gn-icon gn-icon-pictures">Images</a></li>
-										<li><a class="gn-icon gn-icon-videos">Videos</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div><!-- /gn-scroller -->
-					</nav>
-				</li>
-				<li><a href="http://tympanus.net/codrops">Codrops</a></li>
-				<li><a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/HeaderEffects/"><span>Previous Demo</span></a></li>
-				<li><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=16030"><span>Back to the Codrops Article</span></a></li>
-			</ul>
-
-			
-			<main>
-			<p>test</p> 
-			</br>
-			<p>test</p>
-			</br>
-			<p>
-			test</p>
-			</main>
-		</div><!-- /container -->
-		<script src="template/js/classie.js"></script>
-		<script src="template/js/gnmenu.js"></script>
-		<script>
-			new gnMenu( document.getElementById( 'gn-menu' ) );
-		</script>
-	</body>
+<html>
+    <head>
+        <title> Station Météo</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="shortcut icon" href="../favicon.ico">
+        <!-- CSS du template -->
+        <link rel="stylesheet" type="text/css" href="template/css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="template/css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="template/css/component.css" />
+        <!-- JS du template -->
+        <script src="js/modernizr.custom.js"></script>        
+        <!-- Jquery -->
+        <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/contenu.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <!-- Highcharts -->
+        <script src="js/libs/highcharts.js"></script>
+        <script src="js/libs/highcharts-more.js"></script>
+        <script src="js/libs/exporting.js"></script>
+        <!-- Fonctions graphiques et JSON -->
+        <script type="text/javascript" src="js/graphiqueJauge.js"></script>
+        <script type="text/javascript" src="js/graphiqueSolidJauge.js"></script>
+        <script type="text/javascript" src="js/graphiqueCourbe.js"></script>
+        <script type="text/javascript" src="js/graphiqueStyles.js"></script>
+        <script type="text/javascript" src="js/jsonHandler.js"></script>
+        <script type="text/javascript" src="js/graphiqueOptions"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/progressBarr.js"></script>
+        <script type="text/javascript" src="js/ajax.js"></script>
+        <script src="js/libs/solid-jauge.js"></script>
+        <script type="text/javascript"></script>
+    </head>
+    <body class="main">
+        <div class="container">
+            <ul id="gn-menu" class="gn-menu-main">
+                <li class="gn-trigger">
+                    <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                    <nav class="gn-menu-wrapper">
+                        <div class="gn-scroller">
+                            <ul class="gn-menu">
+                                <li class="gn-search-item">
+                                    <input placeholder="Search" type="search" class="gn-search">
+                                    <a class="gn-icon gn-icon-search"><span>Search</span></a>
+                                </li>
+                                <li>
+                                    <a class="gn-icon gn-icon-download">Downloads</a>
+                                    <ul class="gn-submenu">
+                                        <li><a class="gn-icon gn-icon-illustrator">Vector Illustrations</a></li>
+                                        <li><a class="gn-icon gn-icon-photoshop">Photoshop files</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="gn-icon gn-icon-cog">Settings</a></li>
+                                <li><a class="gn-icon gn-icon-help">Help</a></li>
+                                <li>
+                                    <a class="gn-icon gn-icon-archive">Archives</a>
+                                    <ul class="gn-submenu">
+                                        <li><a class="gn-icon gn-icon-article">Articles</a></li>
+                                        <li><a class="gn-icon gn-icon-pictures">Images</a></li>
+                                        <li><a class="gn-icon gn-icon-videos">Videos</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </li>
+                <li><a href="http://tympanus.net/codrops">Codrops</a></li>
+                <li><a class="codrops-icon codrops-icon-prev" href=""><span>Previous Demo</span></a></li>
+                <li><a class="codrops-icon codrops-icon-drop" href=""><span>Back to the Codrops Article</span></a></li>
+            </ul>
+            <main>
+                
+      
+                <div class="well col-sm-6 left-side" style="margin-top:80px">
+                     <div class= col-sm-12"  >Meteo temps réel</div>
+                    <div class="jauge col-sm-6"  id="humidite"></div>
+                    <div class="jauge col-sm-6" id="pluie"></div>
+                    <div class="jauge col-sm-6" id="luminosite"></div>
+                    <div class="jauge col-sm-6" id="temperatureExterieure"></div>
+                    <div class="solidJauge col-sm-12" id="deltaTemperature" ></div>
+                </div>
+                  <div class="jauge" id="pression"></div>
+              
+                
+            </main>
+        </div>
+        
+        <script src="template/js/classie.js"></script>
+        <script src="template/js/gnmenu.js"></script>
+        <script>
+                new gnMenu( document.getElementById( 'gn-menu' ) );
+        </script>
+    </body>
 </html>

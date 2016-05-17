@@ -39,7 +39,12 @@ function initGrapheJauge(div,titre,titre2,min,max,intD1,intF1,C1,intD2,intF2,C2,
                enabled: false
             },
             title:{
-                text: titre
+                text: titre,
+                y:30,
+                margin: 0,
+                
+                padding:0
+                
             },
             exporting: {
                 enabled: false 

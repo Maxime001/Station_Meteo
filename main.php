@@ -11,7 +11,6 @@ if($_SERVER['REQUEST_URI'] == '/main.php') header('Location:/');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/button.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <!-- Highcharts -->
     <script src="js/libs/highcharts.js"></script>
@@ -39,14 +38,14 @@ if($_SERVER['REQUEST_URI'] == '/main.php') header('Location:/');
 <!-- Affichage des jauges temps réel  -->
 <div class="container">
     <div class="row">
-        <div class="jauge col-xs-2" id="humidite"></div>
-        <div class="jauge col-xs-2" id="pluie"></div>
-        <div class="jauge col-xs-2" id="pression"></div>
-        <div class="jauge col-xs-2" id="luminosite"></div>
+        <div class="jauge" id="humidite"></div>
+        <div class="jauge" id="pluie"></div>
+        <div class="jauge" id="pression"></div>
+        <div class="jauge" id="luminosite"></div>
     </div>
     <div class="row">
-        <div class="jauge col-xs-2" id="temperatureExterieure"></div>
-        <div class="solidJauge col-xs-6" id="deltaTemperature" ></div>
+        <div class="jauge" id="temperatureExterieure"></div>
+        <div class="solidJauge" id="deltaTemperature" ></div>
                 <div class="col-xs-2">
             <?php
       //      $Sat24 = new Sat24();
