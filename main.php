@@ -1,3 +1,9 @@
+<?php
+// Au chargement, on va faire la requete SQL qui va remplir correctement le json avec les dernieres 24h de données
+$MajJson = new Json(0,"json/meteo24h.json");
+$MajJson->save24h();
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
