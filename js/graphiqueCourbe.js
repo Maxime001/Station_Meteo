@@ -80,11 +80,12 @@ function loadOptions(data,arrayDate){
     // Options pour graphique de température exterieure
     GrapheCourbeTemperatureExt = {
         data : data.donnees.temperatureExterieure,
+        data2 : data.donnees.temperatureInterieure,
         div : "#grapheTemperatureExterieure",
         titre: "Température Exterieure",
         soustitre:"Températures de la journée",
         mini:data.minMax.temperatureExterieureMin,
-        maxi:data.minMax.temperatureExterieureMax,
+        maxi:data.minMax.temperatureInterieureMax,
         unite:"%HR",
         limd1:-20,
         limf1:0,
@@ -202,14 +203,14 @@ function loadDataGraphe(data){
 
 
     initGrapheCourbe(GrapheCourbeHumidite);
-    initGrapheCourbe(GrapheCourbeTemperatureExt);
+    initGrapheDoubleCourbe(GrapheCourbeTemperatureExt);
     initGrapheCourbe(GrapheCourbeDetectionEau);
     initGrapheCourbe(GrapheCourbeLuminosite);
     initGrapheCourbe(GrapheCourbePression);
 }
 
 /*
- * Graphique des courbes 
+ * Graphique des courbes - courbe unique 
  * @param Obj objet contenant les parametres du graphique
  */
 function initGrapheCourbe(valeur){
@@ -317,10 +318,138 @@ function initGrapheCourbe(valeur){
             }
         },
         series: [{
-        name:'humidite',
+        name:valeur.unite,
             data: valeur.data
 
         }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+};
+
+
+/*
+ * Graphique des courbes - courbe unique 
+ * @param Obj objet contenant les parametres du graphique
+ */
+function initGrapheDoubleCourbe(valeur){
+    
+    $(valeur.div).highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: valeur.titre
+        },
+        credits: {
+               enabled: false
+            },
+        exporting:{
+        	enabled:false
+        },
+        subtitle: {
+            text: valeur.soustitre
+        },
+        xAxis: {
+            type: 'datetime',
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        yAxis: {
+       			min:valeur.mini,
+       			max:valeur.maxi,
+            title: {
+                text: valeur.unite
+            },
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null,
+            plotBands: [{ 
+                from: valeur.limd1,
+                to: valeur.limf1,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: valeur.valeur1,
+                    style: {
+                        color: valeur.couleur1
+                    }
+                }
+            }, { 
+                from: valeur.limd2,
+                to: valeur.limf2,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: valeur.valeur2,
+                    style: {
+                        color: valeur.couleur2
+                    }
+                }
+            }, { 
+                from: valeur.limd3,
+                to: valeur.limf3,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: valeur.valeur3,
+                    style: {
+                        color: valeur.couleur3
+                    }
+                }
+            }, { 
+                from: valeur.limd4,
+                to: valeur.limf4,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: valeur.valeur4,
+                    style: {
+                        color: valeur.couleur4
+                    }
+                }
+            }, { 
+                from: valeur.limd5,
+                to: valeur.limf5,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: valeur.valeur5,
+                    style: {
+                        color: valeur.couleur5
+                    }
+                }
+            
+            }]
+        },
+        tooltip: {
+            valueSuffix: valeur.unite
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 2,
+                states: {
+                    hover: {
+                        lineWidth: 3
+                    }
+                },
+                marker: {
+                    enabled: false
+                }, //3600000
+                pointInterval: 300000, 
+                pointStart: Date.UTC(valeur.an, valeur.mois, valeur.jour, valeur.heure, valeur.minute, valeur.seconde)
+            }
+        },
+        series: [{
+        name:'temperatureExterieure',
+            data: valeur.data
+
+        },
+        {
+        name:'temperatureInterieure',
+            data: valeur.data2
+
+        }
+    ],
         navigation: {
             menuItemStyle: {
                 fontSize: '10px'
