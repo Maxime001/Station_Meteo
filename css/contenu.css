@@ -49,5 +49,17 @@
     height:auto;
     z-index:-10;
     width:39%;
-      margin-top:80px;
+     margin-top:80px;
+}
+
+@media all and (max-width:1380px){
+    .affichageCommandes
+    {
+        
+     width:68.5%;
+    }
+    .affichageCourbes{
+        width:100%;
+        margin-top:5px;
+    }
 }
