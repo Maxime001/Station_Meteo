@@ -76,19 +76,32 @@
             </ul>
             <main>
        
-      
-                <div class="well col-sm-3 left-side" style="margin-top:80px">
-                     <div class= "mainTitle">Meteo temps réel</div>
-                    <div class="jauge "  id="humidite"></div>
-                    <div class="jauge" id="pluie"></div>
-                    <div class="jauge " id="luminosite"></div>
-                    <div class="jauge " id="temperatureExterieure"></div>
-                    <div class="solidJauge col-sm-12" id="deltaTemperature" ></div>
+
+                <div class="well col-sm-3" style="height:auto; margin-top:80px">
+                     <div class= "mainTitle col-sm-12">Meteo temps réel</div>
+                    <div class="  col-xl-12 col-xs-12 col-md-12 col-lg-6  jauge"  id="humidite"></div>
+                    <div class="   col-xl-12 col-xs-12 col-md-12 col-lg-6 jauge" id="pluie"></div>
+                    <div class="  col-xl-12 col-xs-12  col-md-12 col-lg-6 jauge" id="luminosite"></div>
+                    <div class=" col-xl-12 col-xs-12  col-md-12 col-lg-6 jauge" id="temperatureExterieure"></div>
+                    <div class="solidJauge  col-md-12" id="deltaTemperature" ></div>
                 </div>
-                  <!--<div class="jauge" id="pression"></div>-->
-              
+                <div class="well col-sm-4" style="margin-top:80px;height:500px; padding:5px;">
+                    <button id="Resistance">Resistance chauffante</button></br></br>
+                    <button id="Alarme">Alarme</button></br></br>
+                    <button id="Toit">Toit</button></br></br>
+                </div>
+
+                <div class="well col-sm-4" style="margin-top:80px; height:auto; padding:5px;">
+                    <div class="graphique" id="graphePression" ></div>
+                    <div class="graphique" id="grapheHumidite" ></div>
+                    <div class="graphique" id="grapheTemperatureExterieure" ></div>
+                    <div class="graphique" id="grapheDetectionEau"></div>
+                    <div class="graphique" id="grapheLuminosite"></div>
+                </div>
+
          
             </main>
+
         </div>
         
         <script src="template/js/classie.js"></script>
