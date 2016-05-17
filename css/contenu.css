@@ -1,9 +1,14 @@
+@font-face{
+    font-family: "MainTitle";
+    src: url('font/Quicksand-Regular.otf');
+}
+
 .main{
     background-color:#34495E;
 }
 
 .mainTitle{
-    font-family: calibri;
+ 
     font-size:20px;
     margin:-1px;
     padding: -1px;
@@ -13,6 +18,7 @@
     color:white;
     opacity:0.9;
     background-color:#34495E;
+    font-family: MainTitle;
     
 }
 
@@ -32,7 +38,7 @@
     z-index:-10;
     min-width:408px;
     padding:-25px;
-    width:30%;
+    width:380px;
 
 
 }

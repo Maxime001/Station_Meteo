@@ -1,7 +1,8 @@
 @font-face {
     font-family: "NumericFont";
-    src: url('font/Open24DisplaySt.ttf');
+    src: url('font/Open24DisplaySt.ttf');    
 }
+
 
 #time{
     color:rgba(255, 255, 255, 0.8);
