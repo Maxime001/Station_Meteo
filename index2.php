@@ -85,7 +85,7 @@
                     <div class="jauge " id="temperatureExterieure"></div>
                     <div class="solidJauge col-sm-12" id="deltaTemperature" ></div>
                 </div>
-                  <div class="jauge" id="pression"></div>
+                  <!--<div class="jauge" id="pression"></div>-->
               
          
             </main>
