@@ -1,0 +1,15 @@
+[{"dark": {
+  "status-widget": {
+    "#status-widget": [{
+      "background-color": "black"
+    }, {
+      "color": "white"
+    }],
+    ".stripe-element": [{
+      "border": "1px solid rgb(0, 0, 0)"
+    }]
+  }
+}}, {"light": {
+
+}
+}]
