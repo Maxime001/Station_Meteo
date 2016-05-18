@@ -44,6 +44,9 @@ $MajJson->save24h();
         <script src="js/libs/solid-jauge.js"></script>
         <script type="text/javascript" src="js/clock.js"></script>
         <script type="text/javascript"></script>
+        
+     
+    
     </head>
     <body class="main">
         <div class="container-fluid" >
@@ -85,7 +88,7 @@ $MajJson->save24h();
             </ul>
         </div>    
         <div class="centerPage">
-            <main>
+  
 
                 <div class="fond affichageJauges">
                      <div class= "mainTitle">Meteo temps réel</div>
@@ -98,10 +101,28 @@ $MajJson->save24h();
                 <div class="fond affichageCommandes">
                     <div class= "mainTitle">Contrôle des commandes</div>
                     </br></br>
+                    
+                    <label class="switch">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
+                    </label></br>
+                    
+                    <label class="switch">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
+                    </label></br>
+                    
+                     <label class="switch">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
+                     </label></br>
+
+                    </br></br>
+                     <!--
                     <button id="Resistance">Resistance chauffante</button></br></br>
                     <button id="Alarme">Alarme</button></br></br>
                     <button id="Toit">Toit</button></br></br>
-                    </br></br></br></br></br></br></br></br>
+                    </br></br></br></br></br></br></br></br>-->
                     <div class="mainTitle">Vue 3D</div>
                 </div>
                 
@@ -114,9 +135,11 @@ $MajJson->save24h();
                     <div class="graphique" id="grapheDetectionEau"></div>
                     <div class="graphique" id="grapheLuminosite"></div>
                 </div>
-               
-                    
-            </main>
+               <!-- <div class="fond meteo">
+                      <div class= "mainTitle">API météo</div>
+                      API's météo
+                </div>-->
+       
 
         </div>
         

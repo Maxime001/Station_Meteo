@@ -52,6 +52,15 @@
 
 }
 
+.meteo{
+    height:300px;
+    width:985px;
+    margin-top:-685px;
+   float:left;
+   margin-left:4.5%;
+}
+
+
 .affichageCourbes{
     height:auto;
     z-index:-10;
