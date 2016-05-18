@@ -2,8 +2,8 @@
 // Au chargement, on va faire la requete SQL qui va remplir correctement le json avec les dernieres 24h de données
 $MajJson = new Json(0,"json/meteo24h.json");
 $MajJson->save24h();
-$sms = new envoiSms();
-$sms->sms("Quelqu'un est sur la page main");
+/*$sms = new envoiSms();
+$sms->sms("Quelqu'un est sur la page main");*/
 
 ?>
 <!DOCTYPE html>
@@ -75,9 +75,9 @@ $sms->sms("Quelqu'un est sur la page main");
                     </nav>
                 </li>
                 
-                <li><a href="index.php"><span>Accueil</span></a></li>
+                <li><a href=""><span>Accueil</span></a></li>
                 <li><a href="http://night-pixel.fr">NightPixel</a></li>
-                <li> Heure serveur   </li>
+                <li><a href="logout.php"  ><img class="logout" src="img/logout.png"></a></li>
                 
             </ul>
         </div>    
