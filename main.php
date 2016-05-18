@@ -94,27 +94,54 @@ $sms->sms("Quelqu'un est sur la page main");*/
                 </div>
                 <div class="fond affichageCommandes">
                     <div class= "mainTitle">Contrôle des commandes</div>
-                    </br></br>
-                    
-                    <label class="switch">
-                        <input id="Resistance" class="switch-input" type="checkbox" />
-                        <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
-                    </label></br>
-                    
-                    <label class="switch">
-                        <input id="Alarme" class="switch-input" type="checkbox" />
-                        <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
-                    </label></br>
-                    
-                     <label class="switch">
-                        <input id="Toit" class="switch-input" type="checkbox" />
-                        <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
-                     </label></br>
-
-                      <label class="switch">
-                        <input id="TensionTelescope" class="switch-input" type="checkbox" />
-                        <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
-                     </label></br>
+                    </br>
+                    <table class="commandesTelescopeStyle" align="center">
+                        <tr>
+                            <td class="tdButton">
+                                <label class="switch">
+                                    <input id="Resistance" class="switch-input" type="checkbox" />
+                                    <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
+                                </label>
+                            </td>
+                            <td class="tdDesc">
+                                <span class="textControl">Résistance chauffante</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdButton">
+                                <label class="switch">
+                                    <input id="TensionTelescope" class="switch-input" type="checkbox" />
+                                    <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
+                                </label>
+                            </td>
+                            <td class="tdDesc">
+                                <span class="textControl"> Mise sous tension télescope</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdButton">
+                                <label class="switch">
+                                   <input id="Alarme" class="switch-input" type="checkbox" />
+                                   <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
+                                </label>
+                            </td>
+                            <td class="tdDesc">
+                                <span class="textControl">Alarme</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdButton">
+                                <label class="switch">
+                                  <input id="Toit" class="switch-input" type="checkbox" />
+                                  <span class="switch-label" data-on="Ouvrir" data-off="Fermer"></span> <span class="switch-handle"></span> 
+                               </label>
+                            </td>
+                            <td class="tdDesc">
+                                <span class="textControl">Ouverture / Fermeture toit</span>
+                            </td>
+                        </tr>
+                    </table>
+                     
                      
                      
                    </br></br></br></br></br></br></br>
