@@ -74,8 +74,9 @@ $sms->sms("Quelqu'un est sur la page main");
                         </div>
                     </nav>
                 </li>
-                <li><a href="http://tympanus.net/codrops">Codrops</a></li>
-                <li><a class="codrops-icon codrops-icon-prev" href=""><span>Previous Demo</span></a></li>
+                
+                <li><a href="index.php"><span>Accueil</span></a></li>
+                <li><a href="http://night-pixel.fr">NightPixel</a></li>
                 <li> Heure serveur   </li>
                 
             </ul>
