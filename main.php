@@ -3,7 +3,7 @@
 $MajJson = new Json(0,"json/meteo24h.json");
 $MajJson->save24h();
 $sms = new envoiSms();
-$sms->sms("Quelqu'un est sur la page main IP:'.$REMOTE_ADDR.'");
+$sms->sms("Quelqu'un est sur la page main");
 
 ?>
 <!DOCTYPE html>
