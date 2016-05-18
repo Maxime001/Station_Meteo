@@ -9,6 +9,7 @@ $MajJson->save24h();
     <head>
         <title> Station Météo</title>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="shortcut icon" href="../favicon.ico">
@@ -45,8 +46,8 @@ $MajJson->save24h();
         <script type="text/javascript"></script>
     </head>
     <body class="main">
-        <div class="container-fluid">
-            <ul id="gn-menu" class="gn-menu-main">
+        <div class="container-fluid" >
+            <ul id="gn-menu" class="gn-menu-main" style="z-index:100;">
                 <li class="gn-trigger">
                     <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
                     <nav class="gn-menu-wrapper">

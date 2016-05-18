@@ -253,3 +253,10 @@ button:hover {
     visibility:hidden;
 }
 
+#barreMenu{
+    width:100px;
+    height:1px;
+    border:1px solid green;
+    margin-top:60px;
+    position:relative;
+}
