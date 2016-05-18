@@ -19,10 +19,13 @@ $sms->sms("Quelqu'un est sur la page main");*/
         <link rel="stylesheet" type="text/css" href="template/css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="template/css/demo.css" />
         <link rel="stylesheet" type="text/css" href="template/css/component.css" />
+        <!-- CSS de jqueryUI -->
+        <link href="css/libs/jquery-ui.min.css" rel="stylesheet">
         <!-- JS du template -->
         <script src="js/modernizr.custom.js"></script>        
         <!-- Jquery -->
         <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
+        <script src="js/libs/jquery-ui.min.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- CSS -->
@@ -45,12 +48,19 @@ $sms->sms("Quelqu'un est sur la page main");*/
         <script type="text/javascript" src="js/ajax.js"></script>
         <script src="js/libs/solid-jauge.js"></script>
         <script type="text/javascript" src="js/clock.js"></script>
-        <script type="text/javascript"></script>
+        <script>
+        $( document ).ready(function() {
+            $( "#progressbar" ).progressbar({
+                    value: 60
+            });
+        });
+    </script>
         
      
     
     </head>
     <body class="main">
+
         <div class="container-fluid" >
             <ul id="gn-menu" class="gn-menu-main" style="z-index:100;">
                 <li class="gn-trigger">
@@ -140,8 +150,10 @@ $sms->sms("Quelqu'un est sur la page main");*/
                                 <span class="textControl">Ouverture / Fermeture toit</span>
                             </td>
                         </tr>
+
                     </table>
-                     
+                    </br></br>
+                      <div id="progressbar" style="width:300px;margin-left:100px;"></div>
                      
                      
                    </br></br></br></br></br></br></br>
