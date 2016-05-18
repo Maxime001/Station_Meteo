@@ -122,7 +122,7 @@ background-color:blue;
 
 td,tr{
     margin:5px;
-    border-bottom: 1px solid rgba(52, 73, 93, 0.5);
+    border-bottom: 1px solid rgba(52, 73, 93, 0.2);
     
     height:45px;
 
