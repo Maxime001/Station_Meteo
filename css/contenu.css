@@ -132,3 +132,8 @@ td,tr{
     font-family: MainTitle;
     font-size:15px;
 }
+
+.progressbar{
+    color:blue;
+    margin:0 auto;
+}

@@ -49,10 +49,26 @@ $sms->sms("Quelqu'un est sur la page main");*/
         <script src="js/libs/solid-jauge.js"></script>
         <script type="text/javascript" src="js/clock.js"></script>
         <script>
-        $( document ).ready(function() {
-            $( "#progressbar" ).progressbar({
-                    value: 60
+        $(document).ready(function() {
+            var dist=20;
+            function progressbarr(){   
+            $("#progressbar").progressbar({
+                value: dist
             });
+        }
+        
+        setInterval(function() {
+            progressbarr();
+            if(dist < 100){
+                dist = dist+5;
+            }
+        }, 2000);
+                
+                
+         
+        progressbarr();
+        
+  
         });
     </script>
         
@@ -110,7 +126,7 @@ $sms->sms("Quelqu'un est sur la page main");*/
                             <td class="tdButton">
                                 <label class="switch">
                                     <input id="Resistance" class="switch-input" type="checkbox" />
-                                    <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
+                                    <span class="switch-label resistCouleur" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
                                 </label>
                             </td>
                             <td class="tdDesc">
