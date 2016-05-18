@@ -41,6 +41,7 @@ class BaseDonnees extends Bdd {
         array_push($array,$mesureBruit);
         array_push($array,$temperatureExterieure);
         array_push($array,$termperatureInterieure);
+        
 
         
        return $array;
