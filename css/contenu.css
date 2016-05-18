@@ -1,9 +1,14 @@
+@font-face{
+    font-family: "MainTitle";
+    src: url('font/Quicksand-Regular.otf');
+}
+
 .main{
     background-color:#34495E;
 }
 
 .mainTitle{
-    font-family: calibri;
+ 
     font-size:20px;
     margin:-1px;
     padding: -1px;
@@ -13,36 +18,122 @@
     color:white;
     opacity:0.9;
     background-color:#34495E;
+    font-family: MainTitle;
     
 }
 
 .fond{
     background-color:white;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius:5px;
+    z-index:-10;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.1);
+        display: inline-block;
+    vertical-align: top;
 }
 
 .affichageJauges{
     height:auto;
     margin-top:80px;
     z-index:-10;
-    width:408px;
+    min-width:408px;
     padding:-25px;
-
+    width:380px;
+    
 
 }
+@media all and (max-width:860px){
+    .affichageJauges{
+        width:auto;
+        margin-left:20px;
+        margin-right:20px;
+        margin-bottom:5px;
+    }
+}
+
+
 
 .affichageCommandes{
-    height:500px;
+    height:1040px;
     margin-top:80px;
     z-index:-10;
-    width: 500px;
+    width: 30%;
+
 
 }
+
+.meteo{
+    height:300px;
+    width:985px;
+    margin-top:-685px;
+   float:left;
+   margin-left:4.5%;
+}
+
 
 .affichageCourbes{
     height:auto;
     z-index:-10;
-    width:500px;
-      margin-top:80px;
+    width:39%;
+     margin-top:80px;
+
+}
+
+@media all and (max-width:1380px){
+    .affichageCommandes
+    {
+        width:50%;
+   
+
+    }
+    .affichageCourbes{
+        width:95%;
+        margin-top:5px;
+        margin-bottom:20px;
+    }
+}
+
+@media all and (max-width:860px){
+    .affichageCommandes
+    {
+        width:95%;
+        margin-top:5px;
+
+    }
+}
+
+.centerPage{
+    margin:0 auto;
+    text-align:center;
+}
+
+.switch{
+background-color:blue;
+    
+}
+
+
+.tdDesc{
+    width: 300px;
+}
+.tdButton{
+    width:100px;
+}
+
+td,tr{
+    margin:5px;
+    border-bottom: 1px solid rgba(52, 73, 93, 0.2);
+    
+    height:45px;
+
+}
+
+.textControl{
+    font-family: MainTitle;
+    font-size:15px;
+}
+
+.progressbar{
+    color:blue;
+    margin:0 auto;
 }

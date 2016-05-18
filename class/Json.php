@@ -26,6 +26,7 @@
             $bdd = new BaseDonnees();
             $donnees = $bdd->recup24h();
             
+
             $json->donnees->Date = $donnees[0];
             $json->donnees->pression = $donnees[1];
             $json->donnees->luminosite = $donnees[2];
