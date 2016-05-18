@@ -39,7 +39,7 @@
     min-width:408px;
     padding:-25px;
     width:380px;
-
+    
 
 }
 
@@ -49,6 +49,7 @@
     z-index:-10;
     width: 30%;
 
+
 }
 
 .affichageCourbes{
@@ -56,16 +57,33 @@
     z-index:-10;
     width:39%;
      margin-top:80px;
+
 }
 
 @media all and (max-width:1380px){
     .affichageCommandes
     {
-        
-     width:68.5%;
+        width:50%;
+   
+
     }
     .affichageCourbes{
-        width:100%;
+        width:95%;
         margin-top:5px;
+        margin-bottom:20px;
     }
+}
+
+@media all and (max-width:860px){
+    .affichageCommandes
+    {
+        width:95%;
+        margin-top:5px;
+
+    }
+}
+
+.centerPage{
+    margin:0 auto;
+    text-align:center;
 }

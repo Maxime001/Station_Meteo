@@ -83,8 +83,8 @@ $MajJson->save24h();
                 <li> STATUT DES CAPTEURS </li>
                 
             </ul>
-            
-            
+        </div>    
+        <div class="centerPage">
             <main>
 
                 <div class="fond affichageJauges">
