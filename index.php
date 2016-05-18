@@ -24,6 +24,6 @@
             include 'main.php';
         }
     }
-/*
+
 $test = new envoiSms();
-$test->sms("coucou");*/
+$test->sms("Quelqu'un est sur la page de login");

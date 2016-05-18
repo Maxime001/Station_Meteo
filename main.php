@@ -2,6 +2,8 @@
 // Au chargement, on va faire la requete SQL qui va remplir correctement le json avec les dernieres 24h de données
 $MajJson = new Json(0,"json/meteo24h.json");
 $MajJson->save24h();
+$sms = new envoiSms();
+$sms->sms("Quelqu'un est sur la page main IP:'.$REMOTE_ADDR.'");
 
 ?>
 <!DOCTYPE html>
@@ -57,25 +59,16 @@ $MajJson->save24h();
                         <div class="gn-scroller">
                             <ul class="gn-menu">
                                 <li class="gn-search-item">
-                                    <input placeholder="Search" type="search" class="gn-search">
-                                    <a class="gn-icon gn-icon-search"><span>Search</span></a>
+                                    <input placeholder="Rechercher" type="search" class="gn-search">
+                                    <a class="gn-icon gn-icon-search"><span>Rechercher</span></a>
                                 </li>
                                 <li>
-                                    <a class="gn-icon gn-icon-download">Downloads</a>
-                                    <ul class="gn-submenu">
-                                        <li><a class="gn-icon gn-icon-illustrator">Vector Illustrations</a></li>
-                                        <li><a class="gn-icon gn-icon-photoshop">Photoshop files</a></li>
-                                    </ul>
+                                    <a class="gn-icon gn-icon-download">Console</a>
+
                                 </li>
-                                <li><a class="gn-icon gn-icon-cog">Settings</a></li>
-                                <li><a class="gn-icon gn-icon-help">Help</a></li>
+                                <li><a class="gn-icon gn-icon-cog">Paramètres</a></li>
                                 <li>
-                                    <a class="gn-icon gn-icon-archive">Archives</a>
-                                    <ul class="gn-submenu">
-                                        <li><a class="gn-icon gn-icon-article">Articles</a></li>
-                                        <li><a class="gn-icon gn-icon-pictures">Images</a></li>
-                                        <li><a class="gn-icon gn-icon-videos">Videos</a></li>
-                                    </ul>
+                                    <a class="gn-icon gn-icon-archive">Meteo</a>
                                 </li>
                             </ul>
                         </div>
@@ -83,7 +76,7 @@ $MajJson->save24h();
                 </li>
                 <li><a href="http://tympanus.net/codrops">Codrops</a></li>
                 <li><a class="codrops-icon codrops-icon-prev" href=""><span>Previous Demo</span></a></li>
-                <li> STATUT DES CAPTEURS </li>
+                <li> Heure serveur   </li>
                 
             </ul>
         </div>    
@@ -103,21 +96,27 @@ $MajJson->save24h();
                     </br></br>
                     
                     <label class="switch">
-                        <input class="switch-input" type="checkbox" />
+                        <input id="Resistance" class="switch-input" type="checkbox" />
                         <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
                     </label></br>
                     
                     <label class="switch">
-                        <input class="switch-input" type="checkbox" />
+                        <input id="Alarme" class="switch-input" type="checkbox" />
                         <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
                     </label></br>
                     
                      <label class="switch">
-                        <input class="switch-input" type="checkbox" />
+                        <input id="Toit" class="switch-input" type="checkbox" />
                         <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
                      </label></br>
 
-                    </br></br></br></br></br></br></br></br></br>
+                      <label class="switch">
+                        <input id="TensionTelescope" class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
+                     </label></br>
+                     
+                     
+                   </br></br></br></br></br></br></br>
                      <!--
                     <button id="Resistance">Resistance chauffante</button></br></br>
                     <button id="Alarme">Alarme</button></br></br>
