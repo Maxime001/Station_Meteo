@@ -8,28 +8,27 @@ function Stripe(data, width, height, parent) {
 Stripe.prototype.create = function() {
     var stripes = [];
     var sensor_status_bad = [];
+    var className = "";
 
     for (var sensor_name in this.data) {
         if (this.data.hasOwnProperty(sensor_name)) {
             var sensor_status = this.data[sensor_name];
             var stripe_element = $('<span/>', {
-                class: "stripe-element"
-            });
-
-            var stripe_element_tooltip = $('<span/>', {
-                class: "stripe-element-tooltip",
-                text: sensor_name + " " + sensor_status
+                class: "stripe-element",
+                title: sensor_name
             });
 
             stripe_element["sensorName"] = sensor_name;
             if (sensor_status == 1) {
                 stripe_element["backgroundColor"] = "#21C721";
                 stripe_element["sensorStatus"] = 1;
+                className = "ui-tooltip-status-ok";
             }
             else {
                 sensor_status_bad.push(stripe_element);
                 stripe_element["backgroundColor"] = "#FF3636";
                 stripe_element["sensorStatus"] = 0;
+                className = "ui-tooltip-status-bad";
             }
 
             TweenLite.set(stripe_element, {
@@ -37,12 +36,16 @@ Stripe.prototype.create = function() {
                 height: this.height + "px"
             });
 
-            /*stripe_element.hover(function(){
-             $(this).
-             });*/
+            $(stripe_element).tooltip({
+                track: true,
+                content: sensor_name,
+                tooltipClass: className,
+                close: function(event, ui) {
+                    $(".ui-helper-hidden-accessible").remove();
+                }
+            });
 
             stripes.push(stripe_element);
-            stripe_element_tooltip.appendTo(stripe_element);
             stripe_element.appendTo(this.parent);
         }
     }
@@ -66,44 +69,45 @@ Stripe.prototype.create = function() {
             ease: Back.easeOut.config(3)
         });
     }
-
-    $('[data-toggle="tooltip"]').tooltip();
 };
 
 Stripe.prototype.update = function(data) {
     this.data = data;
-    var i = 0;
     var stripes_to_update = [];
-    var sensor_status_bad = [];
     var statusChanged = false;
+    var className = "";
 
     for (var sensor_name in this.data) {
         if (this.data.hasOwnProperty(sensor_name)) {
             var sensor_status = this.data[sensor_name];
 
-            for (i = 0; i < this.stripes[i].length; i++) {
+            for (var i = 0; i < this.stripes.length; i++) {
                 // Changing status
                 if (this.stripes[i].sensorName == sensor_name
                     && sensor_status != this.stripes[i].sensorStatus) {
                     if (sensor_status == 1) {
                         this.stripes[i]["backgroundColor"] = "#21C721";
                         this.stripes[i]["sensorStatus"] = 1;
+                        className = "ui-tooltip-status-ok";
                     }
                     else {
                         this.stripes[i]["backgroundColor"] = "#FF3636";
                         this.stripes[i]["sensorStatus"] = 0;
+                        className = "ui-tooltip-status-bad";
                     }
 
                     stripes_to_update.push(this.stripes[i]);
                     statusChanged = true;
+                    $(this.stripes[i]).tooltip({
+                        track: true,
+                        content: sensor_name,
+                        tooltipClass: className,
+                        close: function(event, ui) {
+                            $(".ui-helper-hidden-accessible").remove();
+                        }
+                    });
                 }
             }
-
-            if (sensor_status != 1) {
-                sensor_status_bad.push(this.stripes[i]);
-            }
-
-            i++;
         }
     }
 
@@ -148,4 +152,5 @@ Stripe.prototype.update = function(data) {
             });
         }
     }
+
 };

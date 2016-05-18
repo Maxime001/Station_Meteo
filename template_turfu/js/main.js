@@ -21,8 +21,9 @@ $(function() {
         }
     };
 
+
     function updateJSON() {
-        // testData["statutCapteur"] = generateRandomStatusData(testData["statutCapteur"]);
+        testData["statutCapteur"] = generateRandomStatusData(testData["statutCapteur"]);
         stripe.update(testData["statutCapteur"]);
     }
 
