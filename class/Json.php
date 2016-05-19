@@ -189,4 +189,14 @@
             }
         }
         
+        public function verifStatut($parametre){
+            $fichierEnregistrement = $this->fichierEnregistrement;
+            $json = file_get_contents($fichierEnregistrement);
+            $json = json_decode($json);
+            $json = $json->position->$parametre;
+            if($json == "activee" || $json == "ouvert" || $json== "on"){
+                return "checked";
+            }
+        }
+        
     }

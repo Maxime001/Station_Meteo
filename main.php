@@ -2,6 +2,7 @@
 // Au chargement, on va faire la requete SQL qui va remplir correctement le json avec les dernieres 24h de données
 $MajJson = new Json(0,"json/meteo24h.json");
 $MajJson->save24h();
+$statusCapteurs = new Json(0,"json/controleObservatoire.json");
 /*$sms = new envoiSms();
 $sms->sms("Quelqu'un est sur la page main");*/
 
@@ -39,6 +40,7 @@ $sms->sms("Quelqu'un est sur la page main");*/
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/googleButton.css">
         <link rel="stylesheet" type="text/css" href="css/contenu.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <!-- CSS du stripe -->
@@ -67,13 +69,15 @@ $sms->sms("Quelqu'un est sur la page main");*/
         $(document).ready(function() {
             var dist=20;
             function progressbarr(){   
-            $("#progressbar").progressbar({
+        $("#progressbar").progressbar({
                 value: dist
             });
         }
         
         setInterval(function() {
             progressbarr();
+              $('.Acceptedbar').css('color','Green');
+    $('.Declinedbar').css('color','Red');
             if(dist < 100){
                 dist = dist+5;
             }
@@ -147,12 +151,12 @@ $sms->sms("Quelqu'un est sur la page main");*/
                         </tr>
                     </table>
                     <div class="ligne"></div>
-                    
+                    <a href="#" class="wakeup blue">Démarrage PC Observatoire</a><a href="https://nasorion68.no-ip.org:5001" target="_blank" class="wakeup blue">Accès NAS</a>
                     <table class="commandesTelescopeStyle" align="center">
                         <tr>
                             <td class="tdButton">
                                 <label class="switch">
-                                    <input id="Resistance" class="switch-input" type="checkbox" />
+                                    <input id="Resistance" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("resistanceChauffante")?>/>
                                     <span class="switch-label resistCouleur" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
                                 </label>
                             </td>
@@ -163,7 +167,7 @@ $sms->sms("Quelqu'un est sur la page main");*/
                         <tr>
                             <td class="tdButton">
                                 <label class="switch">
-                                    <input id="TensionTelescope" class="switch-input" type="checkbox" />
+                                    <input id="TensionTelescope" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("tension")?> />
                                     <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
                                 </label>
                             </td>
@@ -174,7 +178,7 @@ $sms->sms("Quelqu'un est sur la page main");*/
                         <tr>
                             <td class="tdButton">
                                 <label class="switch">
-                                   <input id="Alarme" class="switch-input" type="checkbox" />
+                                   <input id="Alarme" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("alarme")?> />
                                    <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
                                 </label>
                             </td>
@@ -185,8 +189,8 @@ $sms->sms("Quelqu'un est sur la page main");*/
                         <tr>
                             <td class="tdButton">
                                 <label class="switch">
-                                  <input id="Toit" class="switch-input" type="checkbox" />
-                                  <span class="switch-label" data-on="Ouvrir" data-off="Fermer"></span> <span class="switch-handle"></span> 
+                                  <input id="Toit" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("toit")?> />
+                                  <span class="switch-label" data-on="Fermer" data-off="Ouvrir"></span> <span class="switch-handle"></span> 
                                </label>
                             </td>
                             <td class="tdDesc">

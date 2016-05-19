@@ -74,13 +74,8 @@ $(document).ready(function() {
        } 
     });
     
-    
-    
-    
-    
-    
-    statusCapteurs();
 
+    statusCapteurs();
 });
 
 
@@ -93,6 +88,7 @@ function statusCapteurs(){
         function updateJSON() {
             $.getJSON('json/controleObservatoire.json', function(data) {
                 stripe.update(data.statutCapteur);
+                console.log(data.statutCapteur);
            
             });
         }
