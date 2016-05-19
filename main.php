@@ -198,8 +198,6 @@ $sms->sms("Quelqu'un est sur la page main");*/
                     
                     
 
-
-                        
                         
                     </br></br>
                       <div id="progressbar" style="width:300px;margin-left:100px;"></div>
@@ -228,11 +226,11 @@ $sms->sms("Quelqu'un est sur la page main");*/
 
                 <div class="fond affichageCourbes ">
                     <div class= "mainTitle">Meteo des dernières 24h</div>
-                    <div class="graphique" id="graphePression" ></div>
+                   <!-- <div class="graphique" id="graphePression" ></div>
                     <div class="graphique" id="grapheHumidite" ></div>
                     <div class="graphique" id="grapheTemperatureExterieure" ></div>
                     <div class="graphique" id="grapheDetectionEau"></div>
-                    <div class="graphique" id="grapheLuminosite"></div>
+                    <div class="graphique" id="grapheLuminosite"></div>-->
                 </div>
                <!-- <div class="fond meteo">
                       <div class= "mainTitle">API météo</div>
@@ -250,5 +248,9 @@ $sms->sms("Quelqu'un est sur la page main");*/
         
         
     </div>
+    
+    
+                    <div id="time2" style="color:blue;z-index:10000000;"></div>
+                        
     </body>
 </html>
