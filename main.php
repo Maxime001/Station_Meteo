@@ -23,7 +23,15 @@ $sms->sms("Quelqu'un est sur la page main");*/
         <!-- CSS de jqueryUI -->
         <link href="css/libs/jquery-ui.min.css" rel="stylesheet">
         <!-- JS du template -->
-        <script src="js/modernizr.custom.js"></script>        
+        <script src="js/modernizr.custom.js"></script>     
+        <!-- JS du stripe -->
+        <script src="js/libs/raphael-2.1.4.min.js"></script>
+        <script src="js/libs/justgage.js"></script>
+        <script src="js/libs/TweenMax.min.js"></script>
+        <script src="js/libs/CSSPlugin.min.js"></script>
+        <script src="js/utility.js"></script>
+        <script src="js/UI/Stripe.js"></script>
+        <script src="../js/main.js"></script>
         <!-- Jquery -->
         <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
         <script src="js/libs/jquery-ui.min.js"></script>
@@ -33,6 +41,12 @@ $sms->sms("Quelqu'un est sur la page main");*/
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/contenu.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <!-- CSS du stripe -->
+        <link rel="stylesheet" type="text/css" href="css/libs/style.css">
+        <link rel="stylesheet" type="text/css" href="css/libs/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/libs/Stripe.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <!-- Highcharts -->
         <script src="js/libs/highcharts.js"></script>
         <script src="js/libs/highcharts-more.js"></script>
@@ -72,12 +86,8 @@ $sms->sms("Quelqu'un est sur la page main");*/
   
         });
     </script>
-        
-     
-    
     </head>
     <body class="main">
-
         <div class="container-fluid" >
             <ul id="gn-menu" class="gn-menu-main" style="z-index:100;">
                 <li class="gn-trigger">
@@ -100,17 +110,13 @@ $sms->sms("Quelqu'un est sur la page main");*/
                             </ul>
                         </div>
                     </nav>
-                </li>
-                
+                </li>         
                 <li><a href=""><span>Accueil</span></a></li>
                 <li><a href="http://night-pixel.fr">NightPixel</a></li>
-                <li><a href="logout.php"  ><img class="logout" src="img/logout.png"></a></li>
-                
+                <li><a href="logout.php"  ><img class="logout" src="img/logout.png"></a></li>         
             </ul>
         </div>    
         <div class="centerPage">
-  
-
                 <div class="fond affichageJauges">
                      <div class= "mainTitle">Meteo temps réel</div>
                     <div class="   jauge"  id="humidite"></div>
@@ -169,11 +175,30 @@ $sms->sms("Quelqu'un est sur la page main");*/
                         </tr>
 
                     </table>
+                    
+                    
+
+
+                        
+                        
                     </br></br>
                       <div id="progressbar" style="width:300px;margin-left:100px;"></div>
                      
                      
-                   </br></br></br></br></br></br></br>
+                   </br></br>
+                   
+                  
+                               
+                         
+                            
+                                        <div id="sensor_status_stripe"></div>
+                                        <div style="clear:both"></div>
+                                        <div id="sensor_status_text"></div>
+                                        <div style="clear:both"></div>
+                                  
+                         
+                           
+                           </br></br></br></br></br>
                      <!--
                     <button id="Resistance">Resistance chauffante</button></br></br>
                     <button id="Alarme">Alarme</button></br></br>
