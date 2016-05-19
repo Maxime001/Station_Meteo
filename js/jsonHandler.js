@@ -5,6 +5,8 @@ function importJSON() {
     $.getJSON('json/controleObservatoire.json', function(data) {
         updateGraphes(data);
         updageGrapheSolidJauge(data);
+        
+        
     });
 }
 

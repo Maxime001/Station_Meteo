@@ -205,20 +205,8 @@ $sms->sms("Quelqu'un est sur la page main");*/
                      
                    </br></br>
                    
-                  
-                               
-                         
-                            
-                                     
-                                  
-                         
-                           
+     
                            </br></br></br></br></br>
-                     <!--
-                    <button id="Resistance">Resistance chauffante</button></br></br>
-                    <button id="Alarme">Alarme</button></br></br>
-                    <button id="Toit">Toit</button></br></br>
-                    </br></br></br></br></br></br></br></br>-->
                     <div class="mainTitle">Vue 3D</div>
                     <img src="img/3D.jpg">
                 </div>
