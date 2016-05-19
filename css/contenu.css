@@ -7,6 +7,11 @@
     background-color:#34495E;
 }
 
+.text{
+    font-family:"MainTitle";
+    padding-right:5px;
+}
+
 .mainTitle{
  
     font-size:20px;

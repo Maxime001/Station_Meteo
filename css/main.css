@@ -3,6 +3,8 @@
     src: url('font/Open24DisplaySt.ttf');
 }
 
+
+
 #time {
     color: rgba(255, 255, 255, 0.8);
     font-size: 35px;
@@ -259,6 +261,12 @@ button:hover {
     border:1px solid green;
     margin-top:60px;
     position:relative;
+}
+
+
+.ligne{
+    width:100%;
+    border-bottom:1px solid rgba(0, 0, 0, 0.3);
 }
 
 
