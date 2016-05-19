@@ -102,7 +102,7 @@ $(document).ready(function() {
         stripe.update(testData["statutCapteur"]);
     }
 
-    var stripe = new Stripe(testData["statutCapteur"], 10, 25, $("#sensor_status_stripe"));
+    var stripe = new Stripe(testData["statutCapteur"], 15, 35, $("#sensor_status_stripe"));
     stripe.create();
    
     setInterval(function() {

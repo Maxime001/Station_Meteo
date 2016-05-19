@@ -127,7 +127,21 @@ $sms->sms("Quelqu'un est sur la page main");*/
                 </div>
                 <div class="fond affichageCommandes">
                     <div class= "mainTitle">Contrôle des commandes</div>
-                    </br>
+                    <!-- Statut des capteurs -->
+                    <table align="center">
+                        <tr>
+                            <td class="text"> <b>Statut capteurs</b> </td>
+                            <td>
+                    <div id="sensor_status_stripe"></div>
+                    <div style="clear:both"></div>
+                    <div id="sensor_status_text"></div>
+                    <div style="clear:both"></div>
+                    
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="ligne"></div>
+                    
                     <table class="commandesTelescopeStyle" align="center">
                         <tr>
                             <td class="tdButton">
@@ -191,10 +205,7 @@ $sms->sms("Quelqu'un est sur la page main");*/
                                
                          
                             
-                                        <div id="sensor_status_stripe"></div>
-                                        <div style="clear:both"></div>
-                                        <div id="sensor_status_text"></div>
-                                        <div style="clear:both"></div>
+                                     
                                   
                          
                            
