@@ -77,6 +77,8 @@ Stripe.prototype.update = function(data) {
     var statusChanged = false;
     var className = "";
 
+    $(".ui-tooltip").remove();
+
     for (var sensor_name in this.data) {
         if (this.data.hasOwnProperty(sensor_name)) {
             var sensor_status = this.data[sensor_name];
@@ -110,6 +112,7 @@ Stripe.prototype.update = function(data) {
             }
         }
     }
+    $(".ui-tooltip").remove();
 
     if (statusChanged) {
         // Animations
