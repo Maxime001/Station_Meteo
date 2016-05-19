@@ -4,7 +4,7 @@ $(function() {
             "Accélerometre": 1,
             "Alarme": 1,
             "Arduino Télescope": 1,
-            "Bruit": 1,
+            "Bruit": 0,
             "Distance Ouverture Toit": 1,
             "Hall Position": 0,
             "Hall Position Toit Est": 1,
