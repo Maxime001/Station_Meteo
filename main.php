@@ -226,11 +226,11 @@ $sms->sms("Quelqu'un est sur la page main");*/
 
                 <div class="fond affichageCourbes ">
                     <div class= "mainTitle">Meteo des dernières 24h</div>
-                   <!-- <div class="graphique" id="graphePression" ></div>
+                    <div class="graphique" id="graphePression" ></div>
                     <div class="graphique" id="grapheHumidite" ></div>
                     <div class="graphique" id="grapheTemperatureExterieure" ></div>
                     <div class="graphique" id="grapheDetectionEau"></div>
-                    <div class="graphique" id="grapheLuminosite"></div>-->
+                    <div class="graphique" id="grapheLuminosite"></div>
                 </div>
                <!-- <div class="fond meteo">
                       <div class= "mainTitle">API météo</div>
