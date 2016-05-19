@@ -118,7 +118,12 @@ $sms->sms("Quelqu'un est sur la page main");*/
         </div>    
         <div class="centerPage">
                 <div class="fond affichageJauges">
-                     <div class= "mainTitle">Meteo temps réel</div>
+                    <div class= "mainTitle">Météo résumé</div>
+                    </br></br>
+                    </br></br>
+                    </br></br>
+                    </br></br>
+                     <div class= "mainTitle">Météo temps réel</div>
                     <div class="   jauge"  id="humidite"></div>
                     <div class="  jauge" id="pluie"></div>
                     <div class="   jauge" id="luminosite"></div>

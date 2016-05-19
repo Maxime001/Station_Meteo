@@ -11,7 +11,10 @@
 }
 
 body {
-	background: #34495e;
+	/*background: #34495e;*/
+         background: url(../../img/fondflou.jpg) no-repeat center fixed;
+         
+
 }
 
 .container > header,
