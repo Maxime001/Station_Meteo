@@ -109,7 +109,7 @@
 
 .gn-menu-wrapper {
 		position: fixed;
-		top: 40px;
+		top: 60px;
 		bottom: 0;
 		left: 0;
 		overflow: hidden;
@@ -126,6 +126,7 @@
 
 .gn-scroller {
 		position: absolute;
+                
 		width: 325px;
 		height: 100%;
                 overflow: hidden;
