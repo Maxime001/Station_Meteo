@@ -1,9 +1,9 @@
 $(function() {
     var testData = {
         "statutCapteur": {
-            "Accélerometre": 1,
-            "Alarme": 1,
-            "Arduino Télescope": 1,
+            "Accélerometre": 0,
+            "Alarme": 0,
+            "Arduino Télescope": 0,
             "Bruit": 0,
             "Distance Ouverture Toit": 1,
             "Hall Position": 0,
@@ -23,7 +23,6 @@ $(function() {
 
 
     function updateJSON() {
-        /*testData["statutCapteur"] = generateRandomStatusData(testData["statutCapteur"]);*/
         stripe.update(testData["statutCapteur"]);
     }
 

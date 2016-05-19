@@ -1,0 +1,16 @@
+.stripe-element {
+    float: left;
+    border: 1px solid white;
+    border-radius: 3px;
+    cursor: help;
+}
+
+.ui-tooltip-status-ok {
+    background: #21C721 !important;
+    color: white !important;
+}
+
+.ui-tooltip-status-bad {
+    background: #FF3636 !important;
+    color: white !important;
+}
