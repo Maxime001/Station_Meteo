@@ -115,6 +115,7 @@ $sms->sms("Quelqu'un est sur la page main");*/
                 <li><a href="http://night-pixel.fr">NightPixel</a></li>
                 <li><a href="logout.php"  ><img class="logout" src="img/logout.png"></a></li>         
             </ul>
+            <div class="principalTitle"><span>Andromede Observatory</span></div>
         </div>    
         <div class="centerPage">
                 <div class="fond affichageJauges">
