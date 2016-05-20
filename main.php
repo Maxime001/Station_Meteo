@@ -11,6 +11,7 @@ $sms->sms("Quelqu'un est sur la page main");*/
 <html>
     <head>
         <title> Station Météo</title>
+  
         <meta name="robots" content="noindex">
         <meta charset="UTF-8" />
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -67,12 +68,12 @@ $sms->sms("Quelqu'un est sur la page main");*/
         <script type="text/javascript" src="js/clock.js"></script>
         <script type="text/javascript">
             function update_img() {
-                 setTimeout("", 8000);
-          document.getElementById('cameraNord').src = "img/cameraNord.jpg";
+                 var d = new Date(); 
+          document.getElementById('cameraNord').src = "img/cameraNord.jpg?ver=" +d.getTime();;
           console.log("nordOk");
-          document.getElementById('cameraSud').src = "img/cameraSud.jpg";
-          console.log("sudOk");
-    setTimeout(function() {update_img();}, 8000);
+          document.getElementById('cameraSud').src = "img/cameraSud.jpg?ver=" +   d.getTime();;
+          
+    setTimeout(function() {update_img();}, 10000);
     
 }</script>
         <script>

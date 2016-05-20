@@ -21,9 +21,11 @@ $(document).ready(function() {
     
     // Mise a jour des fichiers jpg des caméras IP 
     setInterval(function() {
-        setTimeout("", 5000);
-        miseAJourPhoto();
-    },15000);
+   miseAJourPhoto();
+     
+    },30000);
+    
+    
     
      $(".logBlock2").click(function(){
            verifId();
