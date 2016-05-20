@@ -19,6 +19,11 @@ $(document).ready(function() {
         importJSON();
     }, 2000);
     
+    // Mise a jour des fichiers jpg des caméras IP 
+    setInterval(function() {
+        setTimeout("", 5000);
+        miseAJourPhoto();
+    },15000);
     
      $(".logBlock2").click(function(){
            verifId();

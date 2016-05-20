@@ -180,3 +180,17 @@ border:2px solid rgba(247, 163, 92, 0.1);
         font-size:20px;
     } 
 }
+
+.cameraNord{
+    border-radius:5px;
+    max-width: 100%;
+    margin-top:12px;
+    border:2px solid rgba(72, 91, 110, 0.8);
+}
+
+.cameraSud{
+    border-radius:5px; 
+    max-width: 100%;
+    margin-bottom:5px;
+    border:2px solid rgba(72, 91, 110, 0.8);
+}
