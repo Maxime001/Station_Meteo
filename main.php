@@ -6,6 +6,9 @@ $statusCapteurs = new Json(0,"json/controleObservatoire.json");
 /*$sms = new envoiSms();
 $sms->sms("Quelqu'un est sur la page main");*/
 
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -70,10 +73,9 @@ $sms->sms("Quelqu'un est sur la page main");*/
             function update_img() {
                  var d = new Date(); 
           document.getElementById('cameraNord').src = "img/cameraNord.jpg?ver=" +d.getTime();;
-          console.log("nordOk");
-          document.getElementById('cameraSud').src = "img/cameraSud.jpg?ver=" +   d.getTime();;
+          document.getElementById('cameraSud').src = "img/cameraSud.jpg?ver=" + d.getTime();;
           
-    setTimeout(function() {update_img();}, 10000);
+    setTimeout(function() {update_img();}, 20000);
     
 }</script>
         <script>

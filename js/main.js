@@ -17,12 +17,11 @@ $(document).ready(function() {
     setInterval(function() {
         // Mise a jour du fichier Json donneesInstantanee.json 
         importJSON();
-    }, 2000);
+    }, 10000);
     
     // Mise a jour des fichiers jpg des caméras IP 
     setInterval(function() {
-   miseAJourPhoto();
-     
+        miseAJourPhoto();
     },30000);
     
     
@@ -95,8 +94,6 @@ function statusCapteurs(){
         function updateJSON() {
             $.getJSON('json/controleObservatoire.json', function(data) {
                 stripe.update(data.statutCapteur);
-                console.log(data.statutCapteur);
-           
             });
         }
 
@@ -105,7 +102,7 @@ function statusCapteurs(){
    
         setInterval(function() {
             updateJSON();
-        }, 5000);
+        }, 60000);
     });
     });
 }

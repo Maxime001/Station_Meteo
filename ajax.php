@@ -16,8 +16,15 @@ $envoiCommandeObservatoire = new Json(0,"json/controleObservatoire.json");
 
 if($_GET['requete'] == 'miseAJourPhoto'){                             
     $updateImage = new CameraIp();
-   $updateImage->getImage(11,"img/cameraNord.jpg");
-    $updateImage->getImage(12,"img/cameraSud.jpg");                           
+   
+    if($_SERVER['SERVER_NAME'] == "localhost"){
+        $updateImage->getImage(54,"img/cameraNord.jpg");
+        $updateImage->getImage(55,"img/cameraSud.jpg"); 
+    }
+    else{
+        $updateImage->getImage(11,"img/cameraNord.jpg");
+        $updateImage->getImage(12,"img/cameraSud.jpg");     
+    }
 }
 
 
