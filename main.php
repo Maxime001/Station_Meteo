@@ -216,19 +216,27 @@ $sms->sms("Quelqu'un est sur la page main");*/
                 </div>
                 
 
-                <div class="fond affichageCourbes ">
-                    <div class= "mainTitle">Caméras IP</div></br></br></br>
+                <div class="fond affichageCameras ">
+                    <div class= "mainTitle">Caméras IP</div>
                     <div id="camera">
-
-                    <img src="<?php echo "http://admin:P3gaze1992@192.168.1.12/image.jpg"?>"/>
+                                <?php
+                                $updateImage = new CameraIp();
+                                $updateImage->getImage(54,"img/cameraNord.jpg");
+                                $updateImage->getImage(55,"img/cameraSud.jpg");
+                                ?>
+                        <img style="border-radius:5px;max-width: 100%;margin-top:12px;" src="img/cameraNord.jpg"/></br></br>
+                    <img style="border-radius:5px; max-width: 100%; margin-bottom:5px;" src="img/cameraSud.jpg"/>
                     </div>
+
+                </div>
+            <div class="fond affichageGraphiques">
                     <div class= "mainTitle">Meteo des dernières 24h</div>
                     <div class="graphique" id="graphePression" ></div>
                     <div class="graphique" id="grapheHumidite" ></div>
                     <div class="graphique" id="grapheTemperatureExterieure" ></div>
                     <div class="graphique" id="grapheDetectionEau"></div>
                     <div class="graphique" id="grapheLuminosite"></div>
-                </div>
+            </div>
                <!-- <div class="fond meteo">
                       <div class= "mainTitle">API météo</div>
                       API's météo
