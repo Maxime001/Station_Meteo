@@ -95,15 +95,15 @@
     
       /* Affichage de la mesure en lux*/
       if (event.light){
-        if(event.light > 20000){
-          Serial.println("E2 : Erreur lecture capteur lumière");
-          Serial.println("C2 : Luminosite (ERREUR) :");
-          Serial.println(1);
-        }
-        else{
+        //if(event.light > 20000){
+      //    Serial.println("E2 : Erreur lecture capteur lumière");
+       //   Serial.println("C2 : Luminosite (ERREUR) :");
+        //  Serial.println(1);
+       // }
+      //  else{
           Serial.println("C2 : Luminosite (lux): ");          
           Serial.println(event.light);
-        }
+        //  }
       }
       else{
         /*Si event.light = 0 lux, le capteur est certainement sature et aucune donnee ne peut etre generee*/
