@@ -220,7 +220,7 @@ $sms->sms("Quelqu'un est sur la page main");*/
                     <div class= "mainTitle">Caméras IP</div></br></br></br>
                     <div id="camera">
 
-                    <img src="http://admin:P3gaze1992@nasorion68.no-ip.org:55/image.jpg"/>
+                    <img src="http://admin:P3gaze1992@192.168.1.12/image.jpg"/>
                     </div>
                     <div class= "mainTitle">Meteo des dernières 24h</div>
                     <div class="graphique" id="graphePression" ></div>
