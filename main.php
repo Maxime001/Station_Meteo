@@ -212,11 +212,16 @@ $sms->sms("Quelqu'un est sur la page main");*/
      
                            </br></br></br></br></br>
                     <div class="mainTitle">Vue 3D</div>
-                    <img src="img/3D.jpg">
+                    <img src="img/3D.jpg"/>
                 </div>
                 
 
                 <div class="fond affichageCourbes ">
+                    <div class= "mainTitle">Caméras IP</div></br></br></br>
+                    <div id="camera">
+
+                    <img src="192.168.1.12/image.jpg"/>
+                    </div>
                     <div class= "mainTitle">Meteo des dernières 24h</div>
                     <div class="graphique" id="graphePression" ></div>
                     <div class="graphique" id="grapheHumidite" ></div>
