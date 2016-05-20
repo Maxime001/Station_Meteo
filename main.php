@@ -65,7 +65,19 @@ $sms->sms("Quelqu'un est sur la page main");*/
         <script type="text/javascript" src="js/ajax.js"></script>
         <script src="js/libs/solid-jauge.js"></script>
         <script type="text/javascript" src="js/clock.js"></script>
+        <script type="text/javascript">
+            function update_img() {
+                 setTimeout("", 8000);
+          document.getElementById('cameraNord').src = "img/cameraNord.jpg";
+          console.log("nordOk");
+          document.getElementById('cameraSud').src = "img/cameraSud.jpg";
+          console.log("sudOk");
+    setTimeout(function() {update_img();}, 8000);
+    
+}</script>
         <script>
+            
+            
         $(document).ready(function() {
             var dist=20;
             function progressbarr(){   
@@ -86,7 +98,7 @@ $sms->sms("Quelqu'un est sur la page main");*/
                 
          
         progressbarr();
-        
+        update_img();
   
         });
     </script>
@@ -219,13 +231,9 @@ $sms->sms("Quelqu'un est sur la page main");*/
                 <div class="fond affichageCameras ">
                     <div class= "mainTitle">Caméras IP</div>
                     <div id="camera">
-                                <?php
-                                $updateImage = new CameraIp();
-                                $updateImage->getImage(54,"img/cameraNord.jpg");
-                                $updateImage->getImage(55,"img/cameraSud.jpg");
-                                ?>
-                        <img style="border-radius:5px;max-width: 100%;margin-top:12px;" src="img/cameraNord.jpg"/></br></br>
-                    <img style="border-radius:5px; max-width: 100%; margin-bottom:5px;" src="img/cameraSud.jpg"/>
+
+                        <img class="cameraNord" id="cameraNord" src="img/cameraNord.jpg"/></br></br>
+                    <img class="cameraSud" id="cameraSud" src="img/cameraSud.jpg"/>
                     </div>
 
                 </div>

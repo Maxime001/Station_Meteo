@@ -7,6 +7,13 @@
 setTimeout(updateWeather,3000); 
 }*/
 
+function miseAJourPhoto(){
+     $.ajax({
+        url : 'ajax.php',
+        type : 'GET',
+        data : 'requete=miseAJourPhoto'
+    });
+}
 
 function ouvreToit(){
      $.ajax({
