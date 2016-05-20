@@ -2,7 +2,7 @@
 
 class CameraIp{
    public function getImage($port,$lien){
-       $url = "http://admin:P3gaze1992@nasorion68.no-ip.org:$port/image.jpg";
+       $url = "http://admin:P3gaze1992@192.168.1.12/image.jpg";
        $fichier = $lien;
 $ch = curl_init($url);
 $fp = fopen($fichier, 'wb');
