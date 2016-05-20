@@ -11,9 +11,15 @@ function miseAJourPhoto(){
      $.ajax({
         url : 'ajax.php',
         type : 'GET',
-        data : 'requete=miseAJourPhoto'
+        data : 'requete=miseAJourPhoto',
+ success:function(){                
+        var d = new Date(); 
+          document.getElementById('cameraNord').src = "img/cameraNord.jpg?ver=" +d.getTime();
+          document.getElementById('cameraSud').src = "img/cameraSud.jpg?ver=" + d.getTime();
+        }
     });
 }
+
 
 function ouvreToit(){
      $.ajax({

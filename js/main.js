@@ -22,7 +22,7 @@ $(document).ready(function() {
     // Mise a jour des fichiers jpg des caméras IP 
     setInterval(function() {
         miseAJourPhoto();
-    },30000);
+    },15000);
     
     
     
