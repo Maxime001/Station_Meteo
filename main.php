@@ -22,9 +22,9 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="shortcut icon" href="../favicon.ico">
         <!-- CSS du template -->
-        <link rel="stylesheet" type="text/css" href="template/css/normalize.css" />
-        <link rel="stylesheet" type="text/css" href="template/css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="template/css/component.css" />
+        <link rel="stylesheet" type="text/css" href="css/template/css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/template/css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/template/css/component.css" />
         <!-- CSS de jqueryUI -->
         <link href="css/libs/jquery-ui.min.css" rel="stylesheet">
         <!-- JS du template -->
@@ -256,8 +256,8 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");
 
         </div>
         
-        <script src="template/js/classie.js"></script>
-        <script src="template/js/gnmenu.js"></script>
+        <script src="css/template/js/classie.js"></script>
+        <script src="css/template/js/gnmenu.js"></script>
         <script>
                 new gnMenu( document.getElementById( 'gn-menu' ) );
         </script>
