@@ -2,8 +2,19 @@
 /**
  * Classe Base de données contenant toutes les requetes SQL du site
  */
-class BaseDonnees extends Bdd {
+class BaseDonnees {
 
+    protected $bdd="";
+
+    public function __construct(){
+        include("config.php");
+        try{
+            $this->bdd = new PDO('mysql:host='.$host.';dbname='.$dbNameMeteo.';charset=utf8', "$user", "$pass");
+            $this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+            }
+        catch(Exception $e){die('Erreur : '.$e->getMessage());}
+    }
+    
     /**
      * Requete SQL qui va récupérer les dernières 24h de données de la station météo
      * @return array Retourne un tableau à 2 dimensions contenant les données des 24 dernières heures.

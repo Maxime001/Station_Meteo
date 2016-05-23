@@ -6,3 +6,4 @@
 /img/cameraSud.jpg
 class/CameraIp.php
 class/ajax.php
+class/envoiSms.php
