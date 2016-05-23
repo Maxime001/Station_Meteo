@@ -9,7 +9,7 @@ $(document).ready(function() {
     initGrapheJauge('#pluie','Capteur de pluie',' SU',0,1000,0,500,'#DF5353',500,700,'#DDDF0D',700,1000,'#55BF3B',0);
     initGrapheJauge('#pression','Baromètre','Hpa',900,1100,900,975,'#DF5353',975,1000,'#DDDF0D',1000,1100,"#55BF3B",900);
     initGrapheJauge('#temperatureExterieure','T°C Exterieure','°C',-20,45,-20,0,'#0066ff',0,25,'#55BF3B',25,45,"#DF5353",-20);
-    initGrapheJauge('#luminosite','Capteur de lumière','lux',0,18000,0,500,'#0066ff',500,5000,'#55BF3B',5000,18000,"#DF5353",-20);
+    initGrapheJauge('#luminosite','Capteur de lumière','lux',0,65536,0,2000,'#0066ff',2000,50000,'#DF5353',50000,65536,"#55BF3B",0);
 
     // Appel du fichier json pour les données journalières ainsi que des graphiques journaliers
     importJsonJournalier();
