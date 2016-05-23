@@ -4,8 +4,8 @@ $MajJson = new Json(0,"json/meteo24h.json");
 $MajJson->save24h();
 $statusCapteurs = new Json(0,"json/controleObservatoire.json");
 /*$sms = new envoiSms();
-$sms->sms("Quelqu'un est sur la page main");*/
-
+$sms->sms("Quelqu'un est sur la page mainfeafaef");
+*/
 
 
 
