@@ -1,11 +1,12 @@
 <?php
+
 /**
  * Classe Base de données contenant toutes les requetes SQL du site
  */
 class BaseDonnees {
 
     protected $bdd="";
-
+    
     public function __construct(){
         include("config.php");
         try{
@@ -23,7 +24,7 @@ class BaseDonnees {
         date_default_timezone_set("Europe/Paris");
         $Date = time();
         $DateJ = $Date - 86400;
-        $DateMoinsUnJour =  date('Y-m-d H:i:d',$DateJ)."</br>";
+        $DateMoinsUnJour =  date('Y-m-d H:i:s',$DateJ);
         $date = array();
         $pression = array();
         $luminosite = array();
@@ -32,7 +33,7 @@ class BaseDonnees {
         $mesureBruit = array();
         $temperatureExterieure = array();
         $termperatureInterieure = array();
-        $reponse = $this->bdd->query('SELECT * FROM infometeo WHERE Date >= "'.$DateMoinsUnJour.'"');
+        $reponse = $this->bdd->query('SELECT * FROM infometeo WHERE Date >= "'.$DateMoinsUnJour.'" ORDER BY ID ASC');
         while($donnees = $reponse->fetch()){
             array_push($date,$donnees["Date"]);
             array_push($pression,intval($donnees["pression"]));
@@ -54,6 +55,27 @@ class BaseDonnees {
         array_push($array,$termperatureInterieure);
         
 
+        // Tableau de date en timestamp
+        $timeStampArray = array();
+        for($i=0;$i<count($date); $i++){
+            $timeStamp = strtotime($date[$i]);
+            array_push($timeStampArray, $timeStamp);
+        }
+        
+        // Si il manque des valeurs, on les rajoutes
+        for($i=0;$i<count($timeStampArray)-1;$i++){
+            $deltaT = $timeStampArray[$i+1] - $timeStampArray[$i];
+            if($deltaT != 300){
+   
+                $valeursARajouter = ($deltaT/300) - 1;
+
+                array_splice($timeStampArray,$i+1,0,$timeStampArray[$i]+300);
+                for($j=1;$j<=7;$j++){
+                    array_splice($array[$j],$i+1,0,"Missing");
+                }
+
+            }
+        }
         
        return $array;
     }

@@ -26,6 +26,14 @@
             $bdd = new BaseDonnees();
             $donnees = $bdd->recup24h();
             
+            for($j=1;$j<=7;$j++){
+                for($i=0;$i<=count($donnees[0])-1;$i++){
+                    if($donnees[$j][$i] == "Missing"){
+                        $donnees[$j][$i] = null;
+                    } 
+                }
+            }
+            
 
             $json->donnees->Date = $donnees[0];
             $json->donnees->pression = $donnees[1];
@@ -35,6 +43,8 @@
             $json->donnees->mesureBruit = $donnees[5];
             $json->donnees->temperatureExterieure = $donnees[6];
             $json->donnees->temperatureInterieure = $donnees[7];
+            
+            
             
             $pressionMin = min($donnees[1]);
             $pressionMax = max($donnees[1]);
@@ -66,25 +76,7 @@
             $json->minMax->temperatureInterieureMin = $temperatureInterieureMin;
             $json->minMax->temperatureInterieureMax = $temperatureInterieureMax;
                     
-                    /*
-             * 
-             *     "minMax": {
-        "pressionMin": 0,
-        "pressionMax": 0,
-        "luminositeMin": 0,
-        "luminositeMax": 0,
-        "humiditeMin": 0,
-        "humiditeMax": 0,
-        "detectionEauMin": 0,
-        "detectionEauMax": 0,
-        "mesureBruitMin": 0,
-        "mesureBruitMax": 0,
-        "temperatureExterieureMin": 0,
-        "temperatureExterieureMax": 0,
-        "temperatureInterieureMin": 0,
-        "temperatureInterieureMax": 0
-             */
-           
+ 
             $json = json_encode($json, JSON_PRETTY_PRINT);
             
             $addJson = fopen($this->fichierEnregistrement,'r+')
