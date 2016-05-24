@@ -1,3 +1,3 @@
 Options +FollowSymlinks
 RewriteEngine On
-RewriteRule ^Historique_Meteo$ index.php?p=HistoriqueMeteo[L] 
+RewriteRule ^Historique_Meteo$ /index.php?p=HistoriqueMeteo 
