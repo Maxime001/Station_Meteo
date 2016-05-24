@@ -63,7 +63,7 @@ class BaseDonnees {
     }
     
      public function recupAll(){
-         date_default_timezone_set("Europe/Paris");
+        
         $date = array();
         $pression = array();
         $luminosite = array();
@@ -95,13 +95,14 @@ class BaseDonnees {
 
         $verif = new VerificationDonnees();
         $array2 = $verif->verifDate($array);
-        
+        var_dump($array2[0][0]);
         // Conversion des dates en timestamp
         for($i=0;$i<count($array2[0]); $i++){
-            
+             date_default_timezone_set("Europe/Paris");
             $array2[0][$i] = strtotime($array2[0][$i]);
             $array2[0][$i] = $array2[0][$i] * 1000;
         }
+       var_dump($array2[0][0]);
        return $array2;
     }
     
