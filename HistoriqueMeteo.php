@@ -79,11 +79,17 @@ $(function () {
             <div class="fond affichageGraphiques2">
                 <div class= "mainTitle">Historique Meteo - Humidite</div>
                 <div id="Humidite" style="height: 400px; min-width: 310px"></div></br>
-                <div id="Pression" style="height: 400px; min-width: 310px"></div>
-                <div id="luminosite" style="height: 400px; min-width: 310px"></div>
-                <div id="detectionEau" style="height: 400px; min-width: 310px"></div>
-                <div id="mesureBruit" style="height: 400px; min-width: 310px"></div>
-                <div id="temperatureInterieure" style="height: 400px; min-width: 310px"></div>
+                <div class= "mainTitle">Historique Meteo - Pression</div>
+                <div id="Pression" style="height: 400px; min-width: 310px"></div></br>
+                <div class= "mainTitle">Historique Meteo - Luminosite</div>
+                <div id="luminosite" style="height: 400px; min-width: 310px"></div></br>
+                <div class= "mainTitle">Historique Meteo - Détection Eau</div>
+                <div id="detectionEau" style="height: 400px; min-width: 310px"></div></br>
+                <div class= "mainTitle">Historique Meteo - Mesure de Bruit</div>
+                <div id="mesureBruit" style="height: 400px; min-width: 310px"></div></br>
+                <div class= "mainTitle">Historique Meteo - Température Intérieure</div>
+                <div id="temperatureInterieure" style="height: 400px; min-width: 310px"></div></br>
+                <div class= "mainTitle">Historique Meteo - Température Exterieure</div>
                 <div id="temperatureExterieure" style="height: 400px; min-width: 310px"></div>
             </div>
         </div>
