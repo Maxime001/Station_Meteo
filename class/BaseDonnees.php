@@ -98,8 +98,9 @@ class BaseDonnees {
         // Conversion des dates en timestamp
         for($i=0;$i<count($array2[0]); $i++){
             $array2[0][$i] = strtotime($array2[0][$i]);
+            $array2[0][$i] = $array2[0][$i] * 1000;
         }
-        
+        var_dump($array2[0]);
        return $array2;
     }
     
