@@ -69,15 +69,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
         <script type="text/javascript" src="js/ajax.js"></script>
         <script src="js/libs/solid-jauge.js"></script>
         <script type="text/javascript" src="js/clock.js"></script>
-        <script type="text/javascript">
-  /*          function update_img() {
-                 var d = new Date(); 
-          document.getElementById('cameraNord').src = "img/cameraNord.jpg?ver=" +d.getTime();;
-          document.getElementById('cameraSud').src = "img/cameraSud.jpg?ver=" + d.getTime();;
-          
-    setTimeout(function() {update_img();}, 20000);
-    
-}*/</script>
+
         <script>
             
             
@@ -124,7 +116,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                                 </li>
                                 <li><a class="gn-icon gn-icon-cog">Paramètres</a></li>
                                 <li>
-                                    <a class="gn-icon gn-icon-archive">Meteo</a>
+                                    <a href="index.php?p=HistoriqueMeteo"class="gn-icon gn-icon-archive">Meteo</a>
                                 </li>
                             </ul>
                         </div>
