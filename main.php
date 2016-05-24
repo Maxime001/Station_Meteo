@@ -185,7 +185,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
 
                         
                     </br></br>
-                      <div id="progressbar" style="width:300px;margin-left:100px;"></div>
+                      <div id="progressbar" style="width:300px;"></div>
                      
                      
                    </br></br>
@@ -193,7 +193,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
      
                            </br></br></br></br></br>
                     <div class="mainTitle">Vue 3D</div>
-                    <img src="img/3D.jpg"/>
+                    <img style="width:280px;"src="img/3D.jpg"/>
                 </div>
                 
 
