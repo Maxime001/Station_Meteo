@@ -16,6 +16,8 @@
             $this->fichierEnregistrement = $fichierEnregistrement;
         }
         
+
+        
         /**
          * Fonction de sauvegarde des 24 dernières heures de données météo dans un fichier json
          */
@@ -35,10 +37,6 @@
                     
                 }
             }
-          /*  for($t=0;$t<250;$t++){
-            var_dump($donnees[2][$t]);
-            }*/
-            
 
             $json->donnees->Date = $donnees[0];
             $json->donnees->pression = $donnees[1];
@@ -48,8 +46,6 @@
             $json->donnees->mesureBruit = $donnees[5];
             $json->donnees->temperatureExterieure = $donnees[6];
             $json->donnees->temperatureInterieure = $donnees[7];
-            
-            
             
             $pressionMin = min($donnees[1]);
             $pressionMax = max($donnees[1]);
@@ -81,7 +77,6 @@
             $json->minMax->temperatureInterieureMin = $temperatureInterieureMin;
             $json->minMax->temperatureInterieureMax = $temperatureInterieureMax;
                     
- 
             $json = json_encode($json, JSON_PRETTY_PRINT);
             
             $addJson = fopen($this->fichierEnregistrement,'r+')
@@ -89,7 +84,82 @@
             ftruncate($addJson,0);
             //Ecriture du nouveau Json
             fputs($addJson,$json);
+        }
+        
+        public function saveAll(){
+            $fichierEnregistrement = $this->fichierEnregistrement;
+            $json = file_get_contents($fichierEnregistrement);
+            $json = json_decode($json);
+            $bdd = new BaseDonnees();
+            $donnees = $bdd->recupAll();
+            
 
+        
+            for($j=1;$j<=7;$j++){
+                for($i=0;$i<=count($donnees[0])-1;$i++){
+                    if(is_string($donnees[$j][$i])){
+                        $donnees[$j][$i] = null;
+                        
+                    } 
+                    
+                }
+            }
+            $pression = array();
+            $humidite = array();
+            $luminosite = array();
+            $detectionEau = array();
+            $mesureBruit = array();
+            $temperatureExterieure = array();
+            $temperatureInterieure = array();
+            
+  
+            for($t=0;$t<count($donnees[0]);$t++){
+                
+                $pression[$t][0] = $donnees[0][$t];
+                $pression[$t][1] = $donnees[1][$t];
+                
+                $luminosite[$t][0] = $donnees[0][$t];
+                $luminosite[$t][1] = $donnees[2][$t];
+                
+                $humidite[$t][0] = $donnees[0][$t];
+                $humidite[$t][1] = $donnees[3][$t];
+                
+                $detectionEau[$t][0] = $donnees[0][$t];
+                $detectionEau[$t][1] = $donnees[4][$t];
+                
+                $mesureBruit[$t][0] = $donnees[0][$t];
+                $mesureBruit[$t][1] = $donnees[5][$t];
+                
+                $temperatureInterieure[$t][0] = $donnees[0][$t];
+                $temperatureInterieure[$t][1] = $donnees[6][$t];
+                
+                $temperatureInterieure[$t][0] = $donnees[0][$t];
+                $temperatureInterieure[$t][1] = $donnees[7][$t];
+                
+                
+            }
+            var_dump($humidite[0][0]);
+
+     
+                $json->pression = $pression;
+                $json->luminosite = $luminosite;
+                $json->humidite = $humidite;
+                $json->detectionEau = $detectionEau;
+                $json->mesureBruit = $mesureBruit;
+                $json->temperatureInterieure = $temperatureInterieure;
+                $json->temperatureExterieure = $temperatureExterieure;
+            
+
+            
+             var_dump(count($donnees[3]));
+            $json = json_encode($json, JSON_PRETTY_PRINT);
+           
+            
+            $addJson = fopen($this->fichierEnregistrement,'r+')
+            or die("Erreur d'ouverture du fichier Json");
+            ftruncate($addJson,0);
+            //Ecriture du nouveau Json
+            fputs($addJson,$json);
         }
         
         /**

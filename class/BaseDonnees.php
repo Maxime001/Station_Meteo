@@ -44,6 +44,8 @@ class BaseDonnees {
             array_push($temperatureExterieure,floatval($donnees["temperatureExterieure"]));
             array_push($termperatureInterieure,floatval($donnees["temperatureInterieure"]));
         }
+        
+
         $array = array();
         array_push($array,$date);
         array_push($array,$pression);
@@ -53,31 +55,52 @@ class BaseDonnees {
         array_push($array,$mesureBruit);
         array_push($array,$temperatureExterieure);
         array_push($array,$termperatureInterieure);
-        
 
-        // Tableau de date en timestamp
-        $timeStampArray = array();
-        for($i=0;$i<count($date); $i++){
-            $timeStamp = strtotime($date[$i]);
-            array_push($timeStampArray, $timeStamp);
+        $verif = new VerificationDonnees();
+        $array2 = $verif->verifDate($array);
+        
+       return $array2;
+    }
+    
+     public function recupAll(){
+        $date = array();
+        $pression = array();
+        $luminosite = array();
+        $humidite = array();
+        $detectionEau = array();
+        $mesureBruit = array();
+        $temperatureExterieure = array();
+        $termperatureInterieure = array();
+        $reponse = $this->bdd->query('SELECT * FROM infometeo ORDER BY ID ASC');
+        while($donnees = $reponse->fetch()){
+            array_push($date,$donnees["Date"]);
+            array_push($pression,intval($donnees["pression"]));
+            array_push($luminosite,intval($donnees["luminosite"]));
+            array_push($humidite,  floatval($donnees["humidite"]));
+            array_push($detectionEau,intval($donnees["detectionEau"]));
+            array_push($mesureBruit,intval($donnees["mesureBruit"]));
+            array_push($temperatureExterieure,floatval($donnees["temperatureExterieure"]));
+            array_push($termperatureInterieure,floatval($donnees["temperatureInterieure"]));
+        }
+        $array = array();
+        array_push($array,$date);
+        array_push($array,$pression);
+        array_push($array,$luminosite);
+        array_push($array,$humidite);
+        array_push($array,$detectionEau);
+        array_push($array,$mesureBruit);
+        array_push($array,$temperatureExterieure);
+        array_push($array,$termperatureInterieure);
+
+        $verif = new VerificationDonnees();
+        $array2 = $verif->verifDate($array);
+        
+        // Conversion des dates en timestamp
+        for($i=0;$i<count($array2[0]); $i++){
+            $array2[0][$i] = strtotime($array2[0][$i]);
         }
         
-        // Si il manque des valeurs, on les rajoutes
-        for($i=0;$i<count($timeStampArray)-1;$i++){
-            $deltaT = $timeStampArray[$i+1] - $timeStampArray[$i];
-            if($deltaT != 300){
-   
-                $valeursARajouter = ($deltaT/300) - 1;
-
-                array_splice($timeStampArray,$i+1,0,$timeStampArray[$i]+300);
-                for($j=1;$j<=7;$j++){
-                    array_splice($array[$j],$i+1,0,"Missing");
-                }
-
-            }
-        }
-        
-       return $array;
+       return $array2;
     }
     
     /**

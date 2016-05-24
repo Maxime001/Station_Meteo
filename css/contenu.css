@@ -85,6 +85,14 @@
     width:91%;
 }
 
+.affichageGraphiques2{
+    margin-top:80px;
+    height:auto;
+    z-index:-10;
+    width:91%;
+    margin-bottom:20px;
+}
+
 .affichageCameras{
     height:auto;
     z-index:-10;
