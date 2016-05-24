@@ -8,21 +8,27 @@
     $ip = new BloquageIp();
     $res = $ip->verifBloque();
     
+    // Adresse IP bloquée 
     if($res == true){
         include '404.php';
     }
-    else{    
+    else{ 
+        // Vérification du login si il est déjà rentré
         if(!isset($_SESSION['validUser'])){
             include 'verif.php';
         }
-
+        // Affichage de la page de log
         if(!isset($_SESSION['validUser'])){
             include 'login.php';
         }
-
+        if(isset($_GET['p']) && $_GET['p'] == "HistoriqueMeteo" ){
+            include 'HistoriqueMeteo.php';
+        }
+        // Affichage de la page main 
         elseif(isset($_SESSION['validUser'])){
             include 'main.php';
         }
+        
     }
 /*
 $test = new envoiSms();
