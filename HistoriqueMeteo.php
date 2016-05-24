@@ -35,17 +35,20 @@
 <script type="text/javascript">
 $(function () {
     $.getJSON('json/meteo.json', function (data) {
-        AfficheGraphe("#Humidite",data.humidite);
-        AfficheGraphe("#Pression",data.pression);
-        AfficheGraphe("#luminosite",data.luminosite);
-        AfficheGraphe("#detectionEau",data.detectionEau);
-        AfficheGraphe("#mesureBruit",data.mesureBruit);
-        AfficheGraphe("#temperatureExterieure",data.temperatureExterieure);
-        AfficheGraphe("#temperatureInterieure",data.temperatureInterieure);
+        AfficheGraphe("#Humidite",data.humidite," Humidité (%HR)");
+        AfficheGraphe("#Pression",data.pression," Pression (HPa)");
+        AfficheGraphe("#luminosite",data.luminosite,"Luminosite (Lux)");
+        AfficheGraphe("#detectionEau",data.detectionEau,"Détection Eau (SU)");
+        AfficheGraphe("#mesureBruit",data.mesureBruit,"Mesure de Bruit (SU)");
+        AfficheGraphe("#temperatureExterieure",data.temperatureExterieure,"Température exterieure (°C)");
+        AfficheGraphe("#temperatureInterieure",data.temperatureInterieure,"Température Intérieure (°C)");
         
         // Création du graphique
-        function AfficheGraphe(Div,dataType){
+        function AfficheGraphe(Div,dataType,Name){
                 $(Div).highcharts('StockChart', {
+                    title:{
+                        text:''
+                    },
                     credits: {
                         enabled: false
                      },
@@ -55,11 +58,8 @@ $(function () {
                     rangeSelector : {
                         selected : 1
                     },
-                    title : {
-                        text : 'Historique Meteo'
-                    },
                     series : [{
-                            name : 'Humidité',
+                            name : Name,
                             data : dataType,
                             tooltip: {
                                     valueDecimals: 1
