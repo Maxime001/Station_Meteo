@@ -130,8 +130,8 @@
                 $mesureBruit[$t][0] = $donnees[0][$t];
                 $mesureBruit[$t][1] = $donnees[5][$t];
                 
-                $temperatureInterieure[$t][0] = $donnees[0][$t];
-                $temperatureInterieure[$t][1] = $donnees[6][$t];
+                $temperatureExterieure[$t][0] = $donnees[0][$t];
+                $temperatureExterieure[$t][1] = $donnees[6][$t];
                 
                 $temperatureInterieure[$t][0] = $donnees[0][$t];
                 $temperatureInterieure[$t][1] = $donnees[7][$t];

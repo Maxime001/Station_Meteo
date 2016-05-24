@@ -37,9 +37,11 @@ $(function () {
     $.getJSON('json/meteo.json', function (data) {
         AfficheGraphe("#Humidite",data.humidite);
         AfficheGraphe("#Pression",data.pression);
-        AfficheGraphe("#Humidite",data.humidite);
-        AfficheGraphe("#Humidite",data.humidite);
-        AfficheGraphe("#Humidite",data.humidite);
+        AfficheGraphe("#luminosite",data.luminosite);
+        AfficheGraphe("#detectionEau",data.detectionEau);
+        AfficheGraphe("#mesureBruit",data.mesureBruit);
+        AfficheGraphe("#temperatureExterieure",data.temperatureExterieure);
+        AfficheGraphe("#temperatureInterieure",data.temperatureInterieure);
         
         // Création du graphique
         function AfficheGraphe(Div,dataType){
@@ -76,8 +78,13 @@ $(function () {
         <div class="centerPage">
             <div class="fond affichageGraphiques2">
                 <div class= "mainTitle">Historique Meteo - Humidite</div>
-                <div id="Humidite" style="height: 400px; min-width: 310px"></div>
+                <div id="Humidite" style="height: 400px; min-width: 310px"></div></br>
                 <div id="Pression" style="height: 400px; min-width: 310px"></div>
+                <div id="luminosite" style="height: 400px; min-width: 310px"></div>
+                <div id="detectionEau" style="height: 400px; min-width: 310px"></div>
+                <div id="mesureBruit" style="height: 400px; min-width: 310px"></div>
+                <div id="temperatureInterieure" style="height: 400px; min-width: 310px"></div>
+                <div id="temperatureExterieure" style="height: 400px; min-width: 310px"></div>
             </div>
         </div>
         <?php
