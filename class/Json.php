@@ -28,11 +28,16 @@
             
             for($j=1;$j<=7;$j++){
                 for($i=0;$i<=count($donnees[0])-1;$i++){
-                    if($donnees[$j][$i] == "Missing"){
+                    if(is_string($donnees[$j][$i])){
                         $donnees[$j][$i] = null;
+                        
                     } 
+                    
                 }
             }
+          /*  for($t=0;$t<250;$t++){
+            var_dump($donnees[2][$t]);
+            }*/
             
 
             $json->donnees->Date = $donnees[0];
