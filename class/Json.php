@@ -138,7 +138,7 @@
                 
                 
             }
-            var_dump($humidite[0][0]);
+            
 
      
                 $json->pression = $pression;
@@ -152,7 +152,7 @@
 
             
              var_dump(count($donnees[3]));
-            $json = json_encode($json, JSON_PRETTY_PRINT);
+            $json = json_encode($json);
            
             
             $addJson = fopen($this->fichierEnregistrement,'r+')
