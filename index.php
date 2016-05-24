@@ -21,7 +21,7 @@
         if(!isset($_SESSION['validUser'])){
             include 'login.php';
         }
-        if(isset($_GET['p']) && $_GET['p'] == "HistoriqueMeteo" ){
+        if(isset($_SESSION['validUser']) && isset($_GET['p']) && $_GET['p'] == "HistoriqueMeteo" ){
             include 'HistoriqueMeteo.php';
         }
         // Affichage de la page main 
