@@ -93,6 +93,11 @@
     margin-bottom:20px;
 }
 
+@media all and (max-width:1380px){
+    .affichageGraphiques2{
+    width:99.5%;
+}
+}
 .affichageCameras{
     height:auto;
     z-index:-10;

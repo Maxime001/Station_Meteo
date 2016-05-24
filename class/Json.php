@@ -151,7 +151,7 @@
             
 
             
-             var_dump(count($donnees[3]));
+            
             $json = json_encode($json);
            
             
