@@ -49,6 +49,9 @@ $(function () {
                     title:{
                         text:''
                     },
+                    global: {
+    useUTC: false
+},
                     credits: {
                         enabled: false
                      },
