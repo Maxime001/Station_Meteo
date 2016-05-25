@@ -25,13 +25,6 @@
         <link rel="stylesheet" type="text/css" href="css/contenu.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
-        <script src="https://code.highcharts.com/stock/highstock.js"></script>
-        <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/libs/style.css">
-        
-        <script src="js/libs/highcharts.js"></script>
-        <script src="js/libs/highcharts-more.js"></script>
-        <script src="js/libs/exporting.js"></script>
 
 </head>
     <?php
