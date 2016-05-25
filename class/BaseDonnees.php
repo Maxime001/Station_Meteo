@@ -99,10 +99,13 @@ class BaseDonnees {
         // Conversion des dates en timestamp
         for($i=0;$i<count($array2[0]); $i++){
              date_default_timezone_set("Europe/Paris");
+          
             $array2[0][$i] = strtotime($array2[0][$i]);
+            
             $array2[0][$i] = $array2[0][$i] * 1000;
+            
         }
-       
+
        return $array2;
     }
     

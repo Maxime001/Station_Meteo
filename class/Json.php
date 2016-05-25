@@ -96,7 +96,7 @@
 
         
             for($j=1;$j<=7;$j++){
-                for($i=0;$i<=count($donnees[0])-1;$i++){
+                for($i=1;$i<=count($donnees[0])-11;$i++){
                     if(is_string($donnees[$j][$i])){
                         $donnees[$j][$i] = null;
                         
