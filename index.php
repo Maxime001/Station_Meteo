@@ -21,14 +21,22 @@
         if(!isset($_SESSION['validUser'])){
             include 'login.php';
         }
-        if(isset($_SESSION['validUser']) && isset($_GET['p']) && $_GET['p'] == "HistoriqueMeteo" ){
+        // LOGGE
+        if(isset($_SESSION['validUser']) && isset($_GET['p'])){
+            if($_GET['p'] == "HistoriqueMeteo"){
             include 'HistoriqueMeteo.php';
+            }
+            elseif($_GET['p'] == "parametres"){
+                include 'parametre.php';
+            }
+            elseif($_GET['p'] == "console"){
+                include 'console.php';
+            }
         }
         // Affichage de la page main 
         elseif(isset($_SESSION['validUser'])){
             include 'main.php';
         }
-        
     }
 /*
 $test = new envoiSms();
