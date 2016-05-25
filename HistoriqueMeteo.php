@@ -47,7 +47,7 @@ $(function () {
         function AfficheGraphe(Div,dataType,Name){
                 Highcharts.setOptions({
         global: {
-            timezoneOffset: -2 * 60
+            timezoneOffset: -4 * 60
         }
     });
                 $(Div).highcharts('StockChart', {
