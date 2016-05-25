@@ -48,17 +48,15 @@
     min-width:408px;
     padding:-25px;
     width:380px;
-       
     
 
 }
 @media all and (max-width:860px){
     .affichageJauges{
         width:auto;
-        margin-left:-20px;
-        margin-right:-20px;
+        margin-left:20px;
+        margin-right:20px;
         margin-bottom:5px;
-        
     }
 }
 
@@ -134,18 +132,13 @@
         margin-top:5px;
 
     }
-        .affichageCameras{
+    .affichageCameras{
         width:99.5%;
     }
     .affichageGraphiques{
- 
-    width:99.5%;
-}
-.affichageJauges{
-    width:99.5%;
-    margin-left:0px;
-    margin-right:0px;
-}
+    width:99.55%;
+    }
+    
 }
 
 .centerPage{
