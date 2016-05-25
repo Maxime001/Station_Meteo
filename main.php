@@ -14,7 +14,12 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
 <html>
     <head>
         <title> Station Météo</title>
-  
+          <!-- Jquery -->
+        <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
+        <script src="js/libs/jquery-ui.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <meta name="robots" content="noindex">
         <meta charset="UTF-8" />
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -37,11 +42,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
         <script src="js/utility.js"></script>
         <script src="js/UI/Stripe.js"></script>
         <script src="../js/main.js"></script>
-        <!-- Jquery -->
-        <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
-        <script src="js/libs/jquery-ui.min.js"></script>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/googleButton.css">
