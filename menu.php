@@ -10,12 +10,12 @@
                                     <a class="gn-icon gn-icon-search"><span>Rechercher</span></a>
                                 </li>
                                 <li>
-                                    <a class="gn-icon gn-icon-download">Console</a>
+                                    <a href="index.php?p=console" class="gn-icon gn-icon-download">Console</a>
 
                                 </li>
-                                <li><a class="gn-icon gn-icon-cog">Paramètres</a></li>
+                                <li><a href="index.php?p=parametres" class="gn-icon gn-icon-cog">Paramètres</a></li>
                                 <li>
-                                    <a href="HistoriqueMeteo.php"class="gn-icon gn-icon-archive">Meteo</a>
+                                    <a href="index.php?p=HistoriqueMeteo" class="gn-icon gn-icon-archive">Meteo</a>
                                 </li>
                             </ul>
                         </div>
