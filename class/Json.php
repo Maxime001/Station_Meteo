@@ -93,13 +93,17 @@
             $bdd = new BaseDonnees();
             $donnees = $bdd->recupAll();
             
-
-        
+                        
+   for($a=0;$a<count($donnees[0]);$a++){
+         //   var_dump($donnees[0][$a]);
+            }
+         
             for($j=1;$j<=7;$j++){
                 for($i=1;$i<=count($donnees[0])-11;$i++){
+                     
                     if(is_string($donnees[$j][$i])){
                         $donnees[$j][$i] = null;
-                        
+                           
                     } 
                     
                 }
@@ -111,7 +115,7 @@
             $mesureBruit = array();
             $temperatureExterieure = array();
             $temperatureInterieure = array();
-            
+
   
             for($t=0;$t<count($donnees[0]);$t++){
                 

@@ -99,10 +99,10 @@ $(function () {
                 <div id="temperatureExterieure" style="height: 400px; min-width: 310px"></div>
             </div>
         </div>
-        <?php/*
+        <?php
         include 'class/Json.php';
-        include 'class/BaseDonnees.php';
-        include 'class/VerificationDonnees.php';*/
+       /* include 'class/BaseDonnees.php';*/
+        include 'class/VerificationDonnees.php';
         $test = new Json(0,'json/meteo.json');
         $test->saveAll();
         ?>

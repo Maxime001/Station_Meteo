@@ -15,12 +15,15 @@ class VerificationDonnees{
                 
 
                 array_splice($timeStampArray,$i+1,0,$timeStampArray[$i]+300);
-                for($j=0;$j<=7;$j++){
+                for($j=1;$j<=7;$j++){
                     array_splice($array[$j],$i+1,0,"Missing");
                 }
+                $ajout = date('Y-m-d H:i:s',$timeStampArray[$i]+300);
+                array_splice($array[0],$i+1,0,$ajout);
             }
             
         }
+       // var_dump($array[0][5]);
         $timeStampArray = $array[0];
         return $array;
     }

@@ -103,6 +103,7 @@ class BaseDonnees {
             $array2[0][$i] = strtotime($array2[0][$i]);
             
             $array2[0][$i] = $array2[0][$i] * 1000;
+  
             
         }
 
