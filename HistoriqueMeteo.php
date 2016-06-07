@@ -47,7 +47,7 @@ $(function () {
         function AfficheGraphe(Div,dataType,Name){
                 Highcharts.setOptions({
         global: {
-            timezoneOffset: -4 * 60
+            timezoneOffset: -2 * 60
         }
     });
                 $(Div).highcharts('StockChart', {
@@ -83,19 +83,19 @@ $(function () {
     <body class="main">
         <div class="centerPage">
             <div class="fond affichageGraphiques2">
-                <div class= "mainTitle">Historique Meteo - Humidite</div>
+                <div class= "mainTitle">Historique Météo - Humidité</div>
                 <div id="Humidite" style="height: 400px; min-width: 310px"></div></br>
-                <div class= "mainTitle">Historique Meteo - Pression</div>
+                <div class= "mainTitle">Historique Météo - Pression</div>
                 <div id="Pression" style="height: 400px; min-width: 310px"></div></br>
-                <div class= "mainTitle">Historique Meteo - Luminosite</div>
+                <div class= "mainTitle">Historique Météo - Luminosité</div>
                 <div id="luminosite" style="height: 400px; min-width: 310px"></div></br>
-                <div class= "mainTitle">Historique Meteo - Détection Eau</div>
+                <div class= "mainTitle">Historique Météo - Détection Eau</div>
                 <div id="detectionEau" style="height: 400px; min-width: 310px"></div></br>
-                <div class= "mainTitle">Historique Meteo - Mesure de Bruit</div>
+                <div class= "mainTitle">Historique Météo - Mesure de Bruit</div>
                 <div id="mesureBruit" style="height: 400px; min-width: 310px"></div></br>
-                <div class= "mainTitle">Historique Meteo - Température Intérieure</div>
+                <div class= "mainTitle">Historique Météo - Température Intérieure</div>
                 <div id="temperatureInterieure" style="height: 400px; min-width: 310px"></div></br>
-                <div class= "mainTitle">Historique Meteo - Température Exterieure</div>
+                <div class= "mainTitle">Historique Météo - Température Exterieure</div>
                 <div id="temperatureExterieure" style="height: 400px; min-width: 310px"></div>
             </div>
         </div>
