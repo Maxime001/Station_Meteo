@@ -15,12 +15,34 @@
         }
     }
     
+    
     $( document ).ready(function() {
-    $('#barr').show("slow");
-    $('#time').show("slow");
-    $('#dd').fadeIn(1000);
+        
+        $('#dd').fadeIn(1000);
+        
+       
+        if($(window).width() > 600){
+            $('#barr').show("slow");
+            $('#time').show("slow");
+           
+        }
 });
+$(function() {
+   
+    $(window).resize(function() {
+      var taille = $(window).width();
+      if(taille<600){
+        $('#time').fadeOut();
+        $('#barr').fadeOut();
+      }
+      else{
+          $('#time').fadeIn();
+          $('#barr').fadeIn();
+    }
+    });
+    
 
+  });
     </script>
 </head>
 <body class="login" onload="afficheAlerte(); document.getElementById('focus').focus(); startTime()" >

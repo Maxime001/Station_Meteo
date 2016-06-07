@@ -25,6 +25,8 @@
     right: 20px;
 }
 
+
+
 @media all and (max-width:750px){
     #time{
         font-size:25px;

@@ -12,7 +12,7 @@ class VerificationDonnees{
         for($i=0;$i<count($timeStampArray)-1;$i++){
             $deltaT = $timeStampArray[$i+1] - $timeStampArray[$i];
             if($deltaT != 300){
-                
+              
 
                 array_splice($timeStampArray,$i+1,0,$timeStampArray[$i]+300);
                 for($j=1;$j<=7;$j++){
