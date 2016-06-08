@@ -18,8 +18,8 @@
     
     $( document ).ready(function() {
         
-        $('#dd').fadeIn(1000);
-        
+        $('#titreprincipal').fadeIn(1500);
+
        
         if($(window).width() > 600){
             $('#barr').show("slow");
@@ -32,8 +32,8 @@ $(function() {
     $(window).resize(function() {
       var taille = $(window).width();
       if(taille<600){
-        $('#time').fadeOut();
-        $('#barr').fadeOut();
+        $('#time').hide(600);
+        $('#barr').hide(1000);
       }
       else{
           $('#time').fadeIn();
@@ -50,8 +50,8 @@ $(function() {
         <div style="display:none" id="time"></div>
         <div style="display:none" id="barr"></div>
 
-        <div style="display:none" id="dd" class="logBlock">     
-            <div class="title" style="">Andromède</div>
+        <div  id="dd" class="logBlock">     
+            <div style="display:none" id="titreprincipal" class="title" style="">Andromède</div>
         
             <div class="logContainer"></br></br>
                 <?php

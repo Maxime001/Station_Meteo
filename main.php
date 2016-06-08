@@ -94,6 +94,12 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                 
          
         progressbarr();
+        
+        
+        window.setTimeout(function(){
+               $('#titresecondaire').fadeOut(1000);
+               $('.affichageJauges').css('padding-top','-20px');
+           },1000);
 
   
         });
@@ -103,8 +109,8 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
     <?php
         include "menu.php";
     ?>
-        <div class="centerPage">
-                <div class="fond affichageJauges">
+        <div    class="centerPage" >
+                <div  class="fond affichageJauges">
                     <div class= "mainTitle">Météo résumé</div>
                     </br></br>
                     </br></br>
