@@ -22,8 +22,8 @@
 
        
         if($(window).width() > 600){
-            $('#barr').show("slow");
-            $('#time').show("slow");
+            $('#barr').delay(2000).show("slow");
+            $('#time').delay(3000).show("slow");
            
         }
 });
