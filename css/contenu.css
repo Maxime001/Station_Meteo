@@ -29,10 +29,21 @@
     background-color:#34495E;
     font-family: MainTitle;
     
+    
 }
 
+.carreMain{
+    border:1px solid rgba(200,200,200,0.5);
+    padding:5px;
+    background-color:rgba(255,255,255,0.6);
+    width:350px;
+    display: inline-block;
+    text-align:left;
+    
+}
 .fond{
-    background-color:white;
+    background-color:rgba(255,255,255,0.9);
+    
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius:5px;
     z-index:-10;
@@ -161,7 +172,7 @@ background-color:blue;
 
 td,tr{
     margin:5px;
-    border-bottom: 1px solid rgba(52, 73, 93, 0.2);
+  /*  border-bottom: 1px solid rgba(52, 73, 93, 0.2);*/
     
     height:45px;
 
