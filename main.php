@@ -33,7 +33,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
         <!-- CSS de jqueryUI -->
         <link href="css/libs/jquery-ui.min.css" rel="stylesheet">
         <!-- JS du template -->
-        <script src="js/modernizr.custom.js"></script>     
+        <!--<script src="js/modernizr.custom.js"></script>    --> 
         <!-- JS du stripe -->
         <script src="js/libs/raphael-2.1.4.min.js"></script>
         <script src="js/libs/justgage.js"></script>
@@ -41,7 +41,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
         <script src="js/libs/CSSPlugin.min.js"></script>
         <script src="js/utility.js"></script>
         <script src="js/UI/Stripe.js"></script>
-        <script src="../js/main.js"></script>
+       <!-- <script src="../js/main.js"></script>-->
 
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -50,7 +50,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <!-- CSS du stripe -->
         <link rel="stylesheet" type="text/css" href="css/libs/style.css">
-        <link rel="stylesheet" type="text/css" href="css/libs/bootstrap.min.css">
+       <!-- <link rel="stylesheet" type="text/css" href="css/libs/bootstrap.min.css">-->
         <link rel="stylesheet" type="text/css" href="css/libs/Stripe.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -64,9 +64,9 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
         <script type="text/javascript" src="js/graphiqueCourbe.js"></script>
         <script type="text/javascript" src="js/graphiqueStyles.js"></script>
         <script type="text/javascript" src="js/jsonHandler.js"></script>
-        <script type="text/javascript" src="js/graphiqueOptions"></script>
+       <!-- <script type="text/javascript" src="js/graphiqueOptions"></script>-->
         <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/progressBarr.js"></script>
+        <!--<script type="text/javascript" src="js/progressBarr.js"></script>-->
         <script type="text/javascript" src="js/ajax.js"></script>
         <script src="js/libs/solid-jauge.js"></script>
         <script type="text/javascript" src="js/clock.js"></script>
@@ -75,23 +75,16 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
             
             
         $(document).ready(function() {
-            var dist=20;
+            var dist=0;
             function progressbarr(){   
         $("#progressbar").progressbar({
                 value: dist
             });
         }
         
-        setInterval(function() {
-            progressbarr();
-              $('.Acceptedbar').css('color','Green');
-    $('.Declinedbar').css('color','Red');
-            if(dist < 100){
-                dist = dist+5;
-            }
-        }, 2000);
+     
                 
-                
+      
          
         progressbarr();
         
@@ -104,6 +97,21 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
   
         });
     </script>
+    <style>
+       #progressbar {
+         
+	border-radius: 3px;
+	background: white;
+	/*border: 1px solid #AAA;*/
+        height: 20px;
+        padding-bottom:-1px;
+	overflow: hidden;		
+}
+#progressbar div {
+	background-image: url(img/pbar-ani.gif);
+	border-right: 1px solid #AAA;
+}
+        </style>
     </head>
     <body class="main">
     <?php
@@ -112,11 +120,12 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
         <div    class="centerPage" >
                 <div  class="fond affichageJauges">
                     <div class= "mainTitle">Météo résumé</div>
-                    </br></br>
-                    </br></br>
-                    </br></br>
+                    </br>
+                    <span style="display:none" class="texteStatus">Statut précipitations :</span> <b><span id="statusPluie" style="display:none"> </span></b></br>
+                    <span style="display:none" class="texteStatus"> Statut lumière : </span><b><span id="statusLumiere" style="display:none"></span></b>
                     </br></br>
                      <div class= "mainTitle">Météo temps réel</div>
+                     </br>
                     <div class="   jauge"  id="humidite"></div>
                     <div class="  jauge" id="pluie"></div>
                     <div class="   jauge" id="luminosite"></div>
@@ -191,8 +200,14 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     
 
                         
-                    </br></br>
-                      <div id="progressbar" style="width:300px;"></div>
+                    
+                    <p class="ligne"></p>
+                    <b><span style="text-align:center;"> Contrôle du toit : </span></b></br></br>
+                    Distance toit ouvert : x cm</br>
+                    Distance toit fermé : x cm</br>
+                    Distance du toit : <b><span id="capteurUltrason">-</span> cm</b></br></br>
+                    <div id="progressbar" style="width:300px; padding:0 auto; margin:0 auto;"></div></br>
+                    Confirmation position : <span id="confirmationPositionToit"></span>
                      
                      
                    </br></br>
@@ -200,7 +215,11 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
      
                            </br></br></br></br></br>
                     <div class="mainTitle">Vue 3D</div>
-                    <img style="width:280px;"src="img/3D.jpg"/>
+                    </br>
+                    AccelerometreX : <b><span id="accX">-</span></b></br>
+                    Accelerometre Y : <b><span id="accY">-</span></b></br>
+                    Accelerometre Z : <b><span id="accZ">-</span></b></br>
+                    <img style="width:180px;"src="img/3D.jpg"/>
                 </div>
                 
 

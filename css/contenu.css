@@ -47,7 +47,7 @@
     z-index:-10;
     min-width:408px;
     padding:-25px;
-    width:380px;
+    width:400px;
     
 
 }
@@ -63,7 +63,7 @@
 
 
 .affichageCommandes{
-    height:1028px;
+    height:970px;
     margin-top:80px;
     z-index:-10;
     width: 35%;
@@ -167,15 +167,13 @@ td,tr{
 
 }
 
+
+
 .textControl{
     font-family: MainTitle;
     font-size:15px;
 }
 
-.progressbar{
-    color:blue;
-    margin:0 auto;
-}
 
 .principalTitle{
     width:600px;height:70px;background-color:rgba(255, 255, 255, 0.2);z-index:20;

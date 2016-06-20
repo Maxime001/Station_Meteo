@@ -17,7 +17,7 @@ $(document).ready(function() {
     setInterval(function() {
         // Mise a jour du fichier Json donneesInstantanee.json 
         importJSON();
-    }, 10000);
+    }, 3000);
     
     // Mise a jour des fichiers jpg des caméras IP 
     setInterval(function() {
