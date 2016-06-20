@@ -23,7 +23,7 @@ if($_GET['requete'] == 'miseAJourPhoto'){
     }
     else{
         $updateImage->getImage(11,"img/cameraNord.jpg");
-        $updateImage->getImage(12,"img/cameraSud.jpg");     
+        $updateImage->getImage(10,"img/cameraSud.jpg");     
     }
 }
 
