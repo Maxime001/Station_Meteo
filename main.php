@@ -121,8 +121,8 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                 <div  class="fond affichageJauges">
                     <div class= "mainTitle">Météo résumé</div>
                     </br>
-                    <div class="carreMain">
-                        <table><tr><td style="width:150px;">
+                    <div class="carreMain" style="width:99%;margin-top:-15px;">
+                        <table><tr><td style="width:200px;">
                             <span style="display:none" class="texteStatus"><b>Statut précipitations  </b></span>
                         </td><td>
                             <b><span id="statusPluie" style="display:none"> </span></b></br>
@@ -132,8 +132,9 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                             <b><span id="statusLumiere" style="display:none"></span></b>
                         </td></tr></table>
                     </div>
-                    </br></br>
+               
                      <div class= "mainTitle">Météo temps réel</div>
+                      <div class="carreMain">
                      </br>
                     <div class="   jauge"  id="humidite"></div>
                     <div class="  jauge" id="pluie"></div>
@@ -141,8 +142,10 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     <div class=" jauge" id="temperatureExterieure"></div>
                     <div class="solidJauge  " id="deltaTemperature" ></div>
                 </div>
-                <div class="fond affichageCommandes">
+                </div>
+                <div class="fond affichageCommandes" >
                     <div class= "mainTitle">Contrôle des commandes</div>
+                    <div class="carreMain" style="width:99%;margin-top:10px">
                     <!-- Statut des capteurs -->
                     <table align="center">
                         <tr>
@@ -157,6 +160,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         </tr>
                     </table>
                     <div class="ligne"></div>
+                    
                     <a href="#" class="wakeup blue">Démarrage PC Observatoire</a><a href="https://nasorion68.no-ip.org:5001" target="_blank" class="wakeup blue">Accès NAS</a>
                     <table class="commandesTelescopeStyle" align="center">
                         <tr>
@@ -205,23 +209,19 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         </tr>
 
                     </table>
+                    </div>
                     
                     
-
                         
                     
-                    <p class="ligne"></p>
-                    <div class="carreMain">
+                    
+                    <div class="carreMain" style="margin-top:10px;width:99%" >
                         <img height="30" style="padding-left:5px;opacity:0.6;" src="img/sat.png">
-                        <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"> Contrôle du toit : </span></b></br></br>
+                        <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"> Contrôle du toit  </span></b></br></br>
                         <table><tr><td style="width:165px">
-                            <b> Distance toit ouvert  </b>
-                        </td><td style="width:50px">
-                            x cm
-                        </td></tr><tr><td>
-                            <b> Distance toit fermé </b>
-                        </td><td>
-                            0 cm
+                            <b>Toit fermé/ouvert  </b>
+                        </td><td style="width:100px">
+                            0/x cm
                         </td></tr><tr><td>
                             <b>Distance du toit  </b>
                         </td><td style="margin:0px;">
@@ -229,7 +229,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         </td></tr></table>
                         </br>
                        
-                        <div id="progressbar" style="width:95%;text-align:center"></div></br>
+                        <div id="progressbar" style="width:99%;text-align:center"></div></br>
                             
                         <table><tr><td style="width:165px">
                             <b>Confirmation position</b>
@@ -241,41 +241,57 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                             <span id="confirmationmouvement">Non</span>
                         </td></tr></table>
                     </div>
-                    
-                    <div class="carreMain">
+                    </br>
+                    <div class="carreMain" style="margin-top:10px;width:99%" >
                          <img height="30" style="padding-left:5px;opacity:0.6;" src="img/status.png">
-                         <span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"><b>Statut actuel :</b></span></br>
-                         oaefea</br>
-                         foaejfoapêj</br>
+                         <span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"><b>Statut actuel </b></span></br>
+                         <table><tr><td style="width:165px">
+                            <b>Résistance chauffante </b> 
+                        </td><td>
+                            Marche / Arrêt 
+                        </td></tr><td>
+                            <b>Température rail </b> 
+                        </td><td>
+                            x°C
+                        </td></tr><tr><td>
+                                 <b>Alarme</b> 
+                        </td><td>
+                            STATUS
+                        </td></tr></table>
+                         
                     </div>
                     
                      
-                   </br></br></br>
-                    <div class="mainTitle">Vue 3D</div>
                     </br>
+                    <div class="mainTitle">Vue 3D</div>
+                    
+                     <div class="carreMain" style="margin-top:10px;width:99%" >
                     AccelerometreX : <b><span id="accX">-</span></b></br>
                     Accelerometre Y : <b><span id="accY">-</span></b></br>
                     Accelerometre Z : <b><span id="accZ">-</span></b></br>
-                    <img style="width:180px;"src="img/3D.jpg"/>
+                     </div>
                 </div>
                 
 
                 <div class="fond affichageCameras ">
                     <div class= "mainTitle">Caméras IP</div>
                     <div id="camera">
-
+                    <div class="carreMain" style="width:99%">
                         <img class="cameraNord" id="cameraNord" src="img/cameraNord.jpg"/></br></br>
-                    <img class="cameraSud" id="cameraSud" src="img/cameraSud.jpg"/>
+                        <img class="cameraSud" id="cameraSud" src="img/cameraSud.jpg"/>
+                    </div>
                     </div>
 
                 </div>
-            <div class="fond affichageGraphiques">
+            <div class="fond affichageGraphiques" style="margin-top:10px;width:89%">
                     <div class= "mainTitle">Meteo des dernières 24h</div>
-                    <div class="graphique" id="graphePression" ></div>
-                    <div class="graphique" id="grapheHumidite" ></div>
-                    <div class="graphique" id="grapheTemperatureExterieure" ></div>
-                    <div class="graphique" id="grapheDetectionEau"></div>
-                    <div class="graphique" id="grapheLuminosite"></div>
+                    <div class="carreMain" style="width:95%;margin-top:10px;">
+                        <div class="graphique" id="graphePression" ></div>
+                        <div class="graphique" id="grapheHumidite" ></div>
+                        <div class="graphique" id="grapheTemperatureExterieure" ></div>
+                        <div class="graphique" id="grapheDetectionEau"></div>
+                        <div class="graphique" id="grapheLuminosite"></div>
+                    </div>
             </div>
                <!-- <div class="fond meteo">
                       <div class= "mainTitle">API météo</div>
