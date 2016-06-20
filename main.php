@@ -121,8 +121,17 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                 <div  class="fond affichageJauges">
                     <div class= "mainTitle">Météo résumé</div>
                     </br>
-                    <span style="display:none" class="texteStatus">Statut précipitations :</span> <b><span id="statusPluie" style="display:none"> </span></b></br>
-                    <span style="display:none" class="texteStatus"> Statut lumière : </span><b><span id="statusLumiere" style="display:none"></span></b>
+                    <div class="carreMain">
+                        <table><tr><td style="width:150px;">
+                            <span style="display:none" class="texteStatus"><b>Statut précipitations  </b></span>
+                        </td><td>
+                            <b><span id="statusPluie" style="display:none"> </span></b></br>
+                        </td></tr><tr><td>
+                            <span style="display:none" class="texteStatus"><b>Statut lumière </b></span>
+                        </td><td>
+                            <b><span id="statusLumiere" style="display:none"></span></b>
+                        </td></tr></table>
+                    </div>
                     </br></br>
                      <div class= "mainTitle">Météo temps réel</div>
                      </br>
@@ -202,18 +211,46 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         
                     
                     <p class="ligne"></p>
-                    <b><span style="text-align:center;"> Contrôle du toit : </span></b></br></br>
-                    Distance toit ouvert : x cm</br>
-                    Distance toit fermé : x cm</br>
-                    Distance du toit : <b><span id="capteurUltrason">-</span> cm</b></br></br>
-                    <div id="progressbar" style="width:300px; padding:0 auto; margin:0 auto;"></div></br>
-                    Confirmation position : <span id="confirmationPositionToit"></span>
+                    <div class="carreMain">
+                        <img height="30" style="padding-left:5px;opacity:0.6;" src="img/sat.png">
+                        <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"> Contrôle du toit : </span></b></br></br>
+                        <table><tr><td style="width:165px">
+                            <b> Distance toit ouvert  </b>
+                        </td><td style="width:50px">
+                            x cm
+                        </td></tr><tr><td>
+                            <b> Distance toit fermé </b>
+                        </td><td>
+                            0 cm
+                        </td></tr><tr><td>
+                            <b>Distance du toit  </b>
+                        </td><td style="margin:0px;">
+                            <b><span id="capteurUltrason" style="display:none">-</span> cm</b>
+                        </td></tr></table>
+                        </br>
+                       
+                        <div id="progressbar" style="width:95%;text-align:center"></div></br>
+                            
+                        <table><tr><td style="width:165px">
+                            <b>Confirmation position</b>
+                        </td><td style="width:100px">
+                            <b> <span id="confirmationPositionToit" style="display:none"></span></br></b>
+                        </td></tr><tr><td>
+                            <b> Mouvement </b> 
+                        </td><td>
+                            <span id="confirmationmouvement">Non</span>
+                        </td></tr></table>
+                    </div>
+                    
+                    <div class="carreMain">
+                         <img height="30" style="padding-left:5px;opacity:0.6;" src="img/status.png">
+                         <span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"><b>Statut actuel :</b></span></br>
+                         oaefea</br>
+                         foaejfoapêj</br>
+                    </div>
+                    
                      
-                     
-                   </br></br>
-                   
-     
-                           </br></br></br></br></br>
+                   </br></br></br>
                     <div class="mainTitle">Vue 3D</div>
                     </br>
                     AccelerometreX : <b><span id="accX">-</span></b></br>

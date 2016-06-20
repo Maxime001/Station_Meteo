@@ -26,16 +26,19 @@ function afficheDonnees(data){
     $('#accY').text(data.valeurCapteurs.accelerometreY);
     $('#accZ').text(data.valeurCapteurs.accelerometreZ);
     $('#capteurUltrason').text(data.valeurCapteurs.capteurUltrason);
+     $('#capteurUltrason').fadeIn();
     progressbarr(data);
     meteoResume(data);
     
     
     if(data.position.toit === "ferme"){
         $('#confirmationPositionToit').text("Toit fermé");
+        $('#confirmationPositionToit').fadeIn();
         $('#confirmationPositionToit').css("color","green");
     }
     else if(data.position.toit === "ouvert"){
         $('#confirmationPositionToit').text("Toit ouvert");
+        $('#confirmationPositionToit').fadeIn();
         $('#confirmationPositionToit').css("color","red");
     }
     
