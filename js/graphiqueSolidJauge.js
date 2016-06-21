@@ -26,7 +26,12 @@ function solidJauge(){
 	        type: 'solidgauge'
 	    },
 	    
-	    title: null,
+	    title: {
+                fontWeight:'bold',
+                fontSize: '14px',
+            textTransform: '',
+            text:"Delta T°C Intérieur/Exterieur"
+            },
 	    
 	    pane: {
 	    	center: ['50%', '85%'],
@@ -82,9 +87,7 @@ function solidJauge(){
         yAxis: {
 	        min: -15,
 	        max: 15,
-	        title: {
-	            text: 'Delta T°C Intérieur / Exterieur'
-	        },
+	     
             tickPositions: [-15, 15]
 	    },
 

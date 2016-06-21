@@ -14,6 +14,11 @@ function miseAJourPhoto(){
         data : 'requete=miseAJourPhoto',
  success:function(){                
         var d = new Date(); 
+        $('#loadCamera').css('display','none');
+        $('#cameraNord').attr('src','img/cameraNord.jpg');
+        $('#cameraSud').attr('src','img/cameraSud.jpg');
+        $('#cameraNord').fadeIn();
+        $('#cameraSud').fadeIn();
           document.getElementById('cameraNord').src = "img/cameraNord.jpg?ver=" +d.getTime();
           document.getElementById('cameraSud').src = "img/cameraSud.jpg?ver=" + d.getTime();
         }

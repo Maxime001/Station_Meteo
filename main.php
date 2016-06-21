@@ -108,8 +108,12 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
 	overflow: hidden;		
 }
 #progressbar div {
-	background-image: url(img/charge.jpg);
-	border-right: 1px solid #AAA;
+	background-image: url(img/charge.jpg); 
+
+  margin:0;
+  padding:0;
+        
+        
 }
         </style>
     </head>
@@ -125,7 +129,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     <div class="carreMain2" style="width:98%;margin-top:-35px;height:150px;margin-bottom:5px;">
                         <img src="img/weather.png" height="35"  style="padding-left:5px;opacity:0.8; margin-left:-230px">
                          <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px;" >Météo résumé</span></b>
-                       <img class="load" src="img/load.gif" style="text-align:center;opacity:0.8;margin-left:-70px;position:absolute">
+                       <img class="load" src="img/load.gif" style="text-align:center;opacity:0.6;margin-left:-70px;position:absolute">
                         <table><tr><td style="width:200px;text-align:left">
                             <span style="margin-left:10px;display:none; opacity: 0.8" class="texteStatus"><b>Statut précipitations  </b></span>
                         </td><td>
@@ -138,13 +142,13 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     </div>
                     
                      <div class= "mainTitle">Météo temps réel</div>
-                      <div class="carreMain" style="width:98%; margin-top:5px;">
-                     </br>
-                    <div class="   jauge"  id="humidite"></div>
-                    <div class="  jauge" id="pluie"></div>
-                    <div class="   jauge" id="luminosite"></div>
-                    <div class=" jauge" id="temperatureExterieure"></div>
-                    <div class="solidJauge  " id="deltaTemperature" ></div>
+                      <div class="carreMain" style="width:98%; margin-top:5px;height:842px;">
+                     
+                    <div style="margin-top:-45px;position:absolute;" class="   jauge"  id="humidite"></div>
+                    <div style="margin-top:-45px;margin-left:195px;position:absolute;" class="  jauge" id="pluie"></div>
+                    <div style="margin-top:160px;position:absolute"class="   jauge" id="luminosite"></div>
+                    <div style="margin-left:195px;margin-top:160px" class=" jauge" id="temperatureExterieure"></div>
+                    <div style="margin-top:-60px;" class="solidJauge  " id="deltaTemperature" ></div>
                 </div>
                 </div>
                 <div class="fond affichageCommandes" >
@@ -168,7 +172,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         <a href="https://nasorion68.no-ip.org:5001" target="_blank" class="wakeup blue">Accès NAS</a>
                     </div>
                     <div class="carreMain" style="width:99%;margin-top:5px;">
-                         <img src="img/control.png" style="padding-left:5px;opacity:0.6;" height="30"> <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px" >Contrôle des commandes</span></b>
+                         <img src="img/control.png" style="padding-left:5px;opacity:0.8;" height="30"> <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px" >Contrôle des commandes</span></b>
                         <table class="commandesTelescopeStyle" align="center">
                             <tr>
                                 <td class="tdButton">
@@ -236,7 +240,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         </td></tr></table>
                         </br>
                        
-                        <div id="progressbar" style="width:99%;text-align:center"></div></br>
+                        <div id="progressbar" style="text-align:center"></div></br>
                             
                         <table><tr><td style="width:165px">
                             <b>Confirmation position</b>
@@ -272,7 +276,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     </br>
                     <div class="mainTitle">Vue 3D</div>
                     
-                     <div class="carreMain" style="margin-top:5px;width:99%" >
+                     <div class="carreMain" style="margin-top:5px;width:99%;height:110px;" >
                     AccelerometreX : <b><span id="accX">-</span></b></br>
                     Accelerometre Y : <b><span id="accY">-</span></b></br>
                     Accelerometre Z : <b><span id="accZ">-</span></b></br>
@@ -283,9 +287,12 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                 <div class="fond affichageCameras ">
                     <div class= "mainTitle">Caméras IP</div>
                     <div id="camera">
-                    <div class="carreMain" style="width:99%">
-                        <img class="cameraNord" id="cameraNord" src="img/cameraNord.jpg"/></br></br>
-                        <img class="cameraSud" id="cameraSud" src="img/cameraSud.jpg"/>
+                    <div class="carreMain" style="width:99%;margin-top:5px; height:1033px">
+                        <img src="img/camera.png" height="30" style="padding-left:5px;opacity:0.6;">
+                        <span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"><b>Caméras IP</b></span></br>
+                         <img id="loadCamera" src="img/load.gif" style="text-align:center;opacity:0.6;margin-left:200px;position:absolute">
+                        <img class="cameraNord" id="cameraNord" style="display:none" src=""/></br></br>
+                        <img class="cameraSud" id="cameraSud" style="display:none" src=""/>
                     </div>
                     </div>
 
