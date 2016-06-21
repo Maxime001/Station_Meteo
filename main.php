@@ -108,7 +108,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
 	overflow: hidden;		
 }
 #progressbar div {
-	background-image: url(img/pbar-ani.gif);
+	background-image: url(img/charge.jpg);
 	border-right: 1px solid #AAA;
 }
         </style>
@@ -122,21 +122,23 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     <div class= "mainTitle">Météo résumé</div>
                     </br>
                      
-                    <div class="carreMain2" style="width:99%;margin-top:-15px;height:110px;">
-                       <img class="load" src="img/load.gif" style="text-align:center;opacity:0.8; margin-top:-20px;">
+                    <div class="carreMain2" style="width:98%;margin-top:-35px;height:150px;margin-bottom:5px;">
+                        <img src="img/weather.png" height="35"  style="padding-left:5px;opacity:0.8; margin-left:-230px">
+                         <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px;" >Météo résumé</span></b>
+                       <img class="load" src="img/load.gif" style="text-align:center;opacity:0.8;margin-left:-70px;position:absolute">
                         <table><tr><td style="width:200px;text-align:left">
-                            <span style="display:none; opacity: 0.8" class="texteStatus"><b>Statut précipitations  </b></span>
+                            <span style="margin-left:10px;display:none; opacity: 0.8" class="texteStatus"><b>Statut précipitations  </b></span>
                         </td><td>
-                            <b><span id="statusPluie" style="display:none"> </span></b></br>
+                            <b><span id="statusPluie" style="display:none"> </span></b><img id="statusPluieWarning" style="display:none" height="35" src="img/warning.png" ></br>
                         </td></tr><tr><td style="text-align:left">
-                            <span style="display:none; opacity: 0.8;" class="texteStatus"><b>Statut lumière </b></span>
+                            <span style="margin-left:10px;display:none; opacity: 0.8;" class="texteStatus"><b>Statut lumière </b></span>
                         </td><td>
                             <img id="statusLumiere" style="display:none;opacity:0.7" src="img/jour.png" height="50">
                         </td></tr></table>
                     </div>
-               
+                    
                      <div class= "mainTitle">Météo temps réel</div>
-                      <div class="carreMain">
+                      <div class="carreMain" style="width:98%; margin-top:5px;">
                      </br>
                     <div class="   jauge"  id="humidite"></div>
                     <div class="  jauge" id="pluie"></div>
