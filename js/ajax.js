@@ -12,10 +12,12 @@ function miseAJourPhoto(){
         url : 'ajax.php',
         type : 'GET',
         data : 'requete=miseAJourPhoto',
- success:function(){                
+ success:function(){      
+     
         var d = new Date(); 
-        $('#cameraNord').attr('src','img/cameraNord.jpg');
-        $('#cameraSud').attr('src','img/cameraSud.jpg');
+        $('#loadCamera').css('display','none');
+        $('#cameraNord').fadeIn();
+        $('#cameraSud').fadeIn();
           document.getElementById('cameraNord').src = "img/cameraNord.jpg?ver=" +d.getTime();
           document.getElementById('cameraSud').src = "img/cameraSud.jpg?ver=" + d.getTime();
         }
