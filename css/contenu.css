@@ -108,7 +108,10 @@
 .affichageGraphiques{
     height:auto;
     z-index:-10;
-    width:91%;
+    width:95%;
+    margin-top:5px;
+    margin-right:50px;
+    margin-left:50px;
 }
 
 .affichageGraphiques2{
@@ -234,12 +237,69 @@ border:2px solid rgba(247, 163, 92, 0.1);
     border-radius:2px;
     max-width: 100%;
     margin-top:12px;
-    border:1px solid rgba(72, 91, 110, 0.4);
+    display:none;
 }
 
 .cameraSud{
     border-radius:5px; 
     max-width: 100%;
     margin-bottom:5px;
-    border:2px solid rgba(72, 91, 110, 0.8);
+    display:none;
+}
+
+#progressbar {
+         
+	border-radius: 3px;
+	background: white;
+	/*border: 1px solid #AAA;*/
+        height: 20px;
+        padding-bottom:-1px;
+	overflow: hidden;		
+}
+#progressbar div {
+	background-image: url(../img/charge.jpg); 
+
+  margin:0;
+  padding:0;
+        
+        
+}
+
+#carreMeteoResume{
+    width:98%;
+    margin-top:-35px;
+    height:150px;
+    margin-bottom:5px;
+}
+#weatherImg{
+    padding-left:5px;
+    opacity:0.8;
+    margin-left:-230px;
+}
+
+#titreMeteoResume{
+   padding-left:5px;
+   padding-top:14px;
+   opacity:0.9;
+   font-size:17px;
+}
+
+#load1{
+    text-align:center;
+    opacity:0.6;
+    margin-left:-70px;
+    position:absolute;
+}
+
+.td100px{
+    width:100px;
+}
+
+#capteurUltrason{
+    display:none;
+}
+
+#carreMainGraphiques{
+    width:98%;
+    margin-top:10px;
 }
