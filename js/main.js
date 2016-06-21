@@ -30,6 +30,27 @@ $(document).ready(function() {
            verifId();
        });
        
+       
+       $("#diminueMeteoResume").click(function(){
+         
+          
+       });
+       
+       
+    // Progressbarr
+    var dist=0;
+    function progressbarr(){   
+        $("#progressbar").progressbar({
+            value: dist
+        });   
+    }
+    progressbarr();
+
+    // Disparition du titre
+    window.setTimeout(function(){
+        $('#titresecondaire').fadeOut(1000);
+        $('.affichageJauges').css('padding-top','-20px');
+    },1000);
     
     // Jquery sur les boutons de contrôle de l'observatoire
     var toit = true;

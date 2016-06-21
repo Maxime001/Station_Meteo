@@ -5,15 +5,11 @@ $MajJson->save24h();
 $statusCapteurs = new Json(0,"json/controleObservatoire.json");
 /*$sms = new envoiSms();
 $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Station Météo</title>
+        <title>Contrôle Observatoire</title>
           <!-- Jquery -->
         <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
         <script src="js/libs/jquery-ui.min.js"></script>
@@ -32,8 +28,6 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
         <link rel="stylesheet" type="text/css" href="css/template/css/component.css" />
         <!-- CSS de jqueryUI -->
         <link href="css/libs/jquery-ui.min.css" rel="stylesheet">
-        <!-- JS du template -->
-        <!--<script src="js/modernizr.custom.js"></script>    --> 
         <!-- JS du stripe -->
         <script src="js/libs/raphael-2.1.4.min.js"></script>
         <script src="js/libs/justgage.js"></script>
@@ -41,7 +35,6 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
         <script src="js/libs/CSSPlugin.min.js"></script>
         <script src="js/utility.js"></script>
         <script src="js/UI/Stripe.js"></script>
-       <!-- <script src="../js/main.js"></script>-->
 
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -50,7 +43,6 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <!-- CSS du stripe -->
         <link rel="stylesheet" type="text/css" href="css/libs/style.css">
-       <!-- <link rel="stylesheet" type="text/css" href="css/libs/bootstrap.min.css">-->
         <link rel="stylesheet" type="text/css" href="css/libs/Stripe.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -58,78 +50,28 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
         <script src="js/libs/highcharts.js"></script>
         <script src="js/libs/highcharts-more.js"></script>
         <script src="js/libs/exporting.js"></script>
-        <!-- Fonctions graphiques et JSON -->
         <script type="text/javascript" src="js/graphiqueJauge.js"></script>
         <script type="text/javascript" src="js/graphiqueSolidJauge.js"></script>
         <script type="text/javascript" src="js/graphiqueCourbe.js"></script>
         <script type="text/javascript" src="js/graphiqueStyles.js"></script>
         <script type="text/javascript" src="js/jsonHandler.js"></script>
-       <!-- <script type="text/javascript" src="js/graphiqueOptions"></script>-->
         <script type="text/javascript" src="js/main.js"></script>
-        <!--<script type="text/javascript" src="js/progressBarr.js"></script>-->
         <script type="text/javascript" src="js/ajax.js"></script>
         <script src="js/libs/solid-jauge.js"></script>
         <script type="text/javascript" src="js/clock.js"></script>
-
-        <script>
-            
-            
-        $(document).ready(function() {
-            var dist=0;
-            function progressbarr(){   
-        $("#progressbar").progressbar({
-                value: dist
-            });
-        }
-        
-     
-                
-      
-         
-        progressbarr();
-        
-        
-        window.setTimeout(function(){
-               $('#titresecondaire').fadeOut(1000);
-               $('.affichageJauges').css('padding-top','-20px');
-           },1000);
-
-  
-        });
-    </script>
-    <style>
-       #progressbar {
-         
-	border-radius: 3px;
-	background: white;
-	/*border: 1px solid #AAA;*/
-        height: 20px;
-        padding-bottom:-1px;
-	overflow: hidden;		
-}
-#progressbar div {
-	background-image: url(img/charge.jpg); 
-
-  margin:0;
-  padding:0;
-        
-        
-}
-        </style>
     </head>
     <body class="main">
     <?php
         include "menu.php";
     ?>
-        <div    class="centerPage" >
-                <div  class="fond affichageJauges">
+        <div class="centerPage" >
+                <div class="fond affichageJauges">
                     <div class= "mainTitle">Météo résumé</div>
-                    </br>
-                     
-                    <div class="carreMain2" style="width:98%;margin-top:-35px;height:150px;margin-bottom:5px;">
-                        <img src="img/weather.png" height="35"  style="padding-left:5px;opacity:0.8; margin-left:-230px">
-                         <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px;" >Météo résumé</span></b>
-                       <img class="load" src="img/load.gif" style="text-align:center;opacity:0.6;margin-left:-70px;position:absolute">
+                    </br> 
+                    <div class="carreMain2" id="carreMeteoResume">
+                        <img src="img/weather.png" height="35"  id="weatherImg" >
+                         <b><span id="titreMeteoResume" >Météo résumé</span></b>
+                       <img class="load" id="load1" src="img/load.gif" >
                         <table><tr><td style="width:200px;text-align:left">
                             <span style="margin-left:10px;display:none; opacity: 0.8" class="texteStatus"><b>Statut précipitations  </b></span>
                         </td><td>
@@ -226,17 +168,17 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         
                     
                     
-                    <div class="carreMain" style="margin-top:5px;width:99%" >
+                    <div class="carreMain" style="margin-left:2px;margin-right:2px;margin-top:5px;width:99%" >
                         <img height="30" style="padding-left:5px;opacity:0.6;" src="img/sat.png">
                         <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"> Contrôle du toit  </span></b></br></br>
                         <table><tr><td style="width:165px">
                             <b>Toit fermé/ouvert  </b>
-                        </td><td style="width:100px">
+                        </td><td class="td100px">
                             0/x cm
                         </td></tr><tr><td>
                             <b>Distance du toit  </b>
                         </td><td style="margin:0px;">
-                            <b><span id="capteurUltrason" style="display:none">-</span> cm</b>
+                            <b><span id="capteurUltrason" >-</span> cm</b>
                         </td></tr></table>
                         </br>
                        
@@ -244,7 +186,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                             
                         <table><tr><td style="width:165px">
                             <b>Confirmation position</b>
-                        </td><td style="width:100px">
+                        </td><td class="td100px">
                             <b> <span id="confirmationPositionToit" style="display:none"></span></br></b>
                         </td></tr><tr><td>
                             <b> Mouvement </b> 
@@ -253,7 +195,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         </td></tr></table>
                     </div>
                     </br>
-                    <div class="carreMain" style="margin-top:5px;width:99%" >
+                    <div class="carreMain" style="margin-top:5px;width:99%;margin-left:3px; margin-bottom:5px;margin-right:2px;" >
                          <img height="30" style="padding-left:5px;opacity:0.6;" src="img/status.png">
                          <span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"><b>Statut actuel </b></span></br>
                          <table><tr><td style="width:165px">
@@ -276,7 +218,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     </br>
                     <div class="mainTitle">Vue 3D</div>
                     
-                     <div class="carreMain" style="margin-top:5px;width:99%;height:110px;" >
+                     <div class="carreMain" style="margin-top:5px;width:99%;height:105px;" >
                     AccelerometreX : <b><span id="accX">-</span></b></br>
                     Accelerometre Y : <b><span id="accY">-</span></b></br>
                     Accelerometre Z : <b><span id="accZ">-</span></b></br>
@@ -291,15 +233,15 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         <img src="img/camera.png" height="30" style="padding-left:5px;opacity:0.6;">
                         <span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"><b>Caméras IP</b></span></br>
                          <img id="loadCamera" src="img/load.gif" style="text-align:center;opacity:0.6;margin-left:200px;position:absolute">
-                        <img class="cameraNord" id="cameraNord" style="display:none" src=""/></br></br>
-                        <img class="cameraSud" id="cameraSud" style="display:none" src=""/>
+                        <img class="cameraNord" id="cameraNord"  src=""/></br></br>
+                        <img class="cameraSud" id="cameraSud"  src=""/>
                     </div>
                     </div>
 
                 </div>
-            <div class="fond affichageGraphiques" style="margin-top:5px;width:89%">
+            <div class="fond affichageGraphiques" >
                     <div class= "mainTitle">Meteo des dernières 24h</div>
-                    <div class="carreMain" style="width:95%;margin-top:10px;">
+                    <div class="carreMain" id="carreMainGraphiques">
                         <div class="graphique" id="graphePression" ></div>
                         <div class="graphique" id="grapheHumidite" ></div>
                         <div class="graphique" id="grapheTemperatureExterieure" ></div>
@@ -307,20 +249,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         <div class="graphique" id="grapheLuminosite"></div>
                     </div>
             </div>
-               <!-- <div class="fond meteo">
-                      <div class= "mainTitle">API météo</div>
-                      API's météo
-                </div>-->
-       
-
-        </div>
-        
-
-        
-    </div>
-    
-    
-                    <div id="time2" style="color:blue;z-index:10000000;"></div>
-                        
+        </div>    
+    </div>                  
     </body>
 </html>
