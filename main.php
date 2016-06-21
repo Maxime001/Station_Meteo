@@ -109,7 +109,8 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
 }
 #progressbar div {
 	background-image: url(img/charge.jpg);
-	border-right: 1px solid #AAA;
+        
+        
 }
         </style>
     </head>
@@ -125,7 +126,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     <div class="carreMain2" style="width:98%;margin-top:-35px;height:150px;margin-bottom:5px;">
                         <img src="img/weather.png" height="35"  style="padding-left:5px;opacity:0.8; margin-left:-230px">
                          <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px;" >Météo résumé</span></b>
-                       <img class="load" src="img/load.gif" style="text-align:center;opacity:0.8;margin-left:-70px;position:absolute">
+                       <img class="load" src="img/load.gif" style="text-align:center;opacity:0.6;margin-left:-70px;position:absolute">
                         <table><tr><td style="width:200px;text-align:left">
                             <span style="margin-left:10px;display:none; opacity: 0.8" class="texteStatus"><b>Statut précipitations  </b></span>
                         </td><td>
@@ -168,7 +169,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         <a href="https://nasorion68.no-ip.org:5001" target="_blank" class="wakeup blue">Accès NAS</a>
                     </div>
                     <div class="carreMain" style="width:99%;margin-top:5px;">
-                         <img src="img/control.png" style="padding-left:5px;opacity:0.6;" height="30"> <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px" >Contrôle des commandes</span></b>
+                         <img src="img/control.png" style="padding-left:5px;opacity:0.8;" height="30"> <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px" >Contrôle des commandes</span></b>
                         <table class="commandesTelescopeStyle" align="center">
                             <tr>
                                 <td class="tdButton">
@@ -236,7 +237,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         </td></tr></table>
                         </br>
                        
-                        <div id="progressbar" style="width:99%;text-align:center"></div></br>
+                        <div id="progressbar" style="text-align:center"></div></br>
                             
                         <table><tr><td style="width:165px">
                             <b>Confirmation position</b>
