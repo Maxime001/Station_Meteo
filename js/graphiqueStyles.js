@@ -13,14 +13,15 @@ Highcharts.theme = {
     chart: {
         backgroundColor: null,
         style: {
-            fontFamily: "Dosis, sans-serif"
+            fontFamily: ""
         }
     },
     title: {
         style: {
             fontSize: '14px',
             fontWeight: 'bold',
-            textTransform: 'uppercase'
+            textTransform: '',
+            opacity:0.8
         }
     },
     tooltip: {

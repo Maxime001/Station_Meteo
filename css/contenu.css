@@ -21,7 +21,7 @@
     padding: -1px;
     text-align:center;
     border-radius:2px;
-    border:1px solid rgba(255, 255, 255, 0.8);
+    border:1px solid rgba(200, 200, 200, 0.4);
     color:white;
     opacity:0.9;
     background-color:rgba(10, 10, 10, 0.7);
@@ -58,7 +58,7 @@
 .fond{
     background-color:rgba(255,255,255,0.4);
     
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(200, 200, 200, 0.4);
     border-radius:5px;
     z-index:-10;
     box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.1);
@@ -67,12 +67,13 @@
 }
 
 .affichageJauges{
-    height:auto;
+    height:1073px;
     margin-top:80px;
     z-index:-10;
     min-width:428px;
     padding:-25px;
     width:420px;
+
     
 
 }
@@ -88,7 +89,7 @@
 
 
 .affichageCommandes{
-    height:1015px;
+    height:1073px;
     margin-top:80px;
     z-index:-10;
     width: 35%;
@@ -123,7 +124,7 @@
 }
 
 .affichageCameras{
-    height:auto;
+    height:1073px;
     z-index:-10;
     width:34%;
      margin-top:80px;
@@ -230,10 +231,10 @@ border:2px solid rgba(247, 163, 92, 0.1);
 }
 
 .cameraNord{
-    border-radius:5px;
+    border-radius:2px;
     max-width: 100%;
     margin-top:12px;
-    border:2px solid rgba(72, 91, 110, 0.8);
+    border:1px solid rgba(72, 91, 110, 0.4);
 }
 
 .cameraSud{
