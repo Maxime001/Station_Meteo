@@ -63,7 +63,7 @@ function meteoResume(data){
     
     if(data.meteoInstantanee.detectionEau > 200){
         $('#statusPluie').text("Pas de pluie");
-         
+         $('.load').css('display','none');
         $('.texteStatus').fadeIn();
         $('#statusPluie').delay(4000).show();
         $('#statusPluie').css("color","green");
@@ -71,14 +71,14 @@ function meteoResume(data){
     
     if(data.meteoInstantanee.luminosite === 0){
         $('#statusLumiere').attr('src','img/nuit.png');
-         
+         $('.load').css('display','none');
         $('.texteStatus').fadeIn();
         $('#statusLumiere').delay(4000).show();
         $('#statusLumiere').css("color","green");
     }
     else{
         $('#statusLumiere').attr('src','img/jour.png');
-         
+         $('.load').css('display','none');
         $('.texteStatus').fadeIn();
         $('#statusLumiere').delay(4000).show();
         $('#statusLumiere').css("color","red");
