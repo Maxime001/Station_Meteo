@@ -21,14 +21,14 @@
         "eteintLaser": 0
     }, 
     "meteoInstantanee": {
-        "detectionEau": 1019, 
-        "humidite": 94.7, 
-        "luminosite": 13925.0, 
+        "detectionEau": 1021, 
+        "humidite": 85.4, 
+        "luminosite": 65536.0, 
         "mesureBruit": 5, 
         "photoresistance": 0, 
         "pression": 1025, 
-        "temperatureExterieure": 19.3, 
-        "temperatureInterieure": 21.6
+        "temperatureExterieure": 21.7, 
+        "temperatureInterieure": 22.6
     }, 
     "position": {
         "alarme": "activee", 
