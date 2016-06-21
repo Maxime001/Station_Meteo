@@ -237,14 +237,12 @@ border:2px solid rgba(247, 163, 92, 0.1);
     border-radius:2px;
     max-width: 100%;
     margin-top:12px;
-    display:none;
 }
 
 .cameraSud{
     border-radius:5px; 
     max-width: 100%;
     margin-bottom:5px;
-    display:none;
 }
 
 #progressbar {
