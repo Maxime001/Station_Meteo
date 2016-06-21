@@ -54,29 +54,33 @@ function progressbarr(data){
 function meteoResume(data){
     
     if(data.meteoInstantanee.detectionEau <= 200){
-        $('#statusPluie').text("PLUIE EN COURS");
+        $('#statusPluie').text("Pluie en cours");
+        $('.load').css('display','none');
         $('.texteStatus').fadeIn();
-        $('#statusPluie').fadeIn();
-        $('#statusPluie').css("color","red");
+        $('#statusPluie').delay(4000).show();
+        $('#statusPluie').css("color","#DA4B4B");
     }
     
     if(data.meteoInstantanee.detectionEau > 200){
         $('#statusPluie').text("Pas de pluie");
+         
         $('.texteStatus').fadeIn();
-        $('#statusPluie').fadeIn();
+        $('#statusPluie').delay(4000).show();
         $('#statusPluie').css("color","green");
     }
     
     if(data.meteoInstantanee.luminosite === 0){
-        $('#statusLumiere').text("Nuit");
+        $('#statusLumiere').attr('src','img/nuit.png');
+         
         $('.texteStatus').fadeIn();
-        $('#statusLumiere').fadeIn();
+        $('#statusLumiere').delay(4000).show();
         $('#statusLumiere').css("color","green");
     }
     else{
-        $('#statusLumiere').text("Jour");
+        $('#statusLumiere').attr('src','img/jour.png');
+         
         $('.texteStatus').fadeIn();
-        $('#statusLumiere').fadeIn();
+        $('#statusLumiere').delay(4000).show();
         $('#statusLumiere').css("color","red");
     }
     

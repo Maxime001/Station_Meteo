@@ -121,15 +121,17 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                 <div  class="fond affichageJauges">
                     <div class= "mainTitle">Météo résumé</div>
                     </br>
-                    <div class="carreMain" style="width:99%;margin-top:-15px;">
-                        <table><tr><td style="width:200px;">
-                            <span style="display:none" class="texteStatus"><b>Statut précipitations  </b></span>
+                     
+                    <div class="carreMain2" style="width:99%;margin-top:-15px;height:110px;">
+                       <img class="load" src="img/load.gif" style="text-align:center;opacity:0.8; margin-top:-20px;">
+                        <table><tr><td style="width:200px;text-align:left">
+                            <span style="display:none; opacity: 0.8" class="texteStatus"><b>Statut précipitations  </b></span>
                         </td><td>
                             <b><span id="statusPluie" style="display:none"> </span></b></br>
-                        </td></tr><tr><td>
-                            <span style="display:none" class="texteStatus"><b>Statut lumière </b></span>
+                        </td></tr><tr><td style="text-align:left">
+                            <span style="display:none; opacity: 0.8;" class="texteStatus"><b>Statut lumière </b></span>
                         </td><td>
-                            <b><span id="statusLumiere" style="display:none"></span></b>
+                            <img id="statusLumiere" style="display:none;opacity:0.7" src="img/jour.png" height="50">
                         </td></tr></table>
                     </div>
                
@@ -145,77 +147,80 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                 </div>
                 <div class="fond affichageCommandes" >
                     <div class= "mainTitle">Contrôle des commandes</div>
-                    <div class="carreMain" style="width:99%;margin-top:10px">
-                    <!-- Statut des capteurs -->
-                    <table align="center">
-                        <tr>
-                            <td class="text"> <b>Statut capteurs</b> </td>
-                            <td>
-                    <div id="sensor_status_stripe"></div>
-                    <div style="clear:both"></div>
-                    <div id="sensor_status_text"></div>
-                    <div style="clear:both"></div>
-                    
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="ligne"></div>
-                    
-                    <a href="#" class="wakeup blue">Démarrage PC Observatoire</a><a href="https://nasorion68.no-ip.org:5001" target="_blank" class="wakeup blue">Accès NAS</a>
-                    <table class="commandesTelescopeStyle" align="center">
-                        <tr>
-                            <td class="tdButton">
-                                <label class="switch">
-                                    <input id="Resistance" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("resistanceChauffante")?>/>
-                                    <span class="switch-label resistCouleur" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
-                                </label>
-                            </td>
-                            <td class="tdDesc">
-                                <span class="textControl">Résistance chauffante</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdButton">
-                                <label class="switch">
-                                    <input id="TensionTelescope" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("tension")?> />
-                                    <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
-                                </label>
-                            </td>
-                            <td class="tdDesc">
-                                <span class="textControl"> Mise sous tension télescope</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdButton">
-                                <label class="switch">
-                                   <input id="Alarme" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("alarme")?> />
-                                   <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
-                                </label>
-                            </td>
-                            <td class="tdDesc">
-                                <span class="textControl">Alarme</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdButton">
-                                <label class="switch">
-                                  <input id="Toit" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("toit")?> />
-                                  <span class="switch-label" data-on="Fermer" data-off="Ouvrir"></span> <span class="switch-handle"></span> 
-                               </label>
-                            </td>
-                            <td class="tdDesc">
-                                <span class="textControl">Ouverture / Fermeture toit</span>
-                            </td>
-                        </tr>
+                    <div class="carreMain" style="width:99%;margin-top:5px">
+                        <!-- Statut des capteurs -->
+                        <img src="img/alive.png" style="padding-left:5px;opacity:0.6;" height="35">
+                        <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px" >Statut des capteurs / Commandes auxilières</span></b>
+                        </br></br>
+                        <table><tr><td style="width: 165px;">
+                                    <b>Etat capteurs </b>
+                                </td><td>
+                        <div id="sensor_status_stripe"></div>
+                        <div style="clear:both"></div>
+                        <div id="sensor_status_text"></div>
+                        <div style="clear:both"></div>
+                                </td></tr></table>
+                        </br>
 
-                    </table>
+                        <a href="#" class="wakeup blue">Démarrage PC Observatoire</a>
+                        <a href="https://nasorion68.no-ip.org:5001" target="_blank" class="wakeup blue">Accès NAS</a>
+                    </div>
+                    <div class="carreMain" style="width:99%;margin-top:5px;">
+                         <img src="img/control.png" style="padding-left:5px;opacity:0.6;" height="30"> <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px" >Contrôle des commandes</span></b>
+                        <table class="commandesTelescopeStyle" align="center">
+                            <tr>
+                                <td class="tdButton">
+                                    <label class="switch">
+                                        <input id="Resistance" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("resistanceChauffante")?>/>
+                                        <span class="switch-label resistCouleur" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
+                                    </label>
+                                </td>
+                                <td class="tdDesc">
+                                    <span class="textControl"><b>Résistance chauffante</b></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdButton">
+                                    <label class="switch">
+                                        <input id="TensionTelescope" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("tension")?> />
+                                        <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
+                                    </label>
+                                </td>
+                                <td class="tdDesc">
+                                    <span class="textControl"><b>Mise sous tension télescope</b></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdButton">
+                                    <label class="switch">
+                                       <input id="Alarme" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("alarme")?> />
+                                       <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
+                                    </label>
+                                </td>
+                                <td class="tdDesc">
+                                    <span class="textControl"><b>Alarme</b></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdButton">
+                                    <label class="switch">
+                                      <input id="Toit" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("toit")?> />
+                                      <span class="switch-label" data-on="Fermer" data-off="Ouvrir"></span> <span class="switch-handle"></span> 
+                                   </label>
+                                </td>
+                                <td class="tdDesc">
+                                    <span class="textControl"><b>Ouverture / Fermeture toit</b></span>
+                                </td>
+                            </tr>
+
+                        </table>
                     </div>
                     
                     
                         
                     
                     
-                    <div class="carreMain" style="margin-top:10px;width:99%" >
+                    <div class="carreMain" style="margin-top:5px;width:99%" >
                         <img height="30" style="padding-left:5px;opacity:0.6;" src="img/sat.png">
                         <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"> Contrôle du toit  </span></b></br></br>
                         <table><tr><td style="width:165px">
@@ -242,7 +247,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         </td></tr></table>
                     </div>
                     </br>
-                    <div class="carreMain" style="margin-top:10px;width:99%" >
+                    <div class="carreMain" style="margin-top:5px;width:99%" >
                          <img height="30" style="padding-left:5px;opacity:0.6;" src="img/status.png">
                          <span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"><b>Statut actuel </b></span></br>
                          <table><tr><td style="width:165px">
@@ -265,7 +270,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     </br>
                     <div class="mainTitle">Vue 3D</div>
                     
-                     <div class="carreMain" style="margin-top:10px;width:99%" >
+                     <div class="carreMain" style="margin-top:5px;width:99%" >
                     AccelerometreX : <b><span id="accX">-</span></b></br>
                     Accelerometre Y : <b><span id="accY">-</span></b></br>
                     Accelerometre Z : <b><span id="accZ">-</span></b></br>
@@ -283,7 +288,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     </div>
 
                 </div>
-            <div class="fond affichageGraphiques" style="margin-top:10px;width:89%">
+            <div class="fond affichageGraphiques" style="margin-top:5px;width:89%">
                     <div class= "mainTitle">Meteo des dernières 24h</div>
                     <div class="carreMain" style="width:95%;margin-top:10px;">
                         <div class="graphique" id="graphePression" ></div>
