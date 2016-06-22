@@ -35,13 +35,13 @@
 <script type="text/javascript">
 $(function () {
     $.getJSON('json/meteo.json', function (data) {
-        AfficheGraphe("#Humidite",data.humidite," Humidité (%HR)");
-        AfficheGraphe("#Pression",data.pression," Pression (HPa)");
-        AfficheGraphe("#luminosite",data.luminosite,"Luminosite (Lux)");
-        AfficheGraphe("#detectionEau",data.detectionEau,"Détection Eau (SU)");
-        AfficheGraphe("#mesureBruit",data.mesureBruit,"Mesure de Bruit (SU)");
-        AfficheGraphe("#temperatureExterieure",data.temperatureExterieure,"Température exterieure (°C)");
-        AfficheGraphe("#temperatureInterieure",data.temperatureInterieure,"Température Intérieure (°C)");
+        AfficheGraphe("#Humidite2",data.humidite," Humidité (%HR)");
+        AfficheGraphe("#Pression2",data.pression," Pression (HPa)");
+        AfficheGraphe("#luminosite2",data.luminosite,"Luminosite (Lux)");
+        AfficheGraphe("#detectionEau2",data.detectionEau,"Détection Eau (SU)");
+        AfficheGraphe("#mesureBruit2",data.mesureBruit,"Mesure de Bruit (SU)");
+        AfficheGraphe("#temperatureExterieure2",data.temperatureExterieure,"Température exterieure (°C)");
+        AfficheGraphe("#temperatureInterieure2",data.temperatureInterieure,"Température Intérieure (°C)");
         
         // Création du graphique
         function AfficheGraphe(Div,dataType,Name){
@@ -84,19 +84,19 @@ $(function () {
         <div class="centerPage">
             <div class="fond affichageGraphiques2">
                 <div class= "mainTitle">Historique Météo - Humidité</div>
-                <div id="Humidite" style="height: 400px; min-width: 310px"></div></br>
+                <div id="Humidite2" style="height: 400px; min-width: 310px"></div></br>
                 <div class= "mainTitle">Historique Météo - Pression</div>
-                <div id="Pression" style="height: 400px; min-width: 310px"></div></br>
+                <div id="Pression2" style="height: 400px; min-width: 310px"></div></br>
                 <div class= "mainTitle">Historique Météo - Luminosité</div>
-                <div id="luminosite" style="height: 400px; min-width: 310px"></div></br>
+                <div id="luminosite2" style="height: 400px; min-width: 310px"></div></br>
                 <div class= "mainTitle">Historique Météo - Détection Eau</div>
-                <div id="detectionEau" style="height: 400px; min-width: 310px"></div></br>
+                <div id="detectionEau2" style="height: 400px; min-width: 310px"></div></br>
                 <div class= "mainTitle">Historique Météo - Mesure de Bruit</div>
-                <div id="mesureBruit" style="height: 400px; min-width: 310px"></div></br>
+                <div id="mesureBruit2" style="height: 400px; min-width: 310px"></div></br>
                 <div class= "mainTitle">Historique Météo - Température Intérieure</div>
-                <div id="temperatureInterieure" style="height: 400px; min-width: 310px"></div></br>
+                <div id="temperatureInterieure2" style="height: 400px; min-width: 310px"></div></br>
                 <div class= "mainTitle">Historique Météo - Température Exterieure</div>
-                <div id="temperatureExterieure" style="height: 400px; min-width: 310px"></div>
+                <div id="temperatureExterieure2" style="height: 400px; min-width: 310px"></div>
             </div>
         </div>
         <?php
