@@ -70,7 +70,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     </br> 
                     <div class="carreMain2" id="carreMeteoResume">
                         <img src="img/weather.png" height="35"  id="weatherImg" >
-                         <b><span id="titreMeteoResume" >Météo résumé</span></b>
+                         <b><span id="titreMeteoResume" style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px">Météo résumé</span></b>
                        <img class="load" id="load1" src="img/load.gif" >
                         <table><tr><td style="width:200px;text-align:left">
                             <span style="margin-left:10px;display:none; opacity: 0.8" class="texteStatus"><b>Statut précipitations  </b></span>
@@ -84,13 +84,13 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     </div>
                     
                      <div class= "mainTitle">Météo temps réel</div>
-                      <div class="carreMain" style="width:98%; margin-top:5px;height:842px;">
+                      <div class="carreMain resp1" style="">
                      
-                    <div style="margin-top:-45px;position:absolute;" class="   jauge"  id="humidite"></div>
-                    <div style="margin-top:-45px;margin-left:195px;position:absolute;" class="  jauge" id="pluie"></div>
-                    <div style="margin-top:160px;position:absolute"class="   jauge" id="luminosite"></div>
-                    <div style="margin-left:195px;margin-top:160px" class=" jauge" id="temperatureExterieure"></div>
-                    <div style="margin-top:-60px;" class="solidJauge  " id="deltaTemperature" ></div>
+                    <div  class="   jauge"  id="humidite"></div>
+                    <div class="  jauge" id="pluie"></div>
+                    <div class="   jauge" id="luminosite"></div>
+                    <div  class=" jauge" id="temperatureExterieure"></div>
+                    <div  class="solidJauge  " id="deltaTemperature" ></div>
                 </div>
                 </div>
                 <div class="fond affichageCommandes" >
@@ -101,7 +101,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px" >Statut des capteurs / Commandes auxilières</span></b>
                         </br></br>
                         <table><tr><td style="width: 165px;">
-                                    <b>Etat capteurs </b>
+                                    <b><span style="margin-left:10px;opacity:0.8">Etat capteurs </span></b>
                                 </td><td>
                         <div id="sensor_status_stripe"></div>
                         <div style="clear:both"></div>
@@ -232,7 +232,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     <div class="carreMain" style="width:99%;margin-top:5px; height:1033px">
                         <img src="img/camera.png" height="30" style="padding-left:5px;opacity:0.6;">
                         <span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"><b>Caméras IP</b></span></br>
-                         <img id="loadCamera" src="img/load.gif" style="text-align:center;opacity:0.6;margin-left:200px;position:absolute">
+                         <img id="loadCamera" src="img/load.gif">
                         <img class="cameraNord" id="cameraNord" style="display:none" src=""/></br></br>
                         <img class="cameraSud" id="cameraSud" style="display:none" src=""/>
                     </div>

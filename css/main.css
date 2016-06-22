@@ -45,16 +45,7 @@
 
 }
 
-.jauge {
-    width: 200px;
-    height: 300px;
-    padding-left:0px;
-    padding-right:0px;
-    margin : 0 auto;
-    padding:0 auto;
- 
-    display:inline-block;
-}
+
 
 .solidJauge {
     width: 300px;
@@ -294,8 +285,11 @@ button:hover {
 	left: 0;
 	opacity: 0;
 }
+
+
 .switch-label {
 	position: relative;
+        
 	display: block;
 	height: inherit;
 	font-size: 10px;

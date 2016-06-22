@@ -24,7 +24,8 @@ $(document).ready(function() {
         miseAJourPhoto();
     },15000);
     
-    
+    $(".textControl").delay(1000).show('fast');
+   
     
      $(".logBlock2").click(function(){
            verifId();
@@ -48,7 +49,7 @@ $(document).ready(function() {
 
     // Disparition du titre
     window.setTimeout(function(){
-        $('#titresecondaire').fadeOut(1000);
+        $('#titresecondaire').delay(10000).fadeOut(1000);
         $('.affichageJauges').css('padding-top','-20px');
     },1000);
     
