@@ -8,11 +8,11 @@
         "ouvreToit": 0, 
         "pcOff": 0, 
         "pcOn": 0, 
-        "resistanceChauffanteOff": 0, 
+        "resistanceChauffanteOff": 1, 
         "resistanceChauffanteOn": 1, 
         "stopperMoteurToit": 0, 
-        "tensionTelescopeOff": 0, 
-        "tensionTelescopeOn": 0
+        "tensionTelescopeOff": 1, 
+        "tensionTelescopeOn": 1
     }, 
     "envoiCommandesCapteurs": {
         "CommencerMesuresToit": 0, 
@@ -21,14 +21,14 @@
         "eteintLaser": 0
     }, 
     "meteoInstantanee": {
-        "detectionEau": 933, 
-        "humidite": 73.9, 
+        "detectionEau": 854, 
+        "humidite": 82.6, 
         "luminosite": 65536.0, 
         "mesureBruit": 0, 
         "photoresistance": 0, 
-        "pression": 1025, 
-        "temperatureExterieure": 23.2, 
-        "temperatureInterieure": 25.3
+        "pression": 1026, 
+        "temperatureExterieure": 23.1, 
+        "temperatureInterieure": 24.4
     }, 
     "position": {
         "alarme": "activee", 
