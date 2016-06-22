@@ -76,6 +76,7 @@ function meteoResume(data){
     }
     
     if(data.meteoInstantanee.luminosite === 0){
+        
         $('#statusLumiere').attr('src','img/nuit.png');
          $('.load').css('display','none');
         $('.texteStatus').fadeIn();
@@ -83,6 +84,7 @@ function meteoResume(data){
         $('#statusLumiere').css("color","green");
     }
     else{
+        
         $('#statusLumiere').attr('src','img/jour.png');
          $('.load').css('display','none');
         $('.texteStatus').fadeIn();
