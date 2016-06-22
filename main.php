@@ -11,6 +11,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
     <head>
         <title>Contrôle Observatoire</title>
           <!-- Jquery -->
+          <link rel="icon" type="image/png" href="img/favicon.png" />
         <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
         <script src="js/libs/jquery-ui.min.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
