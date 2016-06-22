@@ -229,7 +229,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                 <div class="fond affichageCameras ">
                     <div class= "mainTitle">Caméras IP</div>
                     <div id="camera">
-                    <div class="carreMain" style="width:99%;margin-top:5px; height:1033px">
+                    <div class="carreMain3" >
                         <img src="img/camera.png" height="30" style="padding-left:5px;opacity:0.6;">
                         <span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"><b>Caméras IP</b></span></br>
                          <img id="loadCamera" src="img/load.gif">
