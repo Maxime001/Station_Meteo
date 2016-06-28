@@ -151,15 +151,13 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tdButton">
-                                    <label class="switch">
-                                      <input id="Toit" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("toit")?> />
-                                      <span class="switch-label" data-on="Fermer" data-off="Ouvrir"></span> <span class="switch-handle"></span> 
-                                   </label>
-                                </td>
-                                <td class="tdDesc">
-                                    <span class="textControl"><b>Ouverture / Fermeture toit</b></span>
-                                </td>
+                                <td colspan="2">
+                                     <?= $statusCapteurs->verifStatut("toit")?> 
+                                    
+                                    <a href="#" id="ouvreToit" class="wakeup  blue">Ouvrir Toit</a>
+                                    <a href="#" id="fermeToit" class="wakeup blue">Fermer Toit</a>
+                                    <a href="#" id="arretToit" class="wakeup blue">Arrêt moteur</a>
+                                <td>
                             </tr>
 
                         </table>

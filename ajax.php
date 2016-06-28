@@ -31,6 +31,10 @@ if($_GET['requete'] == 'miseAJourPhoto'){
 if($_GET['requete'] == 'ouvreToit'){
     $envoiCommandeObservatoire->envoiCommande("ouvreToit");  
 }
+
+if($_GET['requete'] == 'arretToit'){
+    $envoiCommandeObservatoire->envoiCommande("arretToit");  
+}
 if($_GET['requete'] == 'fermeToit'){
     $envoiCommandeObservatoire->envoiCommande("fermeToit"); 
 }

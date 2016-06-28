@@ -52,7 +52,8 @@ function afficheDonnees(data){
 
 function progressbarr(data){   
     $("#progressbar").progressbar({
-        value: data.valeurCapteurs.capteurUltrason
+        value: data.valeurCapteurs.capteurUltrason,
+        max:250
 });
 };
 
@@ -112,6 +113,13 @@ function fermeToit(){
     });
 }
 
+function arretToit(){
+        $.ajax({
+        url : 'ajax.php',
+        type : 'GET',
+        data : 'requete=arretToit'
+    });
+}
 function  activeAlarme(){
      $.ajax({
         url : 'ajax.php',
