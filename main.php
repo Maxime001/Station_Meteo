@@ -60,63 +60,6 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
         <script type="text/javascript" src="js/ajax.js"></script>
         <script src="js/libs/solid-jauge.js"></script>
         <script type="text/javascript" src="js/clock.js"></script>
-        <script>
-     
-    
-            $(document).ready(function() {
-              
-        /*setInterval(function(){
-                  alert($window.height());
-               console.log("test");
-                var window = $(window);
-                window.scroll(function () {
-                    if (window.scrollTop() === 0){
-                       
-                        $('.gn-menu-main').animate({'height':'60'});
-                    }
-                    else {
-                        $('.gn-menu-main').animate({'height':'30'});
-                     
-                    }
-                });
-                
-                 },500);
-            */
-           /*
-            $(document).on('scroll',function() {   
-                var hauteur = $(document).scrollTop();
-              
-                
-                if(hauteur > 0){
-           
-            //$('.gn-menu-main').delay('100').animate({'height':'30'});
-           $('.gn-menu-main').animate({'height':'30'});
-           
-            console.log(hauteur);
-                }
-               else{
-                    $('.gn-menu-main').animate({'height':'60'});
-                    console.log(hauteur);
-                }
-             
-               */
-               
-    var scrollfunction = $(window).scroll(function(){
-        var scrollTop = $(window).scrollTop();
-
-        if (scrollTop > 10){
-            $('.gn-menu-main').animate({height: 30}, 60);
-      }
-        else {
-            $('.gn-menu-main').animate({height: 60}, 60);
-      }  
-    });
-             // scrollfunction();
-
-             
-            });
-           
-        </script>
     </head>
     <body class="main">
     <?php
@@ -128,12 +71,12 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     </br> 
                     <div class="carreMain2" id="carreMeteoResume">
                         <img src="img/weather.png" height="35"  id="weatherImg" >
-                         <b><span id="titreMeteoResume" style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px">Météo résumé</span></b>
+                         <b><span id="titreMeteoResume" style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px">Météo résumé</span></b><img id="statusPluieWarning" style="display:none;position:absolute;z-index:100;margin-left:250px;margin-top:-30px;" height="35" src="img/warning.png" >
                        <img class="load" id="load1" src="img/load.gif" >
                         <table><tr><td style="width:200px;text-align:left">
                             <span style="margin-left:10px;display:none; opacity: 0.8" class="texteStatus"><b>Statut précipitations  </b></span>
                         </td><td>
-                            <b><span id="statusPluie" style="display:none"> </span></b><img id="statusPluieWarning" style="display:none" height="35" src="img/warning.png" ></br>
+                            <b><span id="statusPluie" style="display:none"> </span></b>
                         </td></tr><tr><td style="text-align:left">
                             <span style="margin-left:10px;display:none; opacity: 0.8;" class="texteStatus"><b>Statut lumière </b></span>
                         </td><td>

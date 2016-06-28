@@ -24,6 +24,7 @@ function miseAJourPhoto(){
     });
 }
 
+var ancienData= "";
 // Affichage des données en dur dans main
 function afficheDonnees(data){
     $('#accX').text(data.valeurCapteurs.accelerometreX);
