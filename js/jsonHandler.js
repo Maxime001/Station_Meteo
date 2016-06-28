@@ -6,10 +6,12 @@ function importJSON() {
         updateGraphes(data);
         updageGrapheSolidJauge(data);
         afficheDonnees(data);
-        
+       
         
     });
 }
+
+
 
 /*
  * Lecture du fichier Json - donneesJournalieres.json

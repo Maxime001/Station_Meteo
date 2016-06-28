@@ -14,10 +14,23 @@ $(document).ready(function() {
     // Appel du fichier json pour les données journalières ainsi que des graphiques journaliers
     importJsonJournalier();
 
+    // Mise a jour du fichier Json donneesInstantanee.json 
     setInterval(function() {
-        // Mise a jour du fichier Json donneesInstantanee.json 
         importJSON();
     }, 3000);
+    
+    var setIntervalFaster = function(){
+        var i = 0;
+        var test = setInterval(function(){
+            importJSON();
+            i++;
+            console.log(i);
+            if(i>240){
+                clearInterval(test);   
+            }
+        }, 500);
+        
+    };
     
     // Mise a jour des fichiers jpg des caméras IP 
     setInterval(function() {
@@ -30,28 +43,23 @@ $(document).ready(function() {
      $(".logBlock2").click(function(){
            verifId();
        });
-       
-       
-       $("#diminueMeteoResume").click(function(){
-         
-          
-       });
-       
-       
-       $('#validChange').on('change',function(){
-          if($('#validChange').is(':checked')){
-              var validation = prompt('activer les commandes ? y/n');
-                if(validation === "y" || validation === "Y"){
-                    $('.commandesTelescopeStyle').fadeIn();
-                }
-                else{
-                    return false;
-                }
-          }
-          else{
-              $('.commandesTelescopeStyle').fadeOut();
-          }
-       });
+        
+    // Validation de l'affichage ou non des commandes de l'observatoire (sécurité supplémentaire)
+    $('#validChange').on('change',function(){
+       if($('#validChange').is(':checked')){
+             var validation = prompt('activer les commandes ? y/n');
+             if(validation === "y" || validation === "Y"){
+                 $('.commandesTelescopeStyle').fadeIn();
+             }
+             else{
+                 return false;
+             }
+       }
+       else{
+           $('.commandesTelescopeStyle').fadeOut();
+       }
+    });
+    
     // Progressbarr
     var dist=0;
     function progressbarr(){   
@@ -73,16 +81,34 @@ $(document).ready(function() {
     var resistance = true;
     var tension = true;
         
+    // Fonction d'envoi des commandes d'ouverture et de fermeture du toit 
     $("#Toit").click(function(){
-       if(toit === true){
-           toit = false;
-           ouvreToit();
-       }
-       else{
-           toit = true;
-           fermeToit();
+        if(toit === false){
+            // On vérifie qu'il ne pleut pas avant d'ouvrir le toit ! 
+            $.getJSON('json/controleObservatoire.json', function(data) {
+                var capteurPluie = data.meteoInstantanee.detectionEau;
+                if(capteurPluie > 300){
+                    setIntervalFaster();
+                   ouvreToit();
+                   toit = true;
+                   alert("Beta test : Le toit s'ouvre !");
+                }
+                else{
+                   alert("Beta test : Le toit ne peux pas s'ouvrir, il pleut");
+                   toit = true;
+               }
+            });  
+        }
+        else{
+            toit = false;
+            setIntervalFaster();
+            fermeToit();
+            alert("Beta test : On ferme le toit ! ");
        }    
     });
+    
+
+
     $("#Alarme").click(function(){
         if(alarme === true){
            alarme = false;
@@ -122,6 +148,7 @@ $(document).ready(function() {
 
 
 
+
 function statusCapteurs(){
     $(function() {
          $.getJSON('json/controleObservatoire.json', function(data) {
@@ -142,3 +169,4 @@ function statusCapteurs(){
     });
     });
 }
+
