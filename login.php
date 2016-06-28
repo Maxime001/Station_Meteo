@@ -7,6 +7,7 @@
     <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="js/ajax.js"></script>
     <script type="text/javascript" src="js/clock.js"></script>
+     <link rel="icon" type="image/png" href="img/favicon.png" />
     <script type="text/javascript">
         function afficheAlerte(){
         $var = "<?= $Verif ?>";

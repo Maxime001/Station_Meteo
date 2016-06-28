@@ -38,6 +38,20 @@ $(document).ready(function() {
        });
        
        
+       $('#validChange').on('change',function(){
+          if($('#validChange').is(':checked')){
+              var validation = prompt('activer les commandes ? y/n');
+                if(validation === "y" || validation === "Y"){
+                    $('.commandesTelescopeStyle').fadeIn();
+                }
+                else{
+                    return false;
+                }
+          }
+          else{
+              $('.commandesTelescopeStyle').fadeOut();
+          }
+       });
     // Progressbarr
     var dist=0;
     function progressbarr(){   
