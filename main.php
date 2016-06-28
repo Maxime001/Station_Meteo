@@ -60,6 +60,63 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
         <script type="text/javascript" src="js/ajax.js"></script>
         <script src="js/libs/solid-jauge.js"></script>
         <script type="text/javascript" src="js/clock.js"></script>
+        <script>
+     
+    
+            $(document).ready(function() {
+              
+        /*setInterval(function(){
+                  alert($window.height());
+               console.log("test");
+                var window = $(window);
+                window.scroll(function () {
+                    if (window.scrollTop() === 0){
+                       
+                        $('.gn-menu-main').animate({'height':'60'});
+                    }
+                    else {
+                        $('.gn-menu-main').animate({'height':'30'});
+                     
+                    }
+                });
+                
+                 },500);
+            */
+           /*
+            $(document).on('scroll',function() {   
+                var hauteur = $(document).scrollTop();
+              
+                
+                if(hauteur > 0){
+           
+            //$('.gn-menu-main').delay('100').animate({'height':'30'});
+           $('.gn-menu-main').animate({'height':'30'});
+           
+            console.log(hauteur);
+                }
+               else{
+                    $('.gn-menu-main').animate({'height':'60'});
+                    console.log(hauteur);
+                }
+             
+               */
+               
+    var scrollfunction = $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > 10){
+            $('.gn-menu-main').animate({height: 30}, 60);
+      }
+        else {
+            $('.gn-menu-main').animate({height: 60}, 60);
+      }  
+    });
+             // scrollfunction();
+
+             
+            });
+           
+        </script>
     </head>
     <body class="main">
     <?php
@@ -114,9 +171,9 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         <a href="#" class="wakeup blue">Démarrage PC Observatoire</a>
                         <a href="https://nasorion68.no-ip.org:5001" target="_blank" class="wakeup blue">Accès NAS</a>
                     </div>
-                    <div class="carreMain" style="width:99%;margin-top:5px;">
-                         <img src="img/control.png" style="padding-left:5px;opacity:0.8;" height="30"> <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px" >Contrôle des commandes</span></b>
-                        <table class="commandesTelescopeStyle" align="center">
+                    <div class="carreMain" style="width:99%;margin-top:5px;height:220px;">
+                        <img src="img/control.png" style="padding-left:5px;opacity:0.8;" height="30"> <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px" >Contrôle des commandes    |</span>      Activer les commandes :</b>  <input type="checkbox" id="validChange">
+                        <table class="commandesTelescopeStyle" align="center" style="display:none">
                             <tr>
                                 <td class="tdButton">
                                     <label class="switch">

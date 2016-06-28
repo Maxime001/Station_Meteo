@@ -47,6 +47,11 @@
             $json->donnees->temperatureExterieure = $donnees[6];
             $json->donnees->temperatureInterieure = $donnees[7];
             
+            if($donnees[0] == null || $donnees[1] == null || $donnees[2] == null || $donnees[3] == null || $donnees[4] == null || $donnees[5] == null || $donnees[6] == null || $donnees[7] == null){
+            
+            return false;
+            }
+            
             $pressionMin = min($donnees[1]);
             $pressionMax = max($donnees[1]);
             $luminositeMin = min($donnees[2]);
