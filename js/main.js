@@ -24,7 +24,6 @@ $(document).ready(function() {
         var test = setInterval(function(){
             importJSON();
             i++;
-            console.log(i);
             if(i>240){
                 clearInterval(test);   
             }
@@ -82,31 +81,18 @@ $(document).ready(function() {
     var tension = true;
         
     // Fonction d'envoi des commandes d'ouverture et de fermeture du toit 
-    $("#Toit").click(function(){
-        if(toit === false){
-            // On vérifie qu'il ne pleut pas avant d'ouvrir le toit ! 
-            $.getJSON('json/controleObservatoire.json', function(data) {
-                var capteurPluie = data.meteoInstantanee.detectionEau;
-                if(capteurPluie > 300){
-                    setIntervalFaster();
-                   ouvreToit();
-                   toit = true;
-                   alert("Beta test : Le toit s'ouvre !");
-                }
-                else{
-                   alert("Beta test : Le toit ne peux pas s'ouvrir, il pleut");
-                   toit = true;
-               }
-            });  
-        }
-        else{
-            toit = false;
-            setIntervalFaster();
-            fermeToit();
-            alert("Beta test : On ferme le toit ! ");
-       }    
+    $('#ouvreToit').on('click',function(){
+        setIntervalFaster();
+        ouvreToit();
+    });
+    $('#fermeToit').on('click',function(){
+       setIntervalFaster();
+       fermeToit();
     });
     
+    $('#arretToit').on('click',function(){
+       arretToit(); 
+    });
 
 
     $("#Alarme").click(function(){
