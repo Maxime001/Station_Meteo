@@ -74,16 +74,21 @@ $(document).ready(function() {
         $('.affichageJauges').css('padding-top','-20px');
     },1000);
     
-    // Jquery sur les boutons de contrôle de l'observatoire
-    var toit = true;
-    var alarme = true;
-    var resistance = true;
-    var tension = true;
         
     // Fonction d'envoi des commandes d'ouverture et de fermeture du toit 
     $('#ouvreToit').on('click',function(){
-        setIntervalFaster();
+        $.getJSON('json/controleObservatoire.json', function(data) {
+        var capteurPluie = data.meteoInstantanee.detectionEau;
+       if(capteurPluie > 300){
+            setIntervalFaster();
         ouvreToit();
+    }
+    else{
+        alert("il pleut, on ne peux pas ouvrir le toit");
+        return false;
+    }
+        });
+        
     });
     $('#fermeToit').on('click',function(){
        setIntervalFaster();
@@ -95,37 +100,69 @@ $(document).ready(function() {
     });
 
 
+
+    // Jquery sur les boutons de contrôle de l'observatoire
+    var alarme = "";
+    var self = this;
+    var resistance = "";
+    var tension = "";
+   /*
+    $.getJSON('json/controleObservatoire.json', function (data) {
+        var statusAlarme = data.position.alarme;
+        var statusResistance = data.position.resistanceChauffante;
+        var statusTension = data.position.tension;
+        
+        if(statusAlarme === "activee"){
+           self.alarme = false;
+        }
+        else{
+           self.alarme = true;
+        }
+    });
+*/
+
+    
     $("#Alarme").click(function(){
-        if(alarme === true){
-           alarme = false;
-           activeAlarme();
-       }
-       else{
-           alarme = true;
-           desactiveAlarme();
-       } 
+        $.getJSON('json/controleObservatoire.json', function (data) {
+            var statusAlarme = data.position.alarme;
+            // vérifier si checked ou non etc pour chaque capteur 
+            if(statusAlarme === "desactivee"){
+               activeAlarme();
+               statusAlarme =""; 
+           }
+           else if(statusAlarme === "activee"){
+               desactiveAlarme();
+              statusAlarme="";
+           } 
+        });
     });
     
     $("#Resistance").click(function(){
-        if(resistance === true){
-           resistance = false;
-           resistanceChauffanteOn();
-       }
-       else{
-           resistance = true;
-           resistanceChauffanteOff();
-       } 
+        $.getJSON('json/controleObservatoire.json', function (data) {
+            var statusResistance = data.position.resistanceChauffante;
+            if(statusResistance === "off"){
+               resistanceChauffanteOn();
+               statusResistance = "";
+           }
+           else if(statusResistance === "on"){
+               resistanceChauffanteOff();
+               statusResistance = "";
+           } 
+        });
     });
         
     $("#TensionTelescope").click(function(){
-        if(tension === true){
-           tension = false;
-           tensionTelescopeOn();
-       }
-       else{
-           tension = true;
-           tensionTelescopeOff();
-       } 
+        $.getJSON('json/controleObservatoire.json', function (data) {
+            var statusTensionTelescope = data.position.tension;
+            if(statusTensionTelescope === "off"){
+               tensionTelescopeOn();
+               statusTensionTelescope ="";
+           }
+           else if(statusTensionTelescope === "on"){
+               tensionTelescopeOff();
+               statusTensionTelescope = "";
+           } 
+        });
     });
     
 
