@@ -132,12 +132,12 @@ $(document).ready(function() {
             if(statusAlarme === "desactivee"){
                activeAlarme();
                statusAlarme =""; 
-               sms('L\'alarme se désactive');
+               sms('L\'alarme s\'active');
            }
            else if(statusAlarme === "activee"){
                desactiveAlarme();
               statusAlarme="";
-              sms('L\'alarme s\'active');
+              sms('L\'alarme se désactive');
                
            } 
         });
