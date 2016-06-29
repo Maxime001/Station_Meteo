@@ -42,6 +42,11 @@ if($_GET['requete'] == 'activeAlarme'){
     $envoiCommandeObservatoire->envoiCommande("activeAlarme");
 }
 
+if($_GET['requete'] == 'sms'){
+    $sms = new envoiSms();
+    $sms->sms($_GET['message']);
+}
+
 if($_GET['requete'] == 'desactiveAlarme'){
     $envoiCommandeObservatoire->envoiCommande("desactiveAlarme");
 }

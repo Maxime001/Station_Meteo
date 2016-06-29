@@ -105,6 +105,14 @@ function ouvreToit(){
     });
 }
 
+function sms(contenu){
+     $.ajax({
+        url : 'ajax.php',
+        type : 'GET',
+        data : 'requete=sms&message='+contenu+''
+    });
+}
+
 function fermeToit(){
     $.ajax({
         url : 'ajax.php',
