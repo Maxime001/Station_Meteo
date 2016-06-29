@@ -6,7 +6,6 @@ function importJSON() {
         updateGraphes(data);
         updageGrapheSolidJauge(data);
         afficheDonnees(data);
-       
         
     });
 }
