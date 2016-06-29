@@ -82,6 +82,7 @@ $(document).ready(function() {
        if(capteurPluie > 300){
             setIntervalFaster();
         ouvreToit();
+         sms('Ouverture du toit de l\'observatoire');
     }
     else{
         alert("il pleut, on ne peux pas ouvrir le toit");
@@ -93,10 +94,12 @@ $(document).ready(function() {
     $('#fermeToit').on('click',function(){
        setIntervalFaster();
        fermeToit();
+        sms('Fermeture du toit de l\'observatoire');
     });
     
     $('#arretToit').on('click',function(){
        arretToit(); 
+        sms('Arrêt du moteur du toit de l\'observatoire');
     });
 
 
@@ -129,10 +132,13 @@ $(document).ready(function() {
             if(statusAlarme === "desactivee"){
                activeAlarme();
                statusAlarme =""; 
+               sms('L\'alarme se désactive');
            }
            else if(statusAlarme === "activee"){
                desactiveAlarme();
               statusAlarme="";
+              sms('L\'alarme s\'active');
+               
            } 
         });
     });
@@ -143,10 +149,12 @@ $(document).ready(function() {
             if(statusResistance === "off"){
                resistanceChauffanteOn();
                statusResistance = "";
+               sms('La résistance chauffante s\'est allumee');
            }
            else if(statusResistance === "on"){
                resistanceChauffanteOff();
                statusResistance = "";
+                sms('La résistance chauffante s\'est eteinte');
            } 
         });
     });
@@ -157,10 +165,12 @@ $(document).ready(function() {
             if(statusTensionTelescope === "off"){
                tensionTelescopeOn();
                statusTensionTelescope ="";
+                sms('Tension télescope ON');
            }
            else if(statusTensionTelescope === "on"){
                tensionTelescopeOff();
                statusTensionTelescope = "";
+                sms('Tension télescope OFF');
            } 
         });
     });
