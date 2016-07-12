@@ -110,6 +110,35 @@ class BaseDonnees {
        return $array2;
     }
     
+    public function recupTemperatures(){
+        
+        $temperatureExterieure = array();
+        $date = array();
+        
+        $reponse = $this->bdd->query('SELECT temperatureExterieure,Date FROM infometeo WHERE MINUTE(date) = 0 ORDER BY ID ASC');
+        while($donnees = $reponse->fetch()){
+            array_push($temperatureExterieure,floatval($donnees["temperatureExterieure"]));
+            array_push($date,$donnees["Date"]);
+        }
+        $array = array();
+        array_push($array,$date);
+        array_push($array,$temperatureExterieure);
+        
+
+        $verif = new VerificationDonnees();
+        $array2 = $verif->verifHeure($array);
+        
+        for($i = 0;$i<count($array2[0]);$i++){    
+            $date = explode(' ',$array2[0][$i]);   
+            $heure = explode(':',$date[1]);
+            $virgule = ",";
+            $virgule2 = ",";
+            $final = $date[0] . $virgule . $heure[0] . $virgule2;
+            $array2[0][$i] = $final;   
+        }
+       return $array2;
+    }
+    
     /**
      * Fonction d'identification
      * @param type $nom recherche de l'identifiant entré dans la page de login dans la base de donnée
@@ -181,5 +210,10 @@ class BaseDonnees {
             if($donnees = $reponse->fetch()){
                 return true;
             }
+    }
+    
+    public function verifBloque(){
+        $result = BaseDonnees::receptionDonnee($_SERVER['REMOTE_ADDR']);
+        return $result;
     }
 }

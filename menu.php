@@ -1,4 +1,5 @@
-        <div class="container-fluid" >
+<!-- Menu -->
+<div class="container-fluid" >
             <ul id="gn-menu" class="gn-menu-main" style="z-index:100;">
                 <li class="gn-trigger">
                     <a class="gn-icon gn-icon-menu"><span>Menu</span></a>

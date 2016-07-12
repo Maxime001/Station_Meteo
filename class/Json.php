@@ -17,6 +17,32 @@
         }
         
 
+        public function saveTemperaturesJson(){
+            $fichierEnregistrement = $this->fichierEnregistrement;
+            $json = file_get_contents($fichierEnregistrement);
+            $json = json_decode($json);
+            $bdd = new BaseDonnees();
+            $data = $bdd->recupTemperatures();
+            
+            for($i=0;$i<count($data[0]);$i++){
+                if(is_string($data[1][$i])){
+                    $data[1][$i] = null;
+                }       
+                
+                $data[2][$i] = $data[0][$i] . $data[1][$i];
+            }
+            
+           
+            $json = json_encode($data[2], JSON_PRETTY_PRINT);
+            
+            $addJson = fopen($this->fichierEnregistrement,'r+')
+            or die("Erreur d'ouverture du fichier Json");
+            ftruncate($addJson,0);
+            //Ecriture du nouveau Json
+            fputs($addJson,$json);
+        }
+        
+        
         
         /**
          * Fonction de sauvegarde des 24 dernières heures de données météo dans un fichier json

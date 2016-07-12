@@ -1,3 +1,4 @@
+<!-- Page historique meteo -->
 <!doctype html>
 <html>
     <head>
@@ -32,51 +33,8 @@
         <script src="js/libs/highcharts.js"></script>
         <script src="js/libs/highcharts-more.js"></script>
         <script src="js/libs/exporting.js"></script>
-<script type="text/javascript">
-$(function () {
-    $.getJSON('json/meteo.json', function (data) {
-        AfficheGraphe("#Humidite2",data.humidite," Humidité (%HR)");
-        AfficheGraphe("#Pression2",data.pression," Pression (HPa)");
-        AfficheGraphe("#luminosite2",data.luminosite,"Luminosite (Lux)");
-        AfficheGraphe("#detectionEau2",data.detectionEau,"Détection Eau (SU)");
-        AfficheGraphe("#mesureBruit2",data.mesureBruit,"Mesure de Bruit (SU)");
-        AfficheGraphe("#temperatureExterieure2",data.temperatureExterieure,"Température exterieure (°C)");
-        AfficheGraphe("#temperatureInterieure2",data.temperatureInterieure,"Température Intérieure (°C)");
-        
-        // Création du graphique
-        function AfficheGraphe(Div,dataType,Name){
-                Highcharts.setOptions({
-        global: {
-            timezoneOffset: -2 * 60
-        }
-    });
-                $(Div).highcharts('StockChart', {
-                    
-                    title:{
-                        text:''
-                    },
-                    credits: {
-                        enabled: false
-                     },
-                    exporting: {
-                        enabled: false 
-                    },
-                    rangeSelector : {
-                        selected : 1
-                    },
-                    series : [{
-                            name : Name,
-                            data : dataType,
-                            tooltip: {
-                                    valueDecimals: 1
-                            }
-                    }]
-                });
-            }
-        });
-});
-</script>
-</head>
+        <script src="js/main_HistoriqueMeteo.js"></script>
+    </head>
     <?php
         include "menu.php";
     ?>
@@ -84,27 +42,27 @@ $(function () {
         <div class="centerPage">
             <div class="fond affichageGraphiques2">
                 <div class= "mainTitle">Historique Météo - Humidité</div>
-                <div id="Humidite2" style="height: 400px; min-width: 310px"></div></br>
+                <div id="Humidite2" ></div></br>
                 <div class= "mainTitle">Historique Météo - Pression</div>
-                <div id="Pression2" style="height: 400px; min-width: 310px"></div></br>
+                <div id="Pression2"></div></br>
                 <div class= "mainTitle">Historique Météo - Luminosité</div>
-                <div id="luminosite2" style="height: 400px; min-width: 310px"></div></br>
+                <div id="luminosite2"></div></br>
                 <div class= "mainTitle">Historique Météo - Détection Eau</div>
-                <div id="detectionEau2" style="height: 400px; min-width: 310px"></div></br>
+                <div id="detectionEau2"></div></br>
                 <div class= "mainTitle">Historique Météo - Mesure de Bruit</div>
-                <div id="mesureBruit2" style="height: 400px; min-width: 310px"></div></br>
+                <div id="mesureBruit2"></div></br>
                 <div class= "mainTitle">Historique Météo - Température Intérieure</div>
-                <div id="temperatureInterieure2" style="height: 400px; min-width: 310px"></div></br>
+                <div id="temperatureInterieure2"></div></br>
                 <div class= "mainTitle">Historique Météo - Température Exterieure</div>
-                <div id="temperatureExterieure2" style="height: 400px; min-width: 310px"></div>
+                <div id="temperatureExterieure2"></div>
             </div>
         </div>
         <?php
-        include 'class/Json.php';
-       /* include 'class/BaseDonnees.php';*/
-        include 'class/VerificationDonnees.php';
-        $test = new Json(0,'json/meteo.json');
-        $test->saveAll();
+            //include 'class/Json.php';
+            /* include 'class/BaseDonnees.php';*/
+            //include 'class/VerificationDonnees.php';
+            $test = new Json(0,'json/meteo.json');
+            $test->saveAll();
         ?>
     </body>
 </html>

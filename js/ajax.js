@@ -1,12 +1,3 @@
-/*function updateWeather(){
-    $.ajax({
-        url : 'ajax.php', // La ressource ciblée
-        type : 'GET', // Le type de la requête HTTP.
-        data : 'requete=updateWeather'
-    });
-setTimeout(updateWeather,3000); 
-}*/
-
 function miseAJourPhoto(){
      $.ajax({
         url : 'ajax.php',
@@ -24,17 +15,15 @@ function miseAJourPhoto(){
     });
 }
 
-var ancienData= "";
 // Affichage des données en dur dans main
 function afficheDonnees(data){
     $('#accX').text(data.valeurCapteurs.accelerometreX);
     $('#accY').text(data.valeurCapteurs.accelerometreY);
     $('#accZ').text(data.valeurCapteurs.accelerometreZ);
     $('#capteurUltrason').text(data.valeurCapteurs.capteurUltrason);
-     $('#capteurUltrason').fadeIn();
+    $('#capteurUltrason').fadeIn();
     progressbarr(data);
     meteoResume(data);
-    
     
     if(data.position.toit === "ferme"){
         $('#confirmationPositionToit').text("Toit fermé");
@@ -45,20 +34,17 @@ function afficheDonnees(data){
         $('#confirmationPositionToit').text("Toit ouvert");
         $('#confirmationPositionToit').fadeIn();
         $('#confirmationPositionToit').css("color","red");
-    }
-    
-    
+    }   
 }
 
 function progressbarr(data){   
     $("#progressbar").progressbar({
         value: data.valeurCapteurs.capteurUltrason,
         max:250
-});
+    });
 };
 
-function meteoResume(data){
-    
+function meteoResume(data){  
     if(data.meteoInstantanee.detectionEau <= 200){
         $('#statusPluie').text("Pluie en cours  ");
         $('.load').css('display','none');
@@ -77,25 +63,40 @@ function meteoResume(data){
         $('#statusPluie').css("color","green");
     }
     
-    if(data.meteoInstantanee.luminosite === 0){
-        
+    if(data.meteoInstantanee.luminosite === 0){  
         $('#statusLumiere').attr('src','img/nuit.png');
          $('.load').css('display','none');
         $('.texteStatus').fadeIn();
         $('#statusLumiere').show('fast');
         $('#statusLumiere').css("color","green");
     }
-    else{
-        
+    else{     
         $('#statusLumiere').attr('src','img/jour.png');
          $('.load').css('display','none');
         $('.texteStatus').fadeIn();
         $('#statusLumiere').show('fast');
         $('#statusLumiere').css("color","red");
-    }
-    
-    
+    } 
 }
+
+function sms(contenu){
+     $.ajax({
+        url : 'ajax.php',
+        type : 'GET',
+        data : 'requete=sms&message='+contenu
+    });
+}
+
+function envoiCommande(param){
+    $.ajax({
+        url : 'ajax.php',
+        type : 'GET',
+        data : 'requete='+param
+    });  
+}
+
+
+
 
 function ouvreToit(){
      $.ajax({
@@ -105,13 +106,6 @@ function ouvreToit(){
     });
 }
 
-function sms(contenu){
-     $.ajax({
-        url : 'ajax.php',
-        type : 'GET',
-        data : 'requete=sms&message='+contenu+''
-    });
-}
 
 function fermeToit(){
     $.ajax({

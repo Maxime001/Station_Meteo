@@ -230,7 +230,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     <div id="camera">
                     <div class="carreMain3" >
                         <img src="img/camera.png" height="30" style="padding-left:5px;opacity:0.6;">
-                        <span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"><b>Caméras IP</b></span></br>
+                        <span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"><b>Caméras IP</b></span><a href="#" id="streamingIp" class="wakeup blue">Streaming Video</a><a href="#" id="imageIp" class="wakeup blue">Image / Image</a></br>
                          <img id="loadCamera" src="img/load.gif">
                         <img class="cameraNord" id="cameraNord" style="display:none" src=""/></br></br>
                         <img class="cameraSud" id="cameraSud" style="display:none" src=""/>

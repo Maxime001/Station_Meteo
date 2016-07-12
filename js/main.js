@@ -1,7 +1,6 @@
-
-
 $(document).ready(function() {
-
+    // Affichage du stripe (état des capteurs vert ou rouge)
+    statusCapteurs();
     // Appel de la solidJauge
     solidJauge();
     // Initialisation de toutes les jauges - donnees instantanées
@@ -19,16 +18,16 @@ $(document).ready(function() {
         importJSON();
     }, 3000);
     
+    // Requetes Ajax plus rapides si ouverture ou fermeture du toit demandée
     var setIntervalFaster = function(){
         var i = 0;
-        var test = setInterval(function(){
+        var interval = setInterval(function(){
             importJSON();
             i++;
             if(i>240){
-                clearInterval(test);   
+                clearInterval(interval);   
             }
-        }, 500);
-        
+        }, 500); 
     };
     
     // Mise a jour des fichiers jpg des caméras IP 
@@ -38,28 +37,23 @@ $(document).ready(function() {
     
     $(".textControl").delay(1000).show('fast');
    
-    
-     $(".logBlock2").click(function(){
-           verifId();
-       });
-        
     // Validation de l'affichage ou non des commandes de l'observatoire (sécurité supplémentaire)
     $('#validChange').on('change',function(){
        if($('#validChange').is(':checked')){
-             var validation = prompt('activer les commandes ? y/n');
-             if(validation === "y" || validation === "Y"){
-                 $('.commandesTelescopeStyle').fadeIn();
-             }
-             else{
-                 return false;
-             }
-       }
+            var validation = prompt('activer les commandes ?');
+            if(validation === "y" || validation === "Y"){
+                $('.commandesTelescopeStyle').fadeIn();
+            }
+            else{
+                return false;
+            }
+        }
        else{
            $('.commandesTelescopeStyle').fadeOut();
-       }
+        }
     });
     
-    // Progressbarr
+    // Affichage de la progressbarr
     var dist=0;
     function progressbarr(){   
         $("#progressbar").progressbar({
@@ -75,67 +69,54 @@ $(document).ready(function() {
     },1000);
     
         
-    // Fonction d'envoi des commandes d'ouverture et de fermeture du toit 
+    // Fonction d'envoi des commandes d'ouverture du toit 
     $('#ouvreToit').on('click',function(){
         $.getJSON('json/controleObservatoire.json', function(data) {
-        var capteurPluie = data.meteoInstantanee.detectionEau;
-       if(capteurPluie > 300){
-            setIntervalFaster();
-        ouvreToit();
-         sms('Ouverture du toit de l\'observatoire');
-    }
-    else{
-        alert("il pleut, on ne peux pas ouvrir le toit");
-        return false;
-    }
-        });
-        
-    });
-    $('#fermeToit').on('click',function(){
-       setIntervalFaster();
-       fermeToit();
-        sms('Fermeture du toit de l\'observatoire');
+            var capteurPluie = data.meteoInstantanee.detectionEau;
+            if(capteurPluie > 300){
+                setIntervalFaster();
+                envoiCommande("ouvreToit");
+                sms('Ouverture du toit de l\'observatoire');
+            }
+            else{
+                alert("il pleut, on ne peux pas ouvrir le toit");
+                return false;
+            }
+        });  
     });
     
+    // Fonction d'envoi de commande de fermeture du toit
+    $('#fermeToit').on('click',function(){
+        setIntervalFaster();
+        envoiCommande("fermeToit");
+        sms('Fermeture du toit de l\'observatoire');
+    });
+    // Fonction d'envoi de commande d'arrêt du toit 
     $('#arretToit').on('click',function(){
-       arretToit(); 
+       envoiCommande("arretToit");
         sms('Arrêt du moteur du toit de l\'observatoire');
     });
-
-
 
     // Jquery sur les boutons de contrôle de l'observatoire
     var alarme = "";
     var self = this;
     var resistance = "";
     var tension = "";
-   /*
-    $.getJSON('json/controleObservatoire.json', function (data) {
-        var statusAlarme = data.position.alarme;
-        var statusResistance = data.position.resistanceChauffante;
-        var statusTension = data.position.tension;
-        
-        if(statusAlarme === "activee"){
-           self.alarme = false;
-        }
-        else{
-           self.alarme = true;
-        }
-    });
-*/
-
     
+    // Activation / Désactivation de l'alarme
     $("#Alarme").click(function(){
         $.getJSON('json/controleObservatoire.json', function (data) {
             var statusAlarme = data.position.alarme;
             // vérifier si checked ou non etc pour chaque capteur 
             if(statusAlarme === "desactivee"){
-               activeAlarme();
+                envoiCommande("activeAlarme");
+               
                statusAlarme =""; 
                sms('L\'alarme s\'active');
            }
            else if(statusAlarme === "activee"){
-               desactiveAlarme();
+               envoiCommande("desactiveAlarme");
+              
               statusAlarme="";
               sms('L\'alarme se désactive');
                
@@ -143,63 +124,67 @@ $(document).ready(function() {
         });
     });
     
+    // Activation / Désactivation de la résistance chauffante
     $("#Resistance").click(function(){
         $.getJSON('json/controleObservatoire.json', function (data) {
             var statusResistance = data.position.resistanceChauffante;
             if(statusResistance === "off"){
-               resistanceChauffanteOn();
+                envoiCommande("resistanceChauffanteOn");
+             
                statusResistance = "";
                sms('La résistance chauffante s\'est allumee');
            }
            else if(statusResistance === "on"){
-               resistanceChauffanteOff();
+               envoiCommande("resistanceChauffanteOff")
+              
                statusResistance = "";
                 sms('La résistance chauffante s\'est eteinte');
            } 
         });
     });
-        
+    
+    // Activation / Désactivation du 220V 
     $("#TensionTelescope").click(function(){
         $.getJSON('json/controleObservatoire.json', function (data) {
             var statusTensionTelescope = data.position.tension;
             if(statusTensionTelescope === "off"){
-               tensionTelescopeOn();
+                envoiCommande("tensionTelescopeOn");
+              
                statusTensionTelescope ="";
                 sms('Tension télescope ON');
            }
            else if(statusTensionTelescope === "on"){
-               tensionTelescopeOff();
+               envoiCommande("tensionTelescopeOff");
                statusTensionTelescope = "";
                 sms('Tension télescope OFF');
            } 
         });
     });
     
-
-    statusCapteurs();
+    function statusCapteurs(){
+        $(function() {
+            $.getJSON('json/controleObservatoire.json', function(data) {
+                function updateJSON() {
+                    $.getJSON('json/controleObservatoire.json', function(data) {
+                        stripe.update(data.statutCapteur);
+                    });
+                }
+            var stripe = new Stripe(data.statutCapteur, 15, 35, $("#sensor_status_stripe"));
+            stripe.create();
+            setInterval(function() {
+                    updateJSON();
+                }, 60000);
+            });
+        }); 
+    }
+     
+    $(".logBlock2").click(function(){
+        verifId();
+    });  
 });
 
 
 
 
-function statusCapteurs(){
-    $(function() {
-         $.getJSON('json/controleObservatoire.json', function(data) {
-      
 
-        function updateJSON() {
-            $.getJSON('json/controleObservatoire.json', function(data) {
-                stripe.update(data.statutCapteur);
-            });
-        }
-
-        var stripe = new Stripe(data.statutCapteur, 15, 35, $("#sensor_status_stripe"));
-        stripe.create();
-   
-        setInterval(function() {
-            updateJSON();
-        }, 60000);
-    });
-    });
-}
 
