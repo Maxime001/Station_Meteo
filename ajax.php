@@ -27,6 +27,13 @@ if($_GET['requete'] == 'miseAJourPhoto'){
     }
 }
 
+if($_GET['requete'] == 'streamingIp'){                             
+    $updateImage = new CameraIp();
+   
+    $updateImage->getVideo(11,"img/cameraNord.jpg");
+    $updateImage->getVideo(10,"img/cameraSud.jpg");     
+}
+
 
 if($_GET['requete'] == 'ouvreToit'){
     $envoiCommandeObservatoire->envoiCommande("ouvreToit");  

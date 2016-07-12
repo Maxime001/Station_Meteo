@@ -34,7 +34,7 @@ void setup(){
 
 //Variables paramétrables
 //période d'envoi des infos sur le port série (ms)
-int periodeinfos = 100; 
+int periodeinfos = 500; 
 //Variables
 //Condition d'arrêt de l'envoi des infos sur le port série
 int test = 0; 

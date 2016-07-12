@@ -132,6 +132,7 @@ void loop() {
         received = Serial.read();
 
         if (received == 'a') {
+       
             activeralarme();    // Active l'alarme (signal rf)
         }
 
@@ -139,6 +140,39 @@ void loop() {
             desactiveralarme(); // Désactive l'alarme (signal rf)
         }
 
+
+
+            if (received == 'e') {
+                digitalWrite(5, LOW);   // Met le télescope sous tension
+                Serial.println("Telescope sous tension");
+            }
+
+            if (received == 'f') {
+                digitalWrite(5, HIGH);  // Met le télescope hors tension
+                Serial.println("Telescope hors tension");
+            }
+
+            if (received == 'g') {
+                digitalWrite(6, LOW);
+                Serial.println("Res chauff sous tension");
+            }
+
+            if (received == 'h') {
+                digitalWrite(6, HIGH);
+                Serial.println("Res chauff hors tension");
+            }
+
+            if (received == 'i') {
+                digitalWrite(7, LOW);   // Met la ventilation sous tension
+                Serial.println("Ventilation sous tension");
+            }
+
+            if (received == 'j') {
+                digitalWrite(7, HIGH);  // Met la ventilation hors tension
+                Serial.println("Ventilation hors tension");
+            }
+
+            
         if (received == 'c') {
             digitalWrite(9, LOW);   // Mise sous tension du système
                         // de commande du toit 
@@ -191,37 +225,7 @@ void loop() {
                 digitalWrite(4, HIGH);
                 digitalWrite(9, HIGH);
             }
-
-
-            if (received == 'e') {
-                digitalWrite(5, LOW);   // Met le télescope sous tension
-                Serial.println("Telescope sous tension");
-            }
-
-            if (received == 'f') {
-                digitalWrite(5, HIGH);  // Met le télescope hors tension
-                Serial.println("Telescope hors tension");
-            }
-
-            if (received == 'g') {
-                digitalWrite(6, LOW);
-                Serial.println("Res chauff sous tension");
-            }
-
-            if (received == 'h') {
-                digitalWrite(6, HIGH);
-                Serial.println("Res chauff hors tension");
-            }
-
-            if (received == 'i') {
-                digitalWrite(7, LOW);   // Met la ventilation sous tension
-                Serial.println("Ventilation sous tension");
-            }
-
-            if (received == 'j') {
-                digitalWrite(7, HIGH);  // Met la ventilation hors tension
-                Serial.println("Ventilation hors tension");
-            }
+            
         }
     }
 }
