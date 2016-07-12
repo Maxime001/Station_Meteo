@@ -26,8 +26,8 @@
             if($_GET['p'] == "HistoriqueMeteo"){
             include 'HistoriqueMeteo.php';
             }
-            elseif($_GET['p'] == "parametres"){
-                include 'parametre.php';
+            elseif($_GET['p'] == "heatmap"){
+                include 'heatmap.php';
             }
             elseif($_GET['p'] == "console"){
                 include 'console.php';

@@ -32,14 +32,15 @@
                 $data[2][$i] = $data[0][$i] . $data[1][$i];
             }
             
+            return $data[2];
            
-            $json = json_encode($data[2], JSON_PRETTY_PRINT);
+            /*$json = json_encode($data[2], JSON_PRETTY_PRINT);
             
             $addJson = fopen($this->fichierEnregistrement,'r+')
             or die("Erreur d'ouverture du fichier Json");
             ftruncate($addJson,0);
             //Ecriture du nouveau Json
-            fputs($addJson,$json);
+            fputs($addJson,$json);*/
         }
         
         

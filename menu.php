@@ -14,7 +14,7 @@
                                     <a href="index.php?p=console" class="gn-icon gn-icon-download">Console</a>
 
                                 </li>
-                                <li><a href="index.php?p=parametres" class="gn-icon gn-icon-cog">Paramètres</a></li>
+                                <li><a href="index.php?p=heatmap" class="gn-icon gn-icon-cog">Carte de chaleur</a></li>
                                 <li>
                                     <a href="index.php?p=HistoriqueMeteo" class="gn-icon gn-icon-archive">Meteo</a>
                                 </li>

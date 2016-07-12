@@ -124,9 +124,9 @@ class BaseDonnees {
         array_push($array,$date);
         array_push($array,$temperatureExterieure);
         
-
-        $verif = new VerificationDonnees();
-        $array2 = $verif->verifHeure($array);
+        $array2 = $array;
+       // $verif = new VerificationDonnees();
+       // $array2 = $verif->verifHeure($array);
         
         for($i = 0;$i<count($array2[0]);$i++){    
             $date = explode(' ',$array2[0][$i]);   
