@@ -6,7 +6,7 @@ ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=0)
 # Import de la librairie MySQL
 import MySQLdb
 # DB Connexion
-db = MySQLdb.connect("localhost","root","-P3gaze-","meteo" )
+db = MySQLdb.connect("localhost","root","","meteo" )
 # prepare a cursor object using cursor() method
 cursor = db.cursor()
 
