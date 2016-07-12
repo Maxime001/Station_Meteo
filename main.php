@@ -1,4 +1,6 @@
 <?php
+
+
 // Au chargement, on va faire la requete SQL qui va remplir correctement le json avec les dernieres 24h de données
 $MajJson = new Json(0,"json/meteo24h.json");
 $MajJson->save24h();
@@ -96,6 +98,8 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                 </div>
                 <div class="fond affichageCommandes" >
                     <div class= "mainTitle">Contrôle des commandes</div>
+                  
+                    
                     <div class="carreMain" style="width:99%;margin-top:5px">
                         <!-- Statut des capteurs -->
                         <img src="img/alive.png" style="padding-left:5px;opacity:0.6;" height="35">
@@ -113,57 +117,20 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
 
                         <a href="#" class="wakeup blue">Démarrage PC Observatoire</a>
                         <a href="https://nasorion68.no-ip.org:5001" target="_blank" class="wakeup blue">Accès NAS</a>
-                    </div>
-                    <div class="carreMain" style="width:99%;margin-top:5px;height:220px;">
-                        <img src="img/control.png" style="padding-left:5px;opacity:0.8;" height="30"> <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px" >Contrôle des commandes    |</span>      Activer les commandes :</b>  <input type="checkbox" id="validChange">
-                        <table class="commandesTelescopeStyle" align="center" style="display:none">
-                            <tr>
-                                <td class="tdButton">
-                                    <label class="switch">
-                                        <input id="Resistance" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("resistanceChauffante")?>/>
-                                        <span class="switch-label resistCouleur" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
-                                    </label>
-                                </td>
-                                <td class="tdDesc">
-                                    <span class="textControl"><b>Résistance chauffante</b></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tdButton">
-                                    <label class="switch">
-                                        <input id="TensionTelescope" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("tension")?> />
-                                        <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
-                                    </label>
-                                </td>
-                                <td class="tdDesc">
-                                    <span class="textControl"><b>Mise sous tension télescope</b></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tdButton">
-                                    <label class="switch">
-                                       <input id="Alarme" class="switch-input" type="checkbox" <?= $statusCapteurs->verifStatut("alarme")?> />
-                                       <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> 
-                                    </label>
-                                </td>
-                                <td class="tdDesc">
-                                    <span class="textControl"><b>Alarme</b></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                     <?= $statusCapteurs->verifStatut("toit")?> 
-                                    
-                                    <a href="#" id="ouvreToit" class="wakeup  blue">Ouvrir Toit</a>
-                                    <a href="#" id="fermeToit" class="wakeup blue">Fermer Toit</a>
-                                    <a href="#" id="arretToit" class="wakeup blue">Arrêt moteur</a>
-                                <td>
-                            </tr>
 
-                        </table>
                     </div>
                     
                     
+                    <div class="carreMain" style="width:99%;margin-top:5px;height:220px;">
+                        <img src="img/control.png" style="padding-left:5px;opacity:0.8;" height="30"> <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px" >Contrôle des commandes    |</span>         
+                        <?php 
+                            if($_SESSION['userName'] == "maxime"){
+                                include "commandes.php";
+                            }else{
+                                echo "<div style=\"text-align:center;color:red;font-size:18px;\"></br></br>Session Invité</div>";
+                            }
+                        ?>
+                      </div>
                         
                     
                     

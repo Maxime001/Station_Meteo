@@ -5,5 +5,6 @@
 
     if($Verif == "OK"){
         $_SESSION['validUser'] = 1;
+        $_SESSION['userName'] = $_POST['id'];
     }
 
