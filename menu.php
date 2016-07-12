@@ -30,5 +30,6 @@
         <script src="css/template/js/classie.js"></script>
         <script src="css/template/js/gnmenu.js"></script>
         <script>
-                
+                    // Création du menu
+    new gnMenu( document.getElementById( 'gn-menu' ) );
         </script>
