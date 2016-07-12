@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    // Création du menu
+    new gnMenu( document.getElementById( 'gn-menu' ) );
     // Affichage du stripe (état des capteurs vert ou rouge)
     statusCapteurs();
     // Appel de la solidJauge
