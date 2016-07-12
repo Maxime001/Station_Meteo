@@ -81,7 +81,7 @@
 
 .affichageJauges{
     height:1073px;
-    margin-top:80px;
+    margin-top:50px;
     z-index:-10;
     min-width:428px;
     padding:-25px;
@@ -96,7 +96,7 @@
 
 .affichageCommandes{
     height:1073px;
-    margin-top:80px;
+    margin-top:50px;
     z-index:-10;
     width: 35%;
 
@@ -120,7 +120,7 @@
 }
 
 .affichageGraphiques2{
-    margin-top:80px;
+    margin-top:50px;
     height:auto;
     z-index:-10;
     width:91%;
@@ -132,7 +132,7 @@
     height:1073px;
     z-index:-10;
     width:34%;
-     margin-top:80px;
+     margin-top:50px;
      margin-bottom:5px;
 
 }

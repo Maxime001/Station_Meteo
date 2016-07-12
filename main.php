@@ -121,7 +121,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     </div>
                     
                     
-                    <div class="carreMain" style="width:99%;margin-top:5px;height:220px;">
+                    <div class="carreMain" style="width:99%;margin-top:1px;height:220px;">
                         <img src="img/control.png" style="padding-left:5px;opacity:0.8;" height="30"> <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px" >Contrôle des commandes    |</span>         
                         <?php 
                             if($_SESSION['userName'] == "maxime"){
@@ -134,7 +134,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         
                     
                     
-                    <div class="carreMain" style="margin-left:2px;margin-right:2px;margin-top:5px;width:99%" >
+                    <div class="carreMain" style="margin-left:2px;margin-right:2px;margin-top:1px;width:99%" >
                         <img height="30" style="padding-left:5px;opacity:0.6;" src="img/sat.png">
                         <b><span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"> Contrôle du toit  </span></b></br></br>
                         <table><tr><td style="width:165px">
@@ -161,7 +161,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         </td></tr></table>
                     </div>
                     </br>
-                    <div class="carreMain" style="margin-top:5px;width:99%;margin-left:3px; margin-bottom:5px;margin-right:2px;" >
+                    <div class="carreMain" style="margin-top:1px;width:99%;margin-left:3px; margin-bottom:5px;margin-right:2px;" >
                          <img height="30" style="padding-left:5px;opacity:0.6;" src="img/status.png">
                          <span style="padding-left:5px;padding-top:14px;opacity:0.9; font-size:17px"><b>Statut actuel </b></span></br>
                          <table><tr><td style="width:165px">

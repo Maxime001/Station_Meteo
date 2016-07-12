@@ -43,11 +43,11 @@
         include "menu.php";
     ?>
     <body class="main">
-        <div class="centerPage">
+        <div class="centerPage" >
             <div style="height:800px;" class="fond affichageGraphiques2">
                 <div class= "mainTitle" >HeatMap</div> 
 
-                   <div id="container" style="width:100%; height: 100%; margin: 0 auto"></div>
+                   <div id="container" style="margin:5px;height:757px;"></div>
             </div>
          
         </div>

@@ -25,7 +25,7 @@
                 <li><a href="index.php" ><span>Accueil</span></a></li>
                 <li><a href="logout.php"  ><img class="logout" src="img/logout.png"></a></li>         
             </ul>
-            <div id="titresecondaire" class="principalTitle"><span>Andromede Observatory</span></div>
+            <!--<div id="titresecondaire" class="principalTitle"><span>Andromede Observatory</span></div>-->
         </div> 
         <script src="css/template/js/classie.js"></script>
         <script src="css/template/js/gnmenu.js"></script>
