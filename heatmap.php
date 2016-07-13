@@ -24,20 +24,14 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/googleButton.css">
         <link rel="stylesheet" type="text/css" href="css/contenu.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> 
+        <!-- JS des heatmap -->
         <script src="js/heatmap.js"></script>
         <script src="js/main_heatmap.js"></script>
-
-<script src="js/libs/highcharts/highcharts2.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/heatmap.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-
-<script type="text/javascript">
-    
-
-</script>
+        <script src="js/libs/highcharts/highcharts2.js"></script>
+        <script src="js/libs/highcharts/data.js"></script>
+        <script src="js/libs/highcharts/heatmap.js"></script>
+        <script src="js/libs/highcharts/exporting.js"></script>
 </head>
     <?php
         include "menu.php";
@@ -52,10 +46,8 @@
          
         </div>
         
-        
-        
-        
-        
+     
+<!-- Donnees -->  
 <pre id="csv" style="display:none;">Date,Time,Temperature 
 <?php
      $saveJson = new Json(0, 'json/heatmap.json');
@@ -64,8 +56,8 @@
      for($i=0;$i<count($donnees);$i++){
         echo nl2br($donnees[$i])."\n";
      }
-    ?> 
-        </pre>
+?> 
+</pre>
    
     </body>
 </html>
