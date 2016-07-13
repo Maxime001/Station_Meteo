@@ -14,7 +14,7 @@
         <link rel="stylesheet" type="text/css" href="css/template/css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/template/css/component.css" />
         <!-- JS du template -->
-        <script src="js/modernizr.custom.js"></script>     
+        <!--<script src="js/modernizr.custom.js"></script>     -->
         <!-- Jquery -->
         <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
         <script src="js/libs/jquery-ui.min.js"></script>
