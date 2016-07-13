@@ -5,6 +5,7 @@
         <title>HeatMap</title>
         <meta name="robots" content="noindex">
         <meta charset="UTF-8" />
+         <link rel="icon" type="image/png" href="img/favicon.png" />
         <meta name="viewport" content="initial-scale=2.0, user-scalable=no" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -14,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="css/template/css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/template/css/component.css" />
         <!-- JS du template -->
-        <script src="js/modernizr.custom.js"></script>     
+        <!--<script src="js/modernizr.custom.js"></script>     -->
         <!-- Jquery -->
         <script type="text/javascript" src="js/libs/jquery-2.2.3.min.js"></script>
         <script src="js/libs/jquery-ui.min.js"></script>
