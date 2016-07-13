@@ -111,7 +111,7 @@ function heatMap(div){
                 [1, '#c4463a']
             ],
             min: -15,
-            max: 25,
+            max: 35,
             startOnTick: false,
             endOnTick: false,
             labels: {
