@@ -41,26 +41,24 @@
     <body class="main">
         <div class="centerPage">
             <div class="fond affichageGraphiques2">
+                
                 <div class= "mainTitle">Historique Météo - Humidité</div>
-                <div id="Humidite2" ></div></br>
+                <div id="Humidite2" class="carreMain4" ><img class="loading_historiqueMeteo" src="img/load.gif"/></div></br>
                 <div class= "mainTitle">Historique Météo - Pression</div>
-                <div id="Pression2"></div></br>
+                <div id="Pression2" class="carreMain4"><img class="loading_historiqueMeteo" src="img/load.gif"/></div></br>
                 <div class= "mainTitle">Historique Météo - Luminosité</div>
-                <div id="luminosite2"></div></br>
+                <div id="luminosite2" class="carreMain4"><img class="loading_historiqueMeteo" src="img/load.gif"/></div></br>
                 <div class= "mainTitle">Historique Météo - Détection Eau</div>
-                <div id="detectionEau2"></div></br>
+                <div id="detectionEau2" class="carreMain4"><img class="loading_historiqueMeteo" src="img/load.gif"/></div></br>
                 <div class= "mainTitle">Historique Météo - Mesure de Bruit</div>
-                <div id="mesureBruit2"></div></br>
+                <div id="mesureBruit2" class="carreMain4"><img class="loading_historiqueMeteo" src="img/load.gif"/></div></br>
                 <div class= "mainTitle">Historique Météo - Température Intérieure</div>
-                <div id="temperatureInterieure2"></div></br>
+                <div id="temperatureInterieure2" class="carreMain4"><img class="loading_historiqueMeteo" src="img/load.gif"/></div></br>
                 <div class= "mainTitle">Historique Météo - Température Exterieure</div>
-                <div id="temperatureExterieure2"></div>
+                <div id="temperatureExterieure2" class="carreMain4"><img class="loading_historiqueMeteo" src="img/load.gif"/></div>
             </div>
         </div>
         <?php
-            //include 'class/Json.php';
-            /* include 'class/BaseDonnees.php';*/
-            //include 'class/VerificationDonnees.php';
             $test = new Json(0,'json/meteo.json');
             $test->saveAll();
         ?>

@@ -1,5 +1,8 @@
 $(document).ready(function(){
     $.getJSON('json/meteo.json', function (data) {
+        
+        
+        $('.loading_historiqueMeteo').css('display','none');
         AfficheGraphe("#Humidite2",data.humidite," Humidité (%HR)");
         AfficheGraphe("#Pression2",data.pression," Pression (HPa)");
         AfficheGraphe("#luminosite2",data.luminosite,"Luminosite (Lux)");
