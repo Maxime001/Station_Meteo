@@ -16,7 +16,7 @@
                                 </li>
                                 <li><a href="index.php?p=heatmap" class="gn-icon gn-icon-cog">Carte de chaleur</a></li>
                                 <li>
-                                    <a href="index.php?p=HistoriqueMeteo" class="gn-icon gn-icon-archive">Meteo</a>
+                                    <a href="index.php?p=HistoriqueMeteo" class="gn-icon gn-icon-archive">Historique Meteo</a>
                                 </li>
                             </ul>
                         </div>

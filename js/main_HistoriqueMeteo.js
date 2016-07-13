@@ -2,7 +2,7 @@ $(document).ready(function(){
     $.getJSON('json/meteo.json', function (data) {
         
         
-        $('.loading_historiqueMeteo').css('display','none');
+        $('.loading_historiqueMeteo').fadeOut();
         AfficheGraphe("#Humidite2",data.humidite," Humidité (%HR)");
         AfficheGraphe("#Pression2",data.pression," Pression (HPa)");
         AfficheGraphe("#luminosite2",data.luminosite,"Luminosite (Lux)");
@@ -10,6 +10,7 @@ $(document).ready(function(){
         AfficheGraphe("#mesureBruit2",data.mesureBruit,"Mesure de Bruit (SU)");
         AfficheGraphe("#temperatureExterieure2",data.temperatureExterieure,"Température exterieure (°C)");
         AfficheGraphe("#temperatureInterieure2",data.temperatureInterieure,"Température Intérieure (°C)");
+        
         
         // Création du graphique
         function AfficheGraphe(Div,dataType,Name){

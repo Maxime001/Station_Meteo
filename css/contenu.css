@@ -427,4 +427,6 @@ border:2px solid rgba(247, 163, 92, 0.1);
 #Humidite2, #Pression2, #luminosite2, #detectionEau2, #mesureBruit2, #temperatureInterieure2, #temperatureExterieure2{
     height: 400px; 
     min-width: 310px;
+    
 }
+
