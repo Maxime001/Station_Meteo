@@ -11,10 +11,10 @@
                                     <a class="gn-icon gn-icon-search"><span>Rechercher</span></a>
                                 </li>
                                 <li>
-                                    <a href="index.php?p=console" class="gn-icon gn-icon-download">Console</a>
+                                    <a href="index.php?p=console"  class="gn-icon gn-icon-download">Console</a>
 
                                 </li>
-                                <li><a href="index.php?p=heatmap" class="gn-icon gn-icon-cog">Carte de chaleur</a></li>
+                                <li><a href="index.php?p=heatmap"  class="gn-icon gn-icon-cog">Carte de chaleur</a></li>
                                 <li>
                                     <a href="index.php?p=HistoriqueMeteo" class="gn-icon gn-icon-archive">Historique Meteo</a>
                                 </li>

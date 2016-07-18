@@ -22,6 +22,7 @@ function afficheDonnees(data){
     $('#accZ').text(data.valeurCapteurs.accelerometreZ);
     $('#capteurUltrason').text(data.valeurCapteurs.capteurUltrason);
     $('#capteurUltrason').fadeIn();
+    $('#girouette').text(data.gpa.girouette);
     progressbarr(data);
     meteoResume(data);
     

@@ -88,12 +88,14 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     
                      <div class= "mainTitle">Météo temps réel</div>
                       <div class="carreMain resp1" style="">
+                          
                      
                     <div  class="   jauge"  id="humidite"></div>
                     <div class="  jauge" id="pluie"></div>
                     <div class="   jauge" id="luminosite"></div>
                     <div  class=" jauge" id="temperatureExterieure"></div>
                     <div  class="solidJauge  " id="deltaTemperature" ></div>
+                    <b>DirectionVent :</b> <span id="girouette"></span>
                 </div>
                 </div>
                 <div class="fond affichageCommandes" >
