@@ -30,7 +30,6 @@ class BaseDonnees {
         $luminosite = array();
         $humidite = array();
         $detectionEau = array();
-        //$mesureBruit = array();
         $temperatureExterieure = array();
         $termperatureInterieure = array();
         $reponse = $this->bdd->query('SELECT * FROM infometeo WHERE Date >= "'.$DateMoinsUnJour.'" ORDER BY ID ASC');
@@ -40,7 +39,6 @@ class BaseDonnees {
             array_push($luminosite,intval($donnees["luminosite"]));
             array_push($humidite,  floatval($donnees["humidite"]));
             array_push($detectionEau,intval($donnees["detectionEau"]));
-           // array_push($mesureBruit,intval($donnees["mesureBruit"]));
             array_push($temperatureExterieure,floatval($donnees["temperatureExterieure"]));
             array_push($termperatureInterieure,floatval($donnees["temperatureInterieure"]));
         }
@@ -52,7 +50,6 @@ class BaseDonnees {
         array_push($array,$luminosite);
         array_push($array,$humidite);
         array_push($array,$detectionEau);
-       // array_push($array,$mesureBruit);
         array_push($array,$temperatureExterieure);
         array_push($array,$termperatureInterieure);
 
