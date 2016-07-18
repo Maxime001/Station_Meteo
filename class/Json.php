@@ -125,7 +125,7 @@
          //   var_dump($donnees[0][$a]);
             }
          
-            for($j=1;$j<=7;$j++){
+            for($j=1;$j<=6;$j++){
                 for($i=1;$i<=count($donnees[0])-11;$i++){
                      
                     if(is_string($donnees[$j][$i])){
@@ -139,7 +139,7 @@
             $humidite = array();
             $luminosite = array();
             $detectionEau = array();
-            $mesureBruit = array();
+            //$mesureBruit = array();
             $temperatureExterieure = array();
             $temperatureInterieure = array();
 
@@ -158,14 +158,14 @@
                 $detectionEau[$t][0] = $donnees[0][$t];
                 $detectionEau[$t][1] = $donnees[4][$t];
                 
-                $mesureBruit[$t][0] = $donnees[0][$t];
-                $mesureBruit[$t][1] = $donnees[5][$t];
+                //$mesureBruit[$t][0] = $donnees[0][$t];
+                //$mesureBruit[$t][1] = $donnees[5][$t];
                 
                 $temperatureExterieure[$t][0] = $donnees[0][$t];
-                $temperatureExterieure[$t][1] = $donnees[6][$t];
+                $temperatureExterieure[$t][1] = $donnees[5][$t];
                 
                 $temperatureInterieure[$t][0] = $donnees[0][$t];
-                $temperatureInterieure[$t][1] = $donnees[7][$t];
+                $temperatureInterieure[$t][1] = $donnees[6][$t];
                 
                 
             }
@@ -176,7 +176,7 @@
                 $json->luminosite = $luminosite;
                 $json->humidite = $humidite;
                 $json->detectionEau = $detectionEau;
-                $json->mesureBruit = $mesureBruit;
+               // $json->mesureBruit = $mesureBruit;
                 $json->temperatureInterieure = $temperatureInterieure;
                 $json->temperatureExterieure = $temperatureExterieure;
             

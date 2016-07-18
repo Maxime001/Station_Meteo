@@ -7,7 +7,7 @@ $(document).ready(function(){
         AfficheGraphe("#Pression2",data.pression," Pression (HPa)");
         AfficheGraphe("#luminosite2",data.luminosite,"Luminosite (Lux)");
         AfficheGraphe("#detectionEau2",data.detectionEau,"Détection Eau (SU)");
-        AfficheGraphe("#mesureBruit2",data.mesureBruit,"Mesure de Bruit (SU)");
+        //AfficheGraphe("#mesureBruit2",data.mesureBruit,"Mesure de Bruit (SU)");
         AfficheGraphe("#temperatureExterieure2",data.temperatureExterieure,"Température exterieure (°C)");
         AfficheGraphe("#temperatureInterieure2",data.temperatureInterieure,"Température Intérieure (°C)");
         

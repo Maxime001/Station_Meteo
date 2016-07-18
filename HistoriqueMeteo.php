@@ -51,8 +51,7 @@
                 <div id="luminosite2" class="carreMain4"><img class="loading_historiqueMeteo" src="img/load.gif"/></div></br>
                 <div class= "mainTitle">Historique Météo - Détection Eau</div>
                 <div id="detectionEau2" class="carreMain4"><img class="loading_historiqueMeteo" src="img/load.gif"/></div></br>
-                <div class= "mainTitle">Historique Météo - Mesure de Bruit</div>
-                <div id="mesureBruit2" class="carreMain4"><img class="loading_historiqueMeteo" src="img/load.gif"/></div></br>
+            
                 <div class= "mainTitle">Historique Météo - Température Intérieure</div>
                 <div id="temperatureInterieure2" class="carreMain4"><img class="loading_historiqueMeteo" src="img/load.gif"/></div></br>
                 <div class= "mainTitle">Historique Météo - Température Exterieure</div>
