@@ -55,7 +55,7 @@
             $bdd = new BaseDonnees();
             $donnees = $bdd->recup24h();
             
-            for($j=1;$j<=7;$j++){
+            for($j=1;$j<=6;$j++){
                 for($i=0;$i<=count($donnees[0])-1;$i++){
                     if(is_string($donnees[$j][$i])){
                         $donnees[$j][$i] = null;
@@ -70,11 +70,11 @@
             $json->donnees->luminosite = $donnees[2];
             $json->donnees->humidite = $donnees[3];
             $json->donnees->detectionEau = $donnees[4];
-            $json->donnees->mesureBruit = $donnees[5];
+            //$json->donnees->mesureBruit = $donnees[5];
             $json->donnees->temperatureExterieure = $donnees[6];
             $json->donnees->temperatureInterieure = $donnees[7];
             
-            if($donnees[0] == null || $donnees[1] == null || $donnees[2] == null || $donnees[3] == null || $donnees[4] == null || $donnees[5] == null || $donnees[6] == null || $donnees[7] == null){
+            if($donnees[0] == null || $donnees[1] == null || $donnees[2] == null || $donnees[3] == null || $donnees[4] == null || $donnees[6] == null || $donnees[7] == null){
             
             return false;
             }
@@ -87,8 +87,8 @@
             $humiditeMax = max($donnees[3]);
             $detectionEauMin = min($donnees[4]);
             $detectionEauMax = max($donnees[4]);
-            $mesureBruitMin = min($donnees[5]);
-            $mesureBruitMax = max($donnees[5]);            
+           // $mesureBruitMin = min($donnees[5]);
+           // $mesureBruitMax = max($donnees[5]);            
             $temperatureExterieureMin = min($donnees[6]);
             $temperatureExterieureMax = max($donnees[6]);
             $temperatureInterieureMin = min($donnees[7]);
@@ -102,8 +102,8 @@
             $json->minMax->humiditeMax = $humiditeMax;
             $json->minMax->detectionEauMin = $detectionEauMin;
             $json->minMax->detectionEauMax = $detectionEauMax;
-            $json->minMax-> mesureBruitMin = $mesureBruitMin;
-            $json->minMax->mesureBruitMax = $mesureBruitMax;
+            //$json->minMax-> mesureBruitMin = $mesureBruitMin;
+            //$json->minMax->mesureBruitMax = $mesureBruitMax;
             $json->minMax->temperatureExterieureMin = $temperatureExterieureMin;
             $json->minMax->temperatureExterieureMax = $temperatureExterieureMax;
             $json->minMax->temperatureInterieureMin = $temperatureInterieureMin;

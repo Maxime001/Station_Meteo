@@ -15,7 +15,7 @@ class VerificationDonnees{
               
 
                 array_splice($timeStampArray,$i+1,0,$timeStampArray[$i]+300);
-                for($j=1;$j<=7;$j++){
+                for($j=1;$j<=6;$j++){
                     array_splice($array[$j],$i+1,0,"Missing");
                 }
                 $ajout = date('Y-m-d H:i:s',$timeStampArray[$i]+300);
