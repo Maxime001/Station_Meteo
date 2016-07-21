@@ -23,6 +23,7 @@ function afficheDonnees(data){
     $('#temperatureRail').text(data.valeurCapteurs.temperatureRail);
     $('#capteurUltrason').text(data.valeurCapteurs.capteurUltrason);
     $('#capteurUltrason').fadeIn();
+    $('#anemometre').text(data.gpa.anemometre);
     $('#girouette').text(data.gpa.girouette);
     progressbarr(data);
     meteoResume(data);
