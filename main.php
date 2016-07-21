@@ -173,7 +173,7 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                         </td></tr><td>
                             <b>Température rail </b> 
                         </td><td>
-                            x°C
+                            <span id="temperatureRail"></span> °C
                         </td></tr><tr><td>
                                  <b>Alarme</b> 
                         </td><td>

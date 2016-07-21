@@ -20,6 +20,7 @@ function afficheDonnees(data){
     $('#accX').text(data.valeurCapteurs.accelerometreX);
     $('#accY').text(data.valeurCapteurs.accelerometreY);
     $('#accZ').text(data.valeurCapteurs.accelerometreZ);
+    $('#temperatureRail').text(data.valeurCapteurs.temperatureRail);
     $('#capteurUltrason').text(data.valeurCapteurs.capteurUltrason);
     $('#capteurUltrason').fadeIn();
     $('#girouette').text(data.gpa.girouette);

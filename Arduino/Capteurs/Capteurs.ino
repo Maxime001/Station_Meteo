@@ -49,7 +49,13 @@ int temperaturerail = 0;
 //Variable donnant la distance mesurée par le capteur ultrasons
 long distance = 0;       
 
+int compteurDureeTemperature = 0;
+int compteurTemperature = 0;
+
+int nombreSecondeCalculTemperature = 30;
+
 void loop(){
+    compteurDureeTemperature = millis()/(nombreSecondeCalculTemperature*1000);
     test = 0; //réinitialise la condition d'arrêt de l'envoi des infos
 
     //Si des données sont disponibles
@@ -69,10 +75,13 @@ void loop(){
       } 
           
       //Envoi info température du rail
-      if(received == 't'){
+        if(compteurDureeTemperature != compteurTemperature){
           temperaturerail = 5*1000*analogRead(4)/1024/10;
-          Serial.print("Temperature rail : "); Serial.print(temperaturerail); Serial.println(" degres");            
-      } 
+          Serial.println("C20 : Temperature rail : ");
+          Serial.println(temperaturerail); 
+          compteurTemperature = compteurDureeTemperature;
+        }     
+      
           
       //Lance la séquence de mesure de la distance du toit et la position du télescope    
       if(received == 'z'){
