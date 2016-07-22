@@ -25,6 +25,7 @@ function afficheDonnees(data){
     $('#capteurUltrason').fadeIn();
     $('#anemometre').text(data.gpa.anemometre);
     $('#girouette').text(data.gpa.girouette);
+    $('#pluviometre').text(data.gpa.pluviometre);
     progressbarr(data);
     meteoResume(data);
     

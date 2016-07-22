@@ -96,7 +96,8 @@ $sms->sms("Quelqu'un est sur la page mainfeafaef");*/
                     <div  class=" jauge" id="temperatureExterieure"></div>
                     <div  class="solidJauge  " id="deltaTemperature" ></div>
                     <b>Direction vent :</b> <span id="girouette"> - </span></br>
-                    <b>Vitesse vent   :</b> <span id="anemometre"> - </span> km/h
+                    <b>Vitesse vent   :</b> <span id="anemometre"> - </span> km/h</br>
+                    <b>Pluviometre    :</b> <span id="pluviometre"> - </span> mm/h
                 </div>
                 </div>
                 <div class="fond affichageCommandes" >
