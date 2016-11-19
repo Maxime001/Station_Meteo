@@ -3,6 +3,7 @@
 <html>
     <head>
         <title> Station Météo</title>
+        <META HTTP-EQUIV="refresh" CONTENT="15">
         <meta name="robots" content="noindex">
         <meta charset="UTF-8" />
          <link rel="icon" type="image/png" href="img/favicon.png" />
@@ -34,7 +35,7 @@
     <body class="main">
         <div class="centerPage">
             <div class="fond affichageGraphiques2">
-                <img src="img/IMAGE.jpg" />
+                <img src="img/IMAGE.jpg" stye="width:1000px" />
             </div>
         </div>
     </body>
