@@ -18,6 +18,9 @@
                                 <li>
                                     <a href="index.php?p=HistoriqueMeteo" class="gn-icon gn-icon-archive">Historique Meteo</a>
                                 </li>
+                                <li>
+                                    <a href="index.php?p=allSky" class="gn-icon gn-icon-archive">Caméra All Sky</a>
+                                </li>
                             </ul>
                         </div>
                     </nav>

@@ -32,6 +32,9 @@
             elseif($_GET['p'] == "console"){
                 include 'console.php';
             }
+            elseif($_GET['p'] == "allSky"){
+                include('allSky.php');
+            }
         }
         // Affichage de la page main 
         elseif(isset($_SESSION['validUser'])){
