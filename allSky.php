@@ -35,7 +35,7 @@
     <body class="main">
         <div class="centerPage">
             <div class="fond affichageGraphiques2">
-                <img src="img/IMAGE.jpg" stye="width:1000px" />
+                <img src="img/IMAGE.jpg" stye="width:500px" />
             </div>
         </div>
     </body>
