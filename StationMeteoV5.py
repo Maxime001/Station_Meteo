@@ -6,8 +6,7 @@ import time
 from datetime import datetime
 # Connexion station meteo
 ser = serial.Serial('/dev/ttyUSB3', 9600, timeout=0)
-# Connexion GPA
-serGPA = serial.Serial('/dev/ttyUSB1', 9600, timeout=0)
+
 # Import de la librairie MySQL
 import MySQLdb
 # DB Connexion
@@ -32,7 +31,6 @@ def envoiBdd():
 		print("----------------------------------")	
 		while(anemometre == "" or pression == "" or luminosite == "" or humidite =="" or detectionEau == "" or temperatureExterieure == "" or temperatureInterieure == "" or girouette == ""):	
 			ID = ser.readline()
-			GPA = serGPA.readline()
 			if(ID[0:2] == "C1"):
 				pression = ser.readline()
 				pression = int(pression)
@@ -54,21 +52,21 @@ def envoiBdd():
 			elif(ID[0:2] == "C8"):
 				temperatureInterieure = ser.readline()
 				temperatureInterieure = float(temperatureInterieure)
-			elif(GPA[0:3] == "C12"):
-				girouette = serGPA.readline()
+			elif(ID[0:2] == "CA"):
+				girouette = ser.readline()
 				girouette = re.sub(" ","",girouette)
 				girouette = re.sub("\n","",girouette)
 				girouette = re.sub("\r","",girouette)
 				
-			elif(GPA[0:3] == "C13"):
-				pluviometre = serGPA.readline()
+			elif(ID[0:2] == "CB"):
+				pluviometre = ser.readline()
 				pluviometre = float(pluviometre)
 				print("nouvelle valeur pluie bdd")
 				print(pluviometre)
 				print("----------------------------------------------")
 				print("oooooooooooooooooooooooooooooooooooooo")
-			elif(GPA[0:3] == "C11"):
-				anemometre = serGPA.readline()
+			elif(ID[0:2] == "CC"):
+				anemometre = ser.readline()
 				anemometre = float(anemometre)
 				
 			time.sleep(0.1)
@@ -118,7 +116,6 @@ def sauvegardeJson():
 		print("----------------------------------")	
 		while(pression == "" or luminosite == "" or humidite =="" or detectionEau == "" or temperatureExterieure == "" or temperatureInterieure == "" or girouette == ""):	
 			ID = ser.readline()
-			GPA = serGPA.readline()
 			if(ID[0:2] == "C1"):
 				pression = ser.readline()
 				pression = int(pression)
@@ -140,21 +137,21 @@ def sauvegardeJson():
 			elif(ID[0:2] == "C8"):
 				temperatureInterieure = ser.readline()
 				temperatureInterieure = float(temperatureInterieure)
-			elif(GPA[0:3] == "C12"):
-				girouette = serGPA.readline()
+			elif(ID[0:2] == "CA"):
+				girouette = ser.readline()
 				girouette = re.sub(" ","",girouette)
 				girouette = re.sub("\n","",girouette)
 				girouette = re.sub("\r","",girouette)
-			elif(GPA[0:3] == "C13"):
+			elif(ID[0:2] == "CB"):
 				global pluviometre
-				pluviometre = serGPA.readline()
+				pluviometre = ser.readline()
 				pluviometre = float(pluviometre)
 				print("----------------------------------------------------")
 				print(pluviometre)
 				print("nouvelle valeur pluie json")
-			elif(GPA[0:3] == "C11"):
+			elif(ID[0:2] == "CC"):
 				global anemometre
-				anemometre = serGPA.readline()
+				anemometre = ser.readline()
 				anemometre = float(anemometre)
 				
 			time.sleep(0.1)
