@@ -112,7 +112,7 @@ class BaseDonnees {
         $temperatureExterieure = array();
         $date = array();
         
-        $reponse = $this->bdd->query('SELECT temperatureExterieure,Date FROM infometeo WHERE MINUTE(date) = 0 ORDER BY ID ASC');
+        $reponse = $this->bdd->query('SELECT temperatureExterieure,Date FROM infometeo WHERE MINUTE(date) = 0 AND YEAR(date) = 2016 ORDER BY ID ASC');
         while($donnees = $reponse->fetch()){
             array_push($temperatureExterieure,floatval($donnees["temperatureExterieure"]));
             array_push($date,$donnees["Date"]);

@@ -27,12 +27,18 @@
         <link rel="stylesheet" type="text/css" href="css/contenu.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> 
         <!-- JS des heatmap -->
-        <script src="js/heatmap.js"></script>
         <script src="js/main_heatmap.js"></script>
-        <script src="js/libs/highcharts/highcharts2.js"></script>
+        <script src="js/heatmap.js"></script>
+	<script src="js/libs/highcharts/highcharts2.js"></script>
         <script src="js/libs/highcharts/data.js"></script>
         <script src="js/libs/highcharts/heatmap.js"></script>
         <script src="js/libs/highcharts/exporting.js"></script>
+	<script type="text/javascript" > 
+	$(document).ready(function(){
+		heatMap();
+	});
+
+	</script>
 </head>
     <?php
         include "menu.php";
@@ -49,7 +55,7 @@
         
      
 <!-- Donnees -->  
-<pre id="csv" style="display:none;">Date,Time,Temperature 
+<pre id="csv" style="display:block;">Date,Time,Temperature 
 <?php
      $saveJson = new Json(0, 'json/heatmap.json');
      $donnees = $saveJson->saveTemperaturesJson();
